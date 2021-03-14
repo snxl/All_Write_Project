@@ -3,16 +3,20 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    border: 1px solid;
 }
 
 header > div > img {
     display: flex;
     justify-content: right;
     border-radius: 50%;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
 }
 
+.input {
+    display: flex;
+}
 
 .pesquisa {
     display: flex;
