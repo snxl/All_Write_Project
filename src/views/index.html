@@ -1,58 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
+    <link rel="stylesheet" href="../public/styles/index.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/index.css">
-    <title>Document</title>
+    <title>Pokdedex</title>
 </head>
 <body>
     <header>
-        <section>
-            <article class="header">
-                <div class="logo">
-                    <img src="../assets/img/logo.jpeg" alt="logoAllWrite">
-                </div>
-                
-
-            </article>
-        </section>
-        <section>
-            <article  class="navigation">
-                <div>
-                    <nav>
-                        <div class="dropdown">
-                            <button class="dropbutton">Categorias</button>
-                            <div class="dropdown-data">
-                              <a href="#">Ação</a>
-                              <a href="#">Aventura</a>
-                              <a href="#">Terror</a>
-                            </div>
-                          </div>
-                    </nav>
-                </div>
-            </article>
-        </section>
-        <section>
-            <article>
-                <div>
-                    <nav>
-                        <input type="text" placeholder="Seu livro">
-                    </nav>
-                </div>
-            </article>
-        </section>
-        <section>
-            <article>
-                <div class="profile">
-                    <img src="../assets/img/profile.webp" alt="">
-                </div>
-            </article>
-        </section>
+        <div class="img-logo">
+            <img src="../public/img/logo.svg" alt="logo">
+        </div>
+        <div>
+            <nav class="navbar">
+                <a class="border" href="">
+                    Home
+                </a>
+                <a href="">
+                    Pokédex
+                </a>
+                <a href="./legendaries.html" class="legendaries">
+                    Lendários
+                </a>
+                <a href="">
+                    Documentação
+                </a>
+            </nav>
+        </div>
+        <div class="button">
+            <button class="img-menu">
+                <img src="../public/img/menu.svg" alt="">
+            </button>
+        </div>
     </header>
     <main>
-        
+        <section>
+            <article>
+                <div class="text-home">
+                    <h1>
+                        <strong>Encontre</strong>  os seus <strong>Pokemons</strong> favoritos aqui!!
+                    </h1>
+                    <p>
+                        Você pode saber o tipo de Pokémon, seus pontos fortes, desvantagens e habilidades
+                    </p>
+                    <picture>
+                        <a href="">
+                            <img src="../public/img/button.svg" alt="">
+                        </a>
+                    </picture>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <picture  class="imgHome">
+                    <img src="../public/img/pikachuHome.svg" alt="imgHome">
+                </picture>
+            </article>
+        </section>
     </main>
     <footer>
 
