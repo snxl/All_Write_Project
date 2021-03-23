@@ -131,8 +131,8 @@ main{
   background:  rgb(184, 179, 179);
   margin-left: 4px;
   margin-right: 4px;
-  height: 190px;
-  width: 190px;  
+  height: 30vh;
+  width: 15vw;  
   border-radius: 10%;
   
   display: flex;
