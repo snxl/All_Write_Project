@@ -20,9 +20,22 @@ main{
   height: 100%;
 }
 
+.menu{
+  background: none;
+  margin-left: 5px;
+  border: 0;
+}
+
+.logoHeader{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .logoHeader > img{
   margin: 10px 10px 10px 10px;
   height: 60px;
+  padding-left: 25px;
 }
 
 .profile{
@@ -313,4 +326,8 @@ footer{
   height: 330px;
   padding:15px 15px;
   border-left: 2px white solid;
+}
+
+.topPerfis > button:hover{
+  filter: brightness(0.9);
 }
