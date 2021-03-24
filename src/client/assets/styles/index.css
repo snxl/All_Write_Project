@@ -4,16 +4,16 @@
   box-sizing: border-box;
 }
 
+body{
+  min-height: 100vh;
+}
+
 header{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0px 0px 3px 0px; 
-}
-
-body{
-  min-height: 100vh;
 }
 
 main{
@@ -67,7 +67,7 @@ main{
   border-radius: 24px;
 }
 
-.pesquisa > input:target::placeholder{
+.pesquisa > input:hover::placeholder{
   color: transparent;
 }
 
@@ -88,8 +88,8 @@ main{
   align-items: center;
   justify-content: center;
   background: rgb(184, 179, 179);
-  height: 250px;
-  width: 80vw;
+  height: 475px;
+  width: 95.41vw;
   border-radius:24px ;
   margin-bottom: 40px;
 }
@@ -104,17 +104,11 @@ main{
 }
 
 #principal{
-  margin-left: 60px;
+  margin-left: 85px;
+  font-size: 21px;
 }
 
-.destaque{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.destaque > div, .listaDestaque {
+.listaDestaque {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -122,20 +116,201 @@ main{
   margin-top: 40px;
 }
 
-.destaque > a {
-  margin-top: 80px;
+.listaDestaque > a > img{
+  max-width: 100%;
 }
 
-.listaDestaque > li {
+.listaDestaque > div{
+  background:rgb(184, 179, 179);
+  width: 15.55vw;
+  height: 257px;
   display: flex;
-  background:  rgb(184, 179, 179);
-  margin-left: 4px;
-  margin-right: 4px;
-  height: 25vh;
-  width: 15vw;  
-  border-radius: 10%;
-  
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.tituloGenero{
+  margin: 50px 0 50px 85px;
+}
+.coluna1, .coluna2, .coluna3, .coluna4{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categorias{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.coluna1 > div, .coluna2 > div, .coluna3 > div, .coluna4 > div {
+  background:rgb(184, 179, 179);
+  border-radius: 10px;
+  height: 75px;
+  width: 15.83vw;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.coluna1 > div > a, .coluna2 > div > a, .coluna3 > div > a, .coluna4 > div > a{
+  text-decoration: none;
+  font-size: 21px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
+.tituloResenha, .toper, .count{
+  margin: 50px 0px 50px 85px;
+}
+
+.resenhas{
+  background:rgb(184, 179, 179);
+  height: 538px;
+  width: 33.68vw;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.resenha1, .resenha2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.divResenha{
+  height: 232px;
+  width: 12.15vw;
+  background: hsla(219, 82%, 43%, 0.295);
+  margin: 0px 10px 0px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topPerfis{
+  width: 28.4vw;
+  height: 356px;
+  background: rgb(184, 179, 179);
+  border-radius: 10px;
+}
+
+.baixo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.topPerfis, .topPerfis > button > a{
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.topPerfis > button{
+  outline: none;
+  width: 22.22vw;
+  height: 37px;
+  border: black 1px solid;
+  border-radius: 10px;
+}
+
+.texts{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.lateralDireita{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.baixoDireita{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.contador, .contador > p{
+  height: 110px;
+  width: 14.58vw;
+  background: rgb(184, 179, 179);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.redes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.espacoRedes{
+  height: 151px;
+  width: 14.58vw;
+  background: rgb(184, 179, 179);
+  border-radius: 10px;
+}
+
+.lateralCompleta{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sorteio{
+  height: 140px;
+  width: 46.45vw;
+  background: rgb(184, 179, 179);
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+footer{
+  display: flex;
+  flex-direction: row;
+  height: 330px;
+  width: 100%;
+  background: rgb(184, 179, 179);
+}
+
+.footer1{
+  width: 32.29vw;
+  height: 330px;
+  padding:15px 15px;
+  border-right: 2px white solid;
+}
+
+.footer2{
+  width: 37.63vw;
+  height: 330px;
+  padding:15px 15px;
+}
+
+.footer3{
+  width: 32.29vw;
+  height: 330px;
+  padding:15px 15px;
+  border-left: 2px white solid;
 }
