@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 3px 0px; 
+}
+
+body{
+  min-height: 100vh;
+}
+
+main{
+  height: 100%;
+}
+
+.logoHeader > img{
+  margin: 10px 10px 10px 10px;
+  height: 60px;
+}
+
+.profile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  margin: 10px 10px 10px 10px;
+  border-radius: 40px;
+  background-color: rgb(184, 179, 179);
+}
+
+.profile > img{
+  border-radius: 40px;
+  height: 60px;
+  width: 60px;
+  margin-right: 8px;
+}
+
+.profile > a{
+  text-decoration: none;
+  color: black;
+  margin-right: 8px;
+}
+
+.pesquisa{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pesquisa > input{
+  font-size: 21px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  width: 420px;
+  height: 32px;
+  margin-top: 20px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 24px;
+}
+
+.pesquisa > input:target::placeholder{
+  color: transparent;
+}
+
+.pesquisa > input:hover{
+  color: rgb(112, 24, 194);
+}
+
+.carrocel{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.listaCarrocel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(184, 179, 179);
+  height: 250px;
+  width: 80vw;
+  border-radius:24px ;
+  margin-bottom: 40px;
+}
+
+.listaCarrocel > li{
+  display: flex;
+  flex-direction: row;
+}
+
+.carrocelImg{
+  margin-right: 40px;
+}
+
+#principal{
+  margin-left: 60px;
+}
+
+.destaque{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.destaque > div, .listaDestaque {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.destaque > a {
+  margin-top: 80px;
+}
+
+.listaDestaque > li {
+  display: flex;
+  background:  rgb(184, 179, 179);
+  margin-left: 4px;
+  margin-right: 4px;
+  height: 25vh;
+  width: 15vw;  
+  border-radius: 10%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
