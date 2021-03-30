@@ -20,9 +20,38 @@ main{
   height: 100%;
 }
 
+.menu{
+  outline: none;
+  background: none;
+  margin-left: 5px;
+  border: 0;
+  animation: menuanimation 1s 1;
+}
+
+@keyframes menuanimation{
+  0% {
+    transform: translateX (0px);
+  }
+
+  50% {
+    transform: translateX(32px);
+  }
+
+  100%{
+    transform: rotateX(0px);
+  }
+}
+
+.logoHeader{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .logoHeader > img{
   margin: 10px 10px 10px 10px;
   height: 60px;
+  padding-left: 25px;
 }
 
 .profile{
@@ -108,26 +137,17 @@ main{
   font-size: 21px;
 }
 
-.listaDestaque {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
+
+
+.botaoDestaque{
+  outline: none;
+  background: none;
+  border: none;
 }
 
-.listaDestaque > a > img{
-  max-width: 100%;
-}
-
-.listaDestaque > div{
-  background:rgb(184, 179, 179);
-  width: 15.55vw;
-  height: 257px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
+.botaoDestaque > img:hover{
+  width: 60px;
+  height: 60px;
 }
 
 .tituloGenero{
@@ -164,8 +184,16 @@ main{
   color: black;
 }
 
-.tituloResenha, .toper, .count{
-  margin: 50px 0px 50px 85px;
+.alinharSpan{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.toper{
+  padding-left: 50px;
 }
 
 .resenhas{
@@ -228,7 +256,7 @@ main{
   border-radius: 10px;
 }
 
-.texts{
+.texts > span{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -239,7 +267,7 @@ main{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-left: 50px;
+  margin-left: 30px;
 }
 
 .baixoDireita{
@@ -313,4 +341,56 @@ footer{
   height: 330px;
   padding:15px 15px;
   border-left: 2px white solid;
+}
+
+.topPerfis > button:hover{
+  filter: brightness(0.9);
+}
+
+@media(min-width: 769px){
+  .listaDestaque {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .listaDestaque > button > img{
+    max-width: 100%;
+  }
+
+  .listaDestaque > div{
+    background:rgb(184, 179, 179);
+    width: 15.55vw;
+    height: 257px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+}
+
+@media(min-width: 0px) and (max-width: 768px){
+  .cinco, .quartro, .tres{
+    display: none;
+  }
+
+  .listaDestaque {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .um, .dois{
+    background:rgb(184, 179, 179);
+    width: 22vw;
+    height: 257px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
 }
