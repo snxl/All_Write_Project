@@ -8,6 +8,7 @@ const api = axios.create({
 });
 
 app.use(express.static(path.join(__dirname, './src/client/assets')));
+app.use(express.static(path.join(__dirname, './src/client/views')));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
