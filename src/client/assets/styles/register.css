@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
 header {
     display: flex;
@@ -6,6 +11,7 @@ header {
     justify-content: space-between;
     padding: 10px;
     background-color: #D6D6D6;
+    width: 100%;
 }
 
 #logo > img{
@@ -75,6 +81,7 @@ main{
     align-items: center;
     justify-content: space-between;
     padding: 100px;
+    width: 100%;
 }
 
 .formulario {
@@ -112,6 +119,9 @@ main{
     justify-content: center;
     background: none;
     margin-top: 50px;
+    margin-left: 45px;
+    margin-right: 1px;
+    width: 24.3vw;
 }
 
 .foto{
@@ -119,14 +129,14 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    max-width: 100%;
     background: #C4C4C4;  
 }
 
 .foto > img{
+    max-width: 85%;
     border-radius: 50%;
-    height: 350px;
-    width: 350px;
+    min-height: 220px;
 }
 
 .botoes{
@@ -153,20 +163,19 @@ main{
 }
 
 .escolher_foto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: none;
+}
+
+.submit{
     width: 157px;
     height: 39px;
     border: 0;
     outline: 0;   
     padding: 0;
-    background: #C4C4C4;
+    background-color: #C4C4C4;
     border-radius: 5px;
     font-size: 20px;
 }
-
 
 .titulo_form{
     display: flex;
@@ -210,7 +219,7 @@ main{
     flex-direction: row;
     align-items: left;
     justify-content: left;
-    width: 20%;
+    min-width: 20%;
 }
 
 .titulo_cidade{
@@ -248,6 +257,11 @@ main{
     padding: 0;
     background: none;
     font-size: 20px;
+    width: 11.1vw;
+}
+
+#cidade{
+    width: 92.55vw;
 }
 
 .cidade {
@@ -284,6 +298,10 @@ main{
     width: 100%;
     background: #C4C4C4;
     border-radius: 10px;
+}
+
+.generos > button:hover {
+    filter: brightness(0.9);
 }
 
 #botao_genero{

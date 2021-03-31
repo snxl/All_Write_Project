@@ -35,11 +35,11 @@
                 <div class="inputs">
                     <div class="form">
                         <label class="titulo_form" for = "usuario">Usuário</label>
-                        <input class="campo_form" nome="usuario" id="usuario" placeholder="m_assis"/>
+                        <input type="text" class="campo_form" nome="usuario" id="usuario" placeholder="m_assis"/>
                         <label class="titulo_form" for = "email">E-mail</label>
-                        <input class="campo_form" nome="email" id="email" placeholder="machadodeassis@mail.com"/>
+                        <input type="email" class="campo_form" nome="email" id="email" placeholder="machadodeassis@mail.com"/>
                         <label class="titulo_form" for = "name">Nome Completo</label>
-                        <input class="campo_form" nome="name" id="name" placeholder="Machado de Assis"/>
+                        <input type="text" class="campo_form" nome="name" id="name" placeholder="Machado de Assis"/>
                     </div>
                     <div class="titulo_endereco">
                         <div class="titulo_estado">
@@ -53,7 +53,33 @@
                     <div class="endereco">
                         <div class="estado">
                             <select class="select_endereco" name="estado" id="estado" required>
-                            <option value="">Selecione</option>
+                            <option value="0">Acre</option>
+                            <option value="1">Alagoas</option>
+                            <option value="2">Amapá</option>
+                            <option value="3">Amazonas</option>
+                            <option value="4">Bahia</option>
+                            <option value="5">Ceará</option>
+                            <option value="6">Distrito Federal</option>
+                            <option value="7">Espirito Santo</option>
+                            <option value="8">Goiá</option>
+                            <option value="9">Maranhão</option>
+                            <option value="10">Mato Grosso</option>
+                            <option value="11">Mato Grosso do Sul</option>
+                            <option value="12">Minas Gerais</option>
+                            <option value="13">pará</option>
+                            <option value="14">Paraíba</option>
+                            <option value="15">Paraná</option>
+                            <option value="16">Pernanbuco</option>
+                            <option value="17">Piauí</option>
+                            <option value="18">Rio de Janeiro</option>
+                            <option value="19">Rio Grande do Norte</option>
+                            <option value="20">Rio Grande do Sul</option>
+                            <option value="21">Rondônia</option>
+                            <option value="22">Roraima</option>
+                            <option value="23">Santa Catarina</option>
+                            <option value="24">São Paulo</option>
+                            <option value="25">Sergipe</option>
+                            <option value="26">Tocantins</option>
                             </select>
                         </div>
     
@@ -72,7 +98,11 @@
                     </div> 
                     
                     <div class="botoes">
-                        <input class="escolher_foto" name="myFile" type="file">
+                        <button type="submit" class="submit">
+                            <label for="submit">escolher foto</label>
+                            <input class="escolher_foto" name="myFile" type="file" id="submit">
+                        </button>
+                        
                         <button class="buttom_submit" type="button">Salvar</button>
                     </div>
                 </div>

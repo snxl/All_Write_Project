@@ -288,10 +288,11 @@ main{
   font-weight: bold;
 }
 
-.redes{
+.redes, .redes > p{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-weight: bold;
 }
 
 .espacoRedes{
