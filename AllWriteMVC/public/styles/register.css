@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #D6D6D6;
+    width: 100%;
+}
+
+#logo > img{
+    width: 180px;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+#pesquisa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding-top: 6px;
+}
+
+#pesquisa > input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0;
+    outline: 0;   
+    padding: 0;
+    width: 450px;
+    margin: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#lupa > img{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;   
+    width: 22px;
+}
+
+#config {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    outline: 0;   
+    padding: 0;    
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding-top: 6px;
+    width: 150px;
+}
+
+#config > img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+    width: 30px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    width: 100%;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+
+.cadastro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    margin-top: 50px;
+    margin-left: 45px;
+    margin-right: 1px;
+    width: 24.3vw;
+}
+
+.foto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    background: #C4C4C4;  
+}
+
+.foto > img{
+    max-width: 85%;
+    border-radius: 50%;
+    min-height: 220px;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.buttom_submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 157px;
+    height: 39px;
+    border: 0;
+    outline: 0;   
+    padding: 0;
+    background: #C4C4C4;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.escolher_foto{
+    display: none;
+}
+
+.submit{
+    width: 157px;
+    height: 39px;
+    border: 0;
+    outline: 0;   
+    padding: 0;
+    background-color: #C4C4C4;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.titulo_form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    padding-left: 10px;
+    margin-top: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.campo_form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    height: 56px;
+    border: 0;
+    outline: 0;   
+    padding: 0;
+    margin-top: 5px;
+    background: #C4C4C4;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.titulo_endereco {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.titulo_estado{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    min-width: 20%;
+}
+
+.titulo_cidade{
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: right;
+    width: 65%; 
+}
+
+.endereco {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.estado {
+    display: flex;
+    width: 20%;
+    height: 56px;
+    border: 0;
+    outline: 0;   
+    padding: 0;
+    background: #C4C4C4;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+.select_endereco{
+    border: 0;
+    outline: 0;   
+    padding: 0;
+    background: none;
+    font-size: 20px;
+    width: 11.1vw;
+}
+
+#cidade{
+    width: 92.55vw;
+}
+
+.cidade {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: right;
+    width: 65%;
+    height: 56px;
+    border: 0;
+    outline: 0;   
+    padding: 0;
+    background: #C4C4C4;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.titulo_genero{
+    padding-top: 60px;
+    margin: inherit;
+}
+
+.escolher_generos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.generos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background: #C4C4C4;
+    border-radius: 10px;
+}
+
+.generos > button:hover {
+    filter: brightness(0.9);
+}
+
+#botao_genero{
+    width: 150px;
+    height: 39px;
+    border: 0;
+    outline: 0;   
+    padding: 0;
+    margin: 15px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    font-size: 20px;    
+}
+
+#selecao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    background: none;   
+}
+
+#selecao > img{
+    width: 24px;
+    height: 24px;
+    margin: 15px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 265px;
+    background-color: #D6D6D6;
+}
