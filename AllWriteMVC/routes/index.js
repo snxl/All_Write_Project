@@ -1,10 +1,10 @@
-var express = require('express');
-const pages = require('../controller/pages');
-var router = express.Router();
+import express from'express';
+import pages from'../controller/pages.js';
+const router = express.Router();
 
 
 /* GET home page. */
 router.get('/', pages.indexGET);
 router.post("/", pages.indexPOST)
 
-module.exports = router;
+export default router;

@@ -13,7 +13,8 @@ const pages = {
         })
     },
     registerPOST:(req, res) => {
-        return 
+        console.log(req.body)
+        res.send(req.body)
     },
     profileGET: (req, res) => {
         return res.render("profile", {
@@ -25,4 +26,4 @@ const pages = {
     }
 }
 
-module.exports = pages
+export default pages

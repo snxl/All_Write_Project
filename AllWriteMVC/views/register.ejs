@@ -23,17 +23,17 @@
     </header>
     <main>
         <div class="formulario">    
-            <form action="cadastro" method="POST" enctype="multipart/form-data">
+            <form action="/register" method="POST" enctype="application/x-www-form-urlencoded">
             <h2 class="titulo_cadastro">CADASTRO</h2>
             <div class="cadastro">
                 <div class="inputs">
                     <div class="form">
                         <label class="titulo_form" for = "usuario">Usuário</label>
-                        <input type="text" class="campo_form" nome="usuario" id="usuario" placeholder="m_assis"/>
+                        <input type="text" class="campo_form" name="usuario" id="usuario" placeholder="m_assis"/>
                         <label class="titulo_form" for = "email">E-mail</label>
-                        <input type="email" class="campo_form" nome="email" id="email" placeholder="machadodeassis@mail.com"/>
+                        <input type="email" class="campo_form" name="email" id="email" placeholder="machadodeassis@mail.com"/>
                         <label class="titulo_form" for = "name">Nome Completo</label>
-                        <input type="text" class="campo_form" nome="name" id="name" placeholder="Machado de Assis"/>
+                        <input type="text" class="campo_form" name="name" id="name" placeholder="Machado de Assis"/>
                     </div>
                     <div class="titulo_endereco">
                         <div class="titulo_estado">
@@ -79,7 +79,7 @@
     
                         <div class="cidade">
                             <select class="select_endereco  " name="cidade" id="cidade" required>
-                            <option value="">Selecione</option>
+                            <option value="0">teste</option>
                             </select>
                         </div>
                     </div> 
@@ -92,12 +92,13 @@
                     </div> 
                     
                     <div class="botoes">
-                        <button type="submit" class="submit">
-                            <label for="submit">escolher foto</label>
-                            <input class="escolher_foto" name="myFile" type="file" id="submit">
+                        <button class="submit" type="button">
+                            <label for="submits">escolher foto</label>
+                            <input class="escolher_foto" name="myFile" type="file" id="submits">
                         </button>
-                        
-                        <button class="buttom_submit" type="button">Salvar</button>
+                        <div>
+                            <button class="buttom_submit" type="submit">Salvar</button>
+                        </div>
                     </div>
                 </div>
 
