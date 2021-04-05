@@ -1,3 +1,5 @@
+import Register from "../service/serviceRegister.js"
+
 const pages = {
     indexGET: (req, res, next) => {
         return res.render('index', {
@@ -13,8 +15,11 @@ const pages = {
         })
     },
     registerPOST:(req, res) => {
-        console.log(req.body)
-        res.send(req.body)
+        const dadosCadastro = req.body
+
+        //Register.adiciona(dadosCadastro)
+
+        res.json(req.body)
     },
     profileGET: (req, res) => {
         return res.render("profile", {
