@@ -13,7 +13,7 @@ connection.connect(err => {
     }else{
         console.log("server connect")
 
-        //Tables.init(connection)
+        Tables.init(connection)
         
         app.listen(port, () => console.log(`server running: ${port}`))
     }

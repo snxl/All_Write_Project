@@ -17,9 +17,9 @@ const pages = {
     registerPOST:(req, res) => {
         const dadosCadastro = req.body
 
-        //Register.adiciona(dadosCadastro)
+        Register.adiciona(dadosCadastro)
 
-        res.json(req.body)
+        res.send(req.body)
     },
     profileGET: (req, res) => {
         return res.render("profile", {
