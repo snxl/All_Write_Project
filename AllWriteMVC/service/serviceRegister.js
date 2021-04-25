@@ -1,13 +1,13 @@
-import Tables from "../model/mySQLConnection.js" 
+import Tables from "../config/mySQLConnection.js" 
 import moment from "moment"
 
 
 class Registro {
-    adiciona(register){
+    adiciona(register, myFile){
         const sql = "INSERT INTO Register SET ?"
         const dataCriacao = moment().format("YYYY-MM-DD HH:MM:SS")
         const acesso = moment().format("YYYY-MM-DD HH:MM:SS")
-        const fullRegister = {...register, dataCriacao, acesso}
+        const fullRegister = {...register, myFile, dataCriacao, acesso}
 
         Tables.query(sql, fullRegister, (err, results) => {
             if(err){

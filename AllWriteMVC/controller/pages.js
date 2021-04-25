@@ -1,12 +1,21 @@
 import Register from "../service/serviceRegister.js"
 
 const pages = {
-    indexGET: (req, res, next) => {
-        return res.render('index', {
+    dashboardGET: (req, res, next) => {
+        return res.render('dashboard', {
              title: 'all write'
         })
     },
+    dashboardPOST: (req, res)=>{
+
+    },
+    indexGET: (req, res)=>{
+        res.status(200).render("index", {
+        
+        })
+    },
     indexPOST: () =>{
+
         return
     },
     registerGET: (req, res) =>{
@@ -15,11 +24,38 @@ const pages = {
         })
     },
     registerPOST:(req, res) => {
-        const dadosCadastro = req.body
+        const file = req.file
+        const {
+            usuario,
+            name,
+            email,
+            senha,
+            repetir_senha,
+            estado,
+            cidade
+        } = req.body
 
-        Register.adiciona(dadosCadastro)
+        const checkPassword = senha === repetir_senha
 
-        res.send(req.body)
+        if(!file || !usuario || !email || !checkPassword || !estado || !cidade || !name){
+            res.status(400).send("oops... Parece que vc enviou algum arquivo errado")
+        }
+
+        const myFile = file.path
+
+        const dadosCadastro = {
+            usuario,
+            name,
+            email,
+            senha,
+            estado,
+            cidade
+        }
+
+        Register.adiciona(dadosCadastro, myFile)
++
+
+        res.send({...dadosCadastro, ...file,  myFile})
     },
     profileGET: (req, res) => {
         return res.render("profile", {

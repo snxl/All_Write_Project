@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 3px 0px; 
+}
+
+main{
+  height: 100%;
+}
+
+.menu{
+  outline: none;
+  background: none;
+  margin-left: 5px;
+  border: 0;
+  animation: menuanimation 1s 1;
+}
+
+@keyframes menuanimation{
+  0% {
+    transform: translateX (0px);
+  }
+
+  50% {
+    transform: translateX(32px);
+  }
+
+  100%{
+    transform: rotateX(0px);
+  }
+}
+
+.logoHeader{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logoHeader > img{
+  margin: 10px 10px 10px 10px;
+  height: 60px;
+  max-width: 100%;
+  padding-left: 25px;
+}
+
+.profile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  margin: 10px 10px 10px 10px;
+  border-radius: 40px;
+  background-color: rgb(184, 179, 179);
+}
+
+.profile > img{
+  border-radius: 40px;
+  height: 60px;
+  width: 60px;
+  margin-right: 8px;
+}
+
+.profile > a{
+  font-size:1.1em;
+  text-decoration: none;
+  color: black;
+  margin-right: 8px;
+}
+
+.pesquisa{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pesquisa > input{
+  font-size: 21px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  width: 420px;
+  height: 32px;
+  margin-top: 20px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 24px;
+}
+
+.pesquisa > input:hover::placeholder{
+  color: transparent;
+}
+
+.pesquisa > input:hover{
+  color: rgb(112, 24, 194);
+}
+
+.carrocel{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.listaCarrocel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(184, 179, 179);
+  height: 475px;
+  width: 95.41vw;
+  border-radius:24px ;
+  margin-bottom: 40px;
+}
+
+.listaCarrocel > li{
+  display: flex;
+  flex-direction: row;
+}
+
+.carrocelImg{
+  margin-right: 40px;
+}
+
+#principal{
+  margin-left: 85px;
+  font-size: 21px;
+}
+
+
+
+.botaoDestaque{
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.botaoDestaque > img:hover{
+  width: 60px;
+  height: 60px;
+}
+
+.tituloGenero{
+  margin: 50px 0 50px 85px;
+}
+.coluna1, .coluna2, .coluna3, .coluna4{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categorias{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.coluna1 > div, .coluna2 > div, .coluna3 > div, .coluna4 > div {
+  background:rgb(184, 179, 179);
+  border-radius: 10px;
+  height: 75px;
+  width: 15.83vw;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coluna1 > div > a, .coluna2 > div > a, .coluna3 > div > a, .coluna4 > div > a{
+  text-decoration: none;
+  font-size: 21px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
+.alinharSpan{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.toper{
+  padding-left: 50px;
+}
+
+.resenhas{
+  background:rgb(184, 179, 179);
+  height: 538px;
+  width: 33.68vw;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.resenha1, .resenha2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.divResenha{
+  height: 232px;
+  width: 12.15vw;
+  background: hsla(219, 82%, 43%, 0.295);
+  margin: 0px 10px 0px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topPerfis{
+  width: 28.4vw;
+  height: 356px;
+  background: rgb(184, 179, 179);
+  border-radius: 10px;
+}
+
+.baixo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.topPerfis, .topPerfis > button > a{
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.topPerfis > button{
+  outline: none;
+  width: 22.22vw;
+  height: 37px;
+  border: black 1px solid;
+  border-radius: 10px;
+}
+
+.texts > span{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.lateralDireita{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.baixoDireita{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.contador, .contador > p{
+  height: 110px;
+  width: 14.58vw;
+  background: rgb(184, 179, 179);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.redes, .redes > p{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.espacoRedes{
+  height: 151px;
+  width: 14.58vw;
+  background: rgb(184, 179, 179);
+  border-radius: 10px;
+}
+
+.lateralCompleta{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sorteio{
+  height: 140px;
+  width: 46.45vw;
+  background: rgb(184, 179, 179);
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+footer{
+  display: flex;
+  flex-direction: row;
+  height: 330px;
+  width: 100%;
+  background: rgb(184, 179, 179);
+}
+
+.footer1{
+  width: 32.29vw;
+  height: 330px;
+  padding:15px 15px;
+  border-right: 2px white solid;
+}
+
+.footer2{
+  width: 37.63vw;
+  height: 330px;
+  padding:15px 15px;
+}
+
+.footer3{
+  width: 32.29vw;
+  height: 330px;
+  padding:15px 15px;
+  border-left: 2px white solid;
+}
+
+.topPerfis > button:hover{
+  filter: brightness(0.9);
+}
+
+@media(min-width: 769px){
+  .listaDestaque {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .listaDestaque > button > img{
+    max-width: 100%;
+  }
+
+  .listaDestaque > div{
+    background:rgb(184, 179, 179);
+    width: 15.55vw;
+    height: 257px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+}
+
+@media(min-width: 0px) and (max-width: 768px){
+  .cinco, .quartro, .tres{
+    display: none;
+  }
+
+  .listaDestaque {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .um, .dois{
+    background:rgb(184, 179, 179);
+    width: 22vw;
+    height: 257px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+}
