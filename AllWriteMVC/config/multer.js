@@ -11,11 +11,10 @@ const __dirname = path.dirname(__filename);
 const storage = multer.diskStorage({
     destination: resolve(__dirname, '..', 'public', 'uploads'),
     filename: (req, file, cb) => {
-        crypto.randomBytes(16, (err, value) => {
+        crypto.randomBytes(32, (err, value) => {
             if (err) {
                 cb(err);
             }
-
             return cb(null, value.toString('hex') + extname(file.originalname));
         })      
     }
