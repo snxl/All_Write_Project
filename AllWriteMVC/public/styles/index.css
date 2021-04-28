@@ -1,399 +1,311 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body{
-  min-height: 100vh;
+    padding: 0;
+    margin: 0;
 }
 
 header{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0px 0px 3px 0px; 
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px ;
+    width: 100%;
+}
+
+.fotoHeader{
+    display: flex;
+    align-items: center;
+    max-width: 15vw;
+    height: 30px;
+    position: static;
+    margin: 0 10px 0 10px;
+}
+
+.navHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: static;
+
+}
+
+.navHeader > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 45px;
+}
+
+.login{
+    border-radius: 20px;
+    border: 1px black solid;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 180px;
+    margin-right: 5px;
+    
+}
+.login > div {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    padding: 0 3px 0 3px;
+}
+
+.login > div > img {
+    max-width: 80%;
+    border-radius: 20px;
+}
+
+.campoLogin, .campoOU{
+    padding-right: 10px;
+}
+
+.login > a, .navHeader > a, .navHeader > div > a  {
+    text-decoration:none;
+    color: black;
+}
+
+.explorar > a{
+    margin:3px;
 }
 
 main{
-  height: 100%;
+    position: relative;
 }
 
-.menu{
-  outline: none;
-  background: none;
-  margin-left: 5px;
-  border: 0;
-  animation: menuanimation 1s 1;
+body{
+    max-width: 100vw;
 }
 
-@keyframes menuanimation{
-  0% {
-    transform: translateX (0px);
-  }
-
-  50% {
-    transform: translateX(32px);
-  }
-
-  100%{
-    transform: rotateX(0px);
-  }
+main{
+    height: 100%;
 }
 
-.logoHeader{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.logoHeader > img{
-  margin: 10px 10px 10px 10px;
-  height: 60px;
-  max-width: 100%;
-  padding-left: 25px;
-}
-
-.profile{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1;
-  margin: 10px 10px 10px 10px;
-  border-radius: 40px;
-  background-color: rgb(184, 179, 179);
-}
-
-.profile > img{
-  border-radius: 40px;
-  height: 60px;
-  width: 60px;
-  margin-right: 8px;
-}
-
-.profile > a{
-  font-size:1.1em;
-  text-decoration: none;
-  color: black;
-  margin-right: 8px;
-}
-
-.pesquisa{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pesquisa > input{
-  font-size: 21px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: center;
-  width: 420px;
-  height: 32px;
-  margin-top: 20px;
-  outline: none;
-  border: 1px solid black;
-  border-radius: 24px;
-}
-
-.pesquisa > input:hover::placeholder{
-  color: transparent;
-}
-
-.pesquisa > input:hover{
-  color: rgb(112, 24, 194);
-}
-
-.carrocel{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-top: 60px;
-}
-
-.listaCarrocel{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgb(184, 179, 179);
-  height: 475px;
-  width: 95.41vw;
-  border-radius:24px ;
-  margin-bottom: 40px;
-}
-
-.listaCarrocel > li{
-  display: flex;
-  flex-direction: row;
-}
-
-.carrocelImg{
-  margin-right: 40px;
-}
-
-#principal{
-  margin-left: 85px;
-  font-size: 21px;
-}
-
-
-
-.botaoDestaque{
-  outline: none;
-  background: none;
-  border: none;
-}
-
-.botaoDestaque > img:hover{
-  width: 60px;
-  height: 60px;
-}
-
-.tituloGenero{
-  margin: 50px 0 50px 85px;
-}
-.coluna1, .coluna2, .coluna3, .coluna4{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.categorias{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.coluna1 > div, .coluna2 > div, .coluna3 > div, .coluna4 > div {
-  background:rgb(184, 179, 179);
-  border-radius: 10px;
-  height: 75px;
-  width: 15.83vw;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.coluna1 > div > a, .coluna2 > div > a, .coluna3 > div > a, .coluna4 > div > a{
-  text-decoration: none;
-  font-size: 21px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: black;
-}
-
-.alinharSpan{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.toper{
-  padding-left: 50px;
-}
-
-.resenhas{
-  background:rgb(184, 179, 179);
-  height: 538px;
-  width: 33.68vw;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 40px;
-}
-
-.resenha1, .resenha2{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.divResenha{
-  height: 232px;
-  width: 12.15vw;
-  background: hsla(219, 82%, 43%, 0.295);
-  margin: 0px 10px 0px 10px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.topPerfis{
-  width: 28.4vw;
-  height: 356px;
-  background: rgb(184, 179, 179);
-  border-radius: 10px;
-}
-
-.baixo{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.topPerfis, .topPerfis > button > a{
-  color: black;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.topPerfis > button{
-  outline: none;
-  width: 22.22vw;
-  height: 37px;
-  border: black 1px solid;
-  border-radius: 10px;
-}
-
-.texts > span{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.lateralDireita{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 30px;
-}
-
-.baixoDireita{
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-}
-
-.contador, .contador > p{
-  height: 110px;
-  width: 14.58vw;
-  background: rgb(184, 179, 179);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-.redes, .redes > p{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-weight: bold;
-}
-
-.espacoRedes{
-  height: 151px;
-  width: 14.58vw;
-  background: rgb(184, 179, 179);
-  border-radius: 10px;
-}
-
-.lateralCompleta{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.sorteio{
-  height: 140px;
-  width: 46.45vw;
-  background: rgb(184, 179, 179);
-  border-radius: 10px;
-  margin-bottom: 40px;
-}
-
-footer{
-  display: flex;
-  flex-direction: row;
-  height: 330px;
-  width: 100%;
-  background: rgb(184, 179, 179);
-}
-
-.footer1{
-  width: 32.29vw;
-  height: 330px;
-  padding:15px 15px;
-  border-right: 2px white solid;
-}
-
-.footer2{
-  width: 37.63vw;
-  height: 330px;
-  padding:15px 15px;
-}
-
-.footer3{
-  width: 32.29vw;
-  height: 330px;
-  padding:15px 15px;
-  border-left: 2px white solid;
-}
-
-.topPerfis > button:hover{
-  filter: brightness(0.9);
-}
-
-@media(min-width: 769px){
-  .listaDestaque {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
-  }
-  
-  .listaDestaque > button > img{
+.imagemLateralCima > img{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 0;
     max-width: 100%;
-  }
-
-  .listaDestaque > div{
-    background:rgb(184, 179, 179);
-    width: 15.55vw;
-    height: 257px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-  }
 }
 
-@media(min-width: 0px) and (max-width: 768px){
-  .cinco, .quartro, .tres{
-    display: none;
-  }
+.textoPrincipal{
+    position: absolute;
+    top: 190px;
+    z-index: 10;
+    left: 20px;
+    max-width: 70%;
+}
 
-  .listaDestaque {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
-  }
+.textoPrincipal > h1{
+    font-size: 3.8rem;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
 
-  .um, .dois{
-    background:rgb(184, 179, 179);
-    width: 22vw;
-    height: 257px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-  }
+.textoPrincipal > h3{
+    font-size: 1.7rem;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+.textoPrincipal > p{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    width: 75%;
+}
+
+.notebookHome{
+    position: absolute;
+    right: 20px;
+    top: 150px;
+    max-width: 60%;
+}
+
+
+.explicacao_texto{
+    position: absolute;
+    top: 540px;
+    left: 20px;
+    z-index: 10;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 65px;
+}
+
+.como_usar{
+    position: relative;
+    z-index: 10;
+    left: -30px;
+    top: 650px;
+}
+
+.explicacao1{
+    position: absolute;
+    z-index: 8;
+    top: 30px;
+    max-width: 100%;
+}
+
+.explicacao2{
+    position: absolute;
+    left: 500px;
+    top: -90px;
+    max-width: 100%;
+}
+
+.explicacao3{
+    position: absolute;
+    top: 680;
+    right:10px;
+    max-width: 100%;
+}
+
+.seta1{
+    position: absolute;
+    left: 350px;
+    top: 50px;
+}
+
+.seta2{
+    position: absolute;
+    right: 400px;
+    top: 50px;
+    width: 200px;
+}
+
+.mao{
+    position: absolute;
+    top: 1100px;
+    z-index: 6;
+    width: 100%;
+}
+
+@media(min-width:450px) and (max-width:768px){
+    .textoPrincipal{
+        position: absolute;
+        top:150px;
+        z-index: 10;
+        left: 20px;
+        max-width: 1220px;
+    }
+    .notebookHome{
+        display: none;
+    }
+    .textoPrincipal > h1{
+        font-size: 2.8rem;
+    }
+    
+    .textoPrincipal > h3{
+        font-size: 1.1rem;
+    }
+    
+    .textoPrincipal > p{
+        font-size: 0.8rem;
+    }
+    .login{
+        height: 35px;  
+    }
+
+    img.artFundo{
+        display: none;
+    }
+    .artFundoMaior{
+        position: absolute;
+        top: 470px;
+        max-width: 100%;
+    }
+
+
+    
+}
+
+@media(min-width:0px) and (max-width:449px){
+    header{
+        background-color: white;
+    }
+    .imagemLateralCima > img{
+        top: -30px;
+        height: 600px;
+    }
+    .navHeader{
+        display: none;
+    }
+    .textoPrincipal{
+        position: absolute;
+        top:90px;
+        z-index: 10;
+        left: 20px;
+        max-width: 1220px;
+    }
+    .notebookHome{
+        display: none;
+    }
+    .textoPrincipal > h1{
+        font-size: 1.8rem;
+    }
+    
+    .textoPrincipal > h3{
+        font-size: 1.1rem;
+    }
+    
+    .textoPrincipal > p{
+        font-size: 0.8rem;
+    }
+    .login{
+        border-radius: 20px;
+        border: 1px black solid;
+        display: flex;
+        align-items: center;
+        height: 20px;
+        width: 110px;  
+    }
+    .login > div {
+        display: none;
+    }
+
+    .login > a {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    
+}
+
+@media(max-width:965px){
+    .notebookHome{
+        display: none;
+    }
+    .artFundo{
+        display: none;
+    }
+    .artFundoMaior{
+        position: absolute;
+        top: 470px;
+        max-width: 100%;
+    }
+    
+}
+
+@media(min-width:769px) and (max-width: 965) {
+
+}
+
+@media (min-width:966px) {
+    .artFundo{
+        width: 100%;
+        position: absolute;
+        z-index: 7;
+        top: 470px;
+    }
+    
+    .artFundoMaior{
+        display: none;   
+    }    
 }

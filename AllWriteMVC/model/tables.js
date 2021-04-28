@@ -1,4 +1,4 @@
-export class Tables {
+class Tables {
 
     init(conexao) {
         this.conexao = conexao
@@ -7,7 +7,7 @@ export class Tables {
     }
 
     cadastroTabela() {
-        const sql = "CREATE TABLE IF NOT EXISTS Register (id int NOT NULL AUTO_INCREMENT, usuario varchar(50) NOT NULL,  email varchar(50), nome varchar(50) NOT NULL, senha varchar(30) NOT NULL, estado varchar(20) NOT NULL, cidade varchar(50) NOT NULL,PRIMARY KEY(id))"
+        const sql = "CREATE TABLE IF NOT EXISTS Register(id INT UNSIGNED NOT NULL AUTO_INCREMENT, usuario varchar(50) NOT NULL,  email varchar(50), name varchar(50) NOT NULL, senha varchar(30) NOT NULL, estado varchar(20) NOT NULL, cidade varchar(50) NOT NULL, myFile varchar(500),dataCriacao datetime NOT NULL, acesso datetime NOT NULL, PRIMARY KEY(id))"
 
         this.conexao.query(sql, err => {
             if (err) {

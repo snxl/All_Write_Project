@@ -36,7 +36,7 @@
     </header>
     <main>
         <div class="formulario">    
-            <form action="/register" method="POST" enctype="application/x-www-form-urlencoded">
+            <form action="/register" method="POST" enctype="multipart/form-data">
             <h2 class="titulo_cadastro">CADASTRO</h2>
             <div class="cadastro">
                 <div class="inputs">
@@ -44,7 +44,7 @@
                         <label class="titulo_form" for = "usuario">Usuário</label>
                         <input type="text" class="campo_form" name="usuario" id="usuario" placeholder="m_assis"/>
                         <label class="titulo_form" for = "email">E-mail</label>
-                        <input type="email" class="campo_form" nome="email" id="email" placeholder="machadodeassis@mail.com"/>
+                        <input type="email" class="campo_form" name="email" id="email" placeholder="machadodeassis@mail.com"/>
                         <label class="titulo_form" for = "senha">Criar Senha</label>
                         <input type="password" class="campo_form" name="senha" id="senha" placeholder="Crie uma senha com no mínimo 8 caracteres"/>
                         <label class="titulo_form" for = "repetir_senha">Repetir Senha</label>
