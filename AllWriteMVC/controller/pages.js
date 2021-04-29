@@ -2,12 +2,12 @@ import Register from "../service/serviceRegister.js"
 
 const pages = {
     dashboardGET: (req, res, next) => {
-        if(req.cookies.login){
+        if(req.cookies.login == "true"){
             return res.render('dashboard', {
                 title: 'all write'
            })
         }else{
-            res.redirect("/register")
+         res.redirect("/register")
         }
     },
     dashboardPOST: (req, res)=>{
@@ -32,8 +32,6 @@ const pages = {
     },
     registerPOST:(req, res) => {
 
-        const logado = req.session.logado
-
         const file = req.file
 
         const {
@@ -46,13 +44,11 @@ const pages = {
             cidade
         } = req.body
 
-        const checkPassword = senha === repetir_senha
-
         if(!file){
             res.status(400).send("oops... favor checar imagem inserida")
         }
 
-        const myFile = file.path
+        const myFile = file.filename
 
         const dadosCadastro = {
             usuario,
@@ -66,20 +62,32 @@ const pages = {
         Register.adiciona(dadosCadastro, myFile)
 
         req.session.logado = true
+        req.session.imgPerfil = myFile
 
-        res.cookie("login", "true", {
-            maxAge: 86400    
+        const logado = req.session.logado
+        const perfilImg = req.session.imgPerfil
+
+        res.cookie("login", logado, {
+            maxAge: 86400000    
           })
-        res.cookie("ultimo acesso", new Date())
+
+        res.cookie("ultimo acesso", new Date(), {
+            maxAge: 86400000
+        })
+
+        res.cookie("imagePerfil", myFile)
 
         console.log(req.cookies)
 
         res.send({...dadosCadastro, ...file,  myFile})
     },
     profileGET: (req, res) => {
-        return res.render("profile", {
-            title: "all write"
+        res.render("profile", {
+            title: "all write",
+            imagePerfil: req.cookies.imagePerfil
         })
+
+        console.log(req.cookies.perfilImg)
     },
     profilePOST: (req, res) =>{
         return 
