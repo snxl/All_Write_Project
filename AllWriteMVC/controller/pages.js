@@ -1,14 +1,10 @@
-import Register from "../service/serviceRegister.js"
+import {register, myEmitter} from "../service/serviceRegister.js"
 
 const pages = {
     dashboardGET: (req, res, next) => {
-        if(req.cookies.login == "true"){
             return res.render('dashboard', {
                 title: 'all write'
            })
-        }else{
-         res.redirect("/register")
-        }
     },
     dashboardPOST: (req, res)=>{
 
@@ -59,7 +55,7 @@ const pages = {
             cidade
         }
 
-        Register.adiciona(dadosCadastro, myFile)
+        register.adiciona(dadosCadastro, myFile)
 
         req.session.logado = true
         req.session.imgPerfil = myFile
@@ -68,7 +64,7 @@ const pages = {
         const perfilImg = req.session.imgPerfil
 
         res.cookie("login", logado, {
-            maxAge: 86400000    
+            maxAge: 86400000   
           })
 
         res.cookie("ultimo acesso", new Date(), {
@@ -79,7 +75,16 @@ const pages = {
 
         console.log(req.cookies)
 
-        res.send({...dadosCadastro, ...file,  myFile})
+        myEmitter.on("SQL", (err)=>{
+            if(err.code){
+                res.send(`<h1>${err}</h1>`)
+            }
+        })
+
+        myEmitter.on("sucessSQL", ()=>{
+           return res.send({...dadosCadastro, ...file,  myFile})
+        })
+        
     },
     profileGET: (req, res) => {
         res.render("profile", {

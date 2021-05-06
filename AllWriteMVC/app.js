@@ -1,20 +1,24 @@
 import createError from 'http-errors';
+import http from "http"
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import session from "express-session"
+import { Server } from "socket.io";
 
 import connection from './config/mySQLConnection.js';
 import tables from './model/tables.js';
+import tables2 from "./model/livro.js"
 
 
 import indexRouter from './routes/index.js';
 import dashboardRouter from "./routes/dashboard.js"
 import registerRouter from './routes/register.js';
 import profileRouter from './routes/profile.js';
-import registerPOST from './routes/register.js';
+import validateRoute from './middlewares/privateRoutes.js';
+
 
 
 connection.connect(err => {
@@ -23,14 +27,24 @@ connection.connect(err => {
   }else{
       console.log("server connect")
 
+      tables2.init(connection)
       tables.init(connection)
   }
 })
 
 
 const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+io.on("connect", (socket)=>{
+  console.log("user connect")
+  socket.on("disconnect",(socket) => {
+    console.log("user disconnect")
+  })
+})
 
 app.use(session({
   secret: "All write project",
@@ -48,11 +62,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/dashboard', dashboardRouter);
+//PUBLIC MIDDLEWARES
+
+//PUBLIC ROUTES
+app.use('/',indexRouter);
 app.use('/register', registerRouter);
+
+//PRIVATE MIDDLEWARES
+app.use(validateRoute.login)
+//PRIVATE ROUTES
+app.use('/dashboard', dashboardRouter);
 app.use('/profile', profileRouter);
-app.use('/post', registerPOST);
+
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -71,4 +93,4 @@ app.use(function (err, req, res, next) {
 });
 
 
-export default app;
+export  {server};

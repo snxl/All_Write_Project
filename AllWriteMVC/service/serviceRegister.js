@@ -1,6 +1,11 @@
 import Tables from "../config/mySQLConnection.js" 
 import bcrypt from "bcryptjs"
 import moment from "moment"
+import EventEmitter from 'events';
+
+class MyEmitter extends EventEmitter {}
+
+const myEmitter = new MyEmitter();
 
 
 class Registro {
@@ -13,12 +18,15 @@ class Registro {
 
         Tables.query(sql, fullRegister, (err, results) => {
             if(err){
-                console.log(err)
+                myEmitter.emit("SQL", err)
             }else{
+                myEmitter.emit("sucessSQL", results)
                 console.log(results)
             }
         })
     }
 }
 
-export default new Registro
+const register = new Registro
+
+export {register, myEmitter}
