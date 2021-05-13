@@ -1,0 +1,58 @@
+body{
+    background-color: white;
+
+}
+
+.container{
+    box-shadow: 0px 0px 8px #ccc;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px ;
+    margin-left: auto;
+    padding-top: 40px;
+    float: right;
+    font-size: 16px;
+}
+/*entrar triângulo */
+
+
+.input_login{
+    border-radius: 10px;
+    width: 220px;
+    height: 20px;
+    padding: 5px;
+    width: 100;
+    color: #3E3E3E;
+    display: block;
+    margin-bottom: 15px;
+    outline: none;
+
+}
+
+.login_submit{
+
+        border-radius: 5px;
+        background-color: #FF8A5B ;
+        width: 150px;
+        text-align: center;
+        padding: 10px 20px;
+        color: #ffffff;
+        border: 0px;
+        display: block;
+        margin-bottom: 10px;
+        margin-left: 55px;
+        font-weight: bold;
+   
+      
+}
+
+.login_reset{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #7D7D7D;
+    margin-left: 75px;
+}
