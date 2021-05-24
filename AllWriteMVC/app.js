@@ -17,12 +17,19 @@ import indexRouter from './routes/index.js';
 import dashboardRouter from "./routes/dashboard.js"
 import registerRouter from './routes/register.js';
 import profileRouter from './routes/profile.js';
+<<<<<<< HEAD
 
 
 
 //MIDDLEWARE
 import validateRoute from './middlewares/privateRoutes.js';
 
+=======
+import validateRoute from './middlewares/privateRoutes.js';
+
+
+
+>>>>>>> f6b3b15ae3f7f510b5af9ca6ec6f32e8be969a56
 connection.connect(err => {
   if(err){
       console.log(err)

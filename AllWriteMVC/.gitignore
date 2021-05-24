@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 node_modules
 ./database/config/config.js
+=======
+node_modules
+>>>>>>> f6b3b15ae3f7f510b5af9ca6ec6f32e8be969a56
