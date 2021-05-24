@@ -1,32 +1,13 @@
 import register from "../service/serviceRegister.js"
 
-const pages = {
-    dashboardGET: (req, res, next) => {
-            return res.render('dashboard', {
-                title: 'all write'
-           })
-    },
-    dashboardPOST: (req, res)=>{
+class Index{
+    GET(req, res){
+        return res.render('register', {
+            title:"all write"
+        })
+    }
 
-    },
-    indexGET: (req, res)=>{
-        if(req.cookies.login == "true"){
-            res.redirect("/dashboard")
-        }else{
-            res.status(200).render("index", {})
-        }
-    },
-    indexPOST: () =>{
-
-        return
-    },
-    registerGET: (req, res) =>{
-            return res.render('register', {
-                title:"all write"
-            })
-        
-    },
-    registerPOST:async (req, res) => {
+    async POST(req, res){
 
         const file = req.file
 
@@ -41,7 +22,7 @@ const pages = {
         } = req.body
 
         if(!file){
-            res.status(400).send("oops... favor checar imagem inserida")
+            return res.status(400).send("oops... favor checar imagem inserida")
         }
 
         const myFile = file.filename
@@ -66,7 +47,7 @@ const pages = {
 
         res.cookie("login", logado, {
             maxAge: 86400000   
-          })
+        })
 
         res.cookie("ultimo acesso", new Date(), {
             maxAge: 86400000
@@ -79,18 +60,17 @@ const pages = {
         }else{
             return res.send(`<h1> Usuario ou e-mail já existente </h1>`)
         }
-    },
-    profileGET: (req, res) => {
-        res.render("profile", {
-            title: "all write",
-            imagePerfil: req.cookies.imagePerfil
-        })
+    }
 
-        console.log(req.cookies.perfilImg)
-    },
-    profilePOST: (req, res) =>{
-        return 
+    PUT(req, res){
+        return
+    }
+
+    DELETE(req, res){
+        return
     }
 }
 
-export default pages
+
+export default new Index
+    

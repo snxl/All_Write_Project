@@ -1,10 +1,12 @@
 import express from'express';
-import pages from'../controller/pages.js';
+import index from'../controller/index.js';
 const router = express.Router();
 
 
 /* GET home page. */
-router.get('/', pages.indexGET);
-router.post("/", pages.indexPOST)
+router.get('/', index.GET);
+//router.post("/", index.POST)
+//router.put("/", index.POST)
+//router.delete("/", index.DELETE)
 
 export default router;

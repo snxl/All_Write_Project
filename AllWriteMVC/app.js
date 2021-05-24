@@ -18,7 +18,6 @@ import dashboardRouter from "./routes/dashboard.js"
 import registerRouter from './routes/register.js';
 import profileRouter from './routes/profile.js';
 
-import sequelizeTest from './routes/sequelizeTeste.js';
 
 
 //MIDDLEWARE
@@ -70,8 +69,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 //PUBLIC ROUTES
 app.use('/',indexRouter);
 app.use('/register', registerRouter);
-
-app.use("/allDAta", sequelizeTest)
 
 //PRIVATE MIDDLEWARES
 app.use(validateRoute.login)
