@@ -4,15 +4,19 @@ import moment from "moment"
 
 
 class Registro {
-    async adiciona(register, myFile){
-        const sql = "INSERT INTO Register SET ?"
+    async adiciona(register){
         
-        const dataCriacao = moment().format("YYYY-MM-DD HH:MM:SS")
-        const acesso = moment().format("YYYY-MM-DD HH:MM:SS")
+        const createDate = moment().format("YYYY-MM-DD HH:MM:SS")
 
-        register.senha = bcrypt.hashSync(register.senha, 12)
+        const lastAcess = moment().format("YYYY-MM-DD HH:MM:SS")
 
-        const fullRegister = {...register, myFile, dataCriacao, acesso}
+        register.password = bcrypt.hashSync(register.password, 12)
+
+        const imageRoute = "undefined"
+
+        const credential = 0
+
+        const fullRegister = {...register, imageRoute, credential, createDate, lastAcess}
 
         const checkEmail = await sequelize.Registro.findOne({
             where:{
@@ -22,9 +26,11 @@ class Registro {
 
         const checkUser = await sequelize.Registro.findOne({
             where:{
-                usuario: register.email
+                user: register.email
             }
         })
+
+        console.log(checkEmail, checkUser)
 
         if(!checkEmail && !checkUser){
             const insert = await sequelize.Registro.create(fullRegister)

@@ -13,7 +13,7 @@ class Tables {
     }
 
     cadastroTabela() {
-        const sql = "CREATE TABLE IF NOT EXISTS Register(id INT AUTO_INCREMENT, usuario varchar(50) NOT NULL UNIQUE,  email varchar(50) UNIQUE, name varchar(50) NOT NULL, senha varchar(200) NOT NULL, estado varchar(20) NOT NULL, cidade varchar(50) NOT NULL, myFile varchar(500),dataCriacao datetime NOT NULL, acesso datetime NOT NULL, PRIMARY KEY(id))"
+        const sql = "CREATE TABLE IF NOT EXISTS Register(id INT AUTO_INCREMENT, user varchar(50) NOT NULL UNIQUE,  name varchar(50) NOT NULL, email varchar(90) NOT NULL UNIQUE, password varchar(200) NOT NULL, imageRoute varchar(500), credential INT NOT NULL , createDate DATETIME NOT NULL, lastAcess DATETIME NOT NULL, PRIMARY KEY(id))"
 
         this.conexao.query(sql, err => {
             if (err) {

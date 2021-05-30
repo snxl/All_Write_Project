@@ -1,6 +1,8 @@
+import sequelize from "../database/models/index.js"
+
 class Profile{
     GET(req, res){
-        return res.render('dashboard', {
+        return res.render('profile', {
             title: 'all write'
        })
     }

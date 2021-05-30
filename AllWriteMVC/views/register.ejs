@@ -36,8 +36,16 @@
     </header>
     <main>
         <div class="formulario">    
+
             <form action="/register" method="POST" enctype="multipart/form-data">
+                
             <h2 class="titulo_cadastro">CADASTRO</h2>
+            <%if(erro1){%>
+                <p><%=erro1%></p>
+            <%}%>
+            <%if(erro2){%>
+                <p><%=erro2%></p>
+            <%}%>
             <div class="cadastro">
                 <div class="inputs">
                     <div class="form">

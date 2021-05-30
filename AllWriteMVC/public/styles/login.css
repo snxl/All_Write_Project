@@ -1,20 +1,26 @@
+
+
 body{
     background-color: white;
-
+    min-height:100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+
 .container{
+
     box-shadow: 0px 0px 8px #ccc;
     background-color: #ffffff;
     padding: 30px;
     border-radius: 15px;
     text-align: left;
-    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
     width: 250px ;
-    margin-left: auto;
     padding-top: 40px;
-    float: right;
     font-size: 16px;
 }
 /*entrar triângulo */

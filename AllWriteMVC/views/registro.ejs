@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/registro.css">
+    <link rel="stylesheet" href="css registro/style.css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <title>Registro</title>
+
+</head>
+<body>
+    <form action="/registro" method="POST" enctype="application/x-www-form-urlencoded">
+        <div class="container">
+            <p><strong>CADASTRE-SE e tenha acesso a milhares de livros em nossa comunidade</strong> </p>
+
+                <div class="grupo_usuario">
+                    <label for="input_user">Usuário</label>
+                    <%if(erro1){%>
+                        <input class="error_input" type="text" name="user" id="input_user">
+                        <p class="p_error"><%=erro1%></p>
+                    <%}else{%>
+                        <input class="input_field" type="text" name="user" id="input_user">
+                    <%}%>
+                </div>
+
+              
+                 <div class="grupo_identificação">
+                    <label for="input_name">Nome Completo</label>
+                    <%if(erro2){%>
+                        <input class="error_input" type="text" name="name" id="input_name">
+                        <p class="p_error"><%=erro2%></p>
+                    <%}else{%>
+                        <input class="input_field" type="text" name="name" id="input_name">
+                    <%}%>
+
+                 </div>
+
+                 <div class="grupo_identificação">
+                    <label for="input_email">Endereço de E-mail</label> 
+                    <%if(erro3){%>
+                        <input class="error_input" type="email" name="email" id="input_email">
+                        <p class="p_error"><%=erro3%></p>
+                    <%}else{%>
+                        <input class="input_field" type="email" name="email" id="input_email">
+                    <%}%>
+                </div>
+                               
+                <div class="grupo_senha">
+
+                        <div class="grupo_senha1">
+                            <label for="input_password">Senha</label>
+                            <%if(erro4){%>
+                                <input class="error_password" type="password" name="password" id="input_password">
+                                <p class="p_error"><%=erro4%></p>
+                            <%}else{%>
+                                <input class="input_password" type="password" name="password" id="input_password">
+                            <%}%>
+                        </div>
+        
+                        <div class="grupo_senha2">
+                            <label for="input_check_password">Repetir Senha</label> 
+                            <%if(erro5){%>
+                                <input class="error_password" type="password" name="checkPassword" id="input_password">
+                                <p class="p_error"> <wbr><%=erro5%><wbr></p>
+                            <%}else{%>
+                                <input class="input_password" type="password" name="checkPassword" id="input_password">
+                            <%}%>
+                        </div> 
+                         
+                </div>
+
+                <div class="userTerm">
+                    <input type="checkbox" class="radios" name="terms" id="terms" value="true" data-terms="" required>
+                    <label for="terms" class="use_terms" href="#">Concordo com os <a href="#" class="term_radio">Termos</a> de Uso</label>
+                </div>
+                
+                <div class="send"> <button  class="login_register">CADASTRAR</button></div>
+        
+            
+        </div>
+    </form>
+</body>
+</html> 

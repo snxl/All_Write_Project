@@ -5,41 +5,37 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
-        usuario: {
+        user: {
             type: DataTypes.STRING(50),
             allowNull:true,
             unique:true
         },
-        email:{
-            type: DataTypes.STRING(50),
-            allowNull:false,
-            unique:true
-        },
         name:{
             type: DataTypes.STRING(50),
-            allowNull:true, 
+            allowNull:true
         },
-        senha:{
+        email:{
+            type: DataTypes.STRING(90),
+            allowNull:true, 
+            unique:true
+        },
+        password:{
             type: DataTypes.STRING(200),
             allowNull:true
         },
-        estado:{
-            type: DataTypes.STRING(20),
-            allowNull:true
-        },
-        cidade:{
-            type: DataTypes.STRING(50),
-            allowNull:true
-        },
-        myFile:{
+        imageRoute:{
             type: DataTypes.STRING(500),
             allowNull:false
         },
-        dataCriacao:{
+        credential:{
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        createDate:{
             type: DataTypes.DATE,
             allowNull:true
         },
-        acesso:{
+        lastAcess:{
             type: DataTypes.DATE,
             allowNull:true
         }

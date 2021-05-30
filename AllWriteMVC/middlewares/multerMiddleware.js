@@ -1,12 +1,14 @@
 import multer from "multer"
 
-import multerConfig from "../config/multer.js"
+import storage from "../config/multer.js"
 
-const upload = multer({storage: multerConfig})
+const upload = multer({storage})
 
 const opcoesMulter = {
 
-    singlePublicUploads: upload.single("myFile")
+    singlePublicUploads: upload.single("myFile"),
+
+    any: upload.any()
 
 }
 

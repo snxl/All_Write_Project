@@ -19,15 +19,13 @@
     "http": "^0.0.1-security",
     "http-errors": "~1.6.3",
     "http2": "^3.3.7",
+    "method-override": "^3.0.0",
     "moment": "^2.29.1",
     "morgan": "~1.9.1",
     "multer": "^1.4.2",
     "mysql": "^2.18.1",
-<<<<<<< HEAD
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2",
-=======
->>>>>>> f6b3b15ae3f7f510b5af9ca6ec6f32e8be969a56
     "socket.io": "^4.0.1",
     "yup": "^0.32.9"
   }

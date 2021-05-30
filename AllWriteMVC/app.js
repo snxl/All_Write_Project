@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import session from "express-session"
 import { Server } from "socket.io";
+import methodOverride from "method-override"
 
 import connection from './config/mySQLConnection.js';
 import tables from './model/tables.js';
@@ -17,19 +18,12 @@ import indexRouter from './routes/index.js';
 import dashboardRouter from "./routes/dashboard.js"
 import registerRouter from './routes/register.js';
 import profileRouter from './routes/profile.js';
-<<<<<<< HEAD
-
-
+import loginRouter from "./routes/login.js"
+import resgistroRouter from "./routes/registros.js"
 
 //MIDDLEWARE
 import validateRoute from './middlewares/privateRoutes.js';
 
-=======
-import validateRoute from './middlewares/privateRoutes.js';
-
-
-
->>>>>>> f6b3b15ae3f7f510b5af9ca6ec6f32e8be969a56
 connection.connect(err => {
   if(err){
       console.log(err)
@@ -70,20 +64,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride("_method"))
 
 //PUBLIC MIDDLEWARES
 
 //PUBLIC ROUTES
 app.use('/',indexRouter);
 app.use('/register', registerRouter);
+app.use("/login", loginRouter)
+app.use("/registro", resgistroRouter)
 
 //PRIVATE MIDDLEWARES
 app.use(validateRoute.login)
 //PRIVATE ROUTES
 app.use('/dashboard', dashboardRouter);
 app.use('/profile', profileRouter);
-
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

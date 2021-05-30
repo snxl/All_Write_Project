@@ -1,37 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 
+input{
+    outline: none;
+    border: #a06d59 solid 1.9px;
+}
 
 body{
     background-color: white;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container{
-    box-shadow: 0px 0px 8px #ccc;
+    box-shadow: 0px 49px 60px #ccc;
     background-color: #ffffff;
     padding: 30px;
     border-radius: 15px;
     text-align: center;
     margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 400px ;
-    height: 400px;
+    max-width: 26vw ;
+    min-height: 1vh;
     margin-left: auto;
     padding-top: 40px;
     float: right;
     font-size: 16px;
-
+    border-style:solid ;
+    border-color: rgb(207 202 202);
     
 }
 
 p{
-    margin-bottom: 30px;
-    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
-.grupo_senha{
+.grupo_usuario, .grupo_senha{
+    margin-bottom: 7px;
     text-align: left;
 }
 
@@ -44,16 +57,28 @@ p{
 }
 
 .grupo_senha{
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     margin-top: 20px;
     margin-bottom: 15px;
 }
 
+.grupo_senha1, .grupo_senha2{
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo_senha1 > label, .grupo_senha2 > label{
+    margin-bottom: 5px;
+    text-align: center;
+    white-space: nowrap;
+}
 
 .input_field{
     border-radius: 8px;
-    width: 380px;
-    height: 20px;
+    width: 24.6vw;
+    height: 16px;
     padding: 5px;
     outline: 0;
     color: #7D7D7D;
@@ -61,7 +86,7 @@ p{
 
 .input_password{
     border-radius: 8px;
-    width: 100px;
+    width: 9vw;
     height: 20px;
     padding: 5px;
     color: #7D7D7D;
@@ -73,11 +98,20 @@ p{
     margin-top: 10px;
     font-size: 12px;
     color: #7D7D7D;
-    margin-left: 65px;
+    margin-left: 25px;
     margin-bottom: 20px;
 }
 
+.send{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .login_register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
     background-color: #FF8A5B ;
     width: 150px;
@@ -85,10 +119,89 @@ p{
     padding: 10px 20px;
     color: #ffffff;
     border: 0px;
-    display: block;
-    margin-bottom: 10px;
-    margin-left: 140px;
+
     font-weight: bold;
     margin-top: 25px;
     cursor: pointer;
+}
+
+.term_radio{
+    text-decoration: none;
+}
+
+.erro{
+    background-color: rgb(242 103 34);
+    width: 300px;
+    height: 48px;
+    border-radius: 10px;
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.erro > p{
+    padding-top: 15px;
+}
+
+.error_input{
+    border-radius: 8px;
+    width: 24.6vw;
+    height: 20px;
+    padding: 5px 5px 0px 5px;
+    outline: 0;
+    border-color: #fa2828;
+}
+
+.p_error{
+    color: #fa2828;
+    text-align: center;
+    padding-bottom: 0px;
+    padding-top: 3px;
+    margin: 0px;
+}
+
+.grupo_senha1, .grupo_senha2{
+    max-width: 9vw;
+}
+
+.error_password{
+    border-radius: 8px;
+    width: 9vw;
+    height: 20px;
+    padding: 5px;
+    border-color: #fa2828;
+    outline: none;
+}
+
+@media (max-width: 700px) {
+
+    .grupo_senha1, .grupo_senha2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grupo_usuario, .grupo_identificação{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 40vw;
+    }
+
+    .grupo_senha{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

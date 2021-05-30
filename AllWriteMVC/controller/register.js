@@ -3,7 +3,14 @@ import register from "../service/serviceRegister.js"
 class Index{
     GET(req, res){
         return res.render('register', {
-            title:"all write"
+            title:"all write",
+            erro1:false,
+            erro2:false,
+            erro3:false,
+            erro4:false,
+            erro5:false,
+            erro6:false,
+            erro7:false,
         })
     }
 
