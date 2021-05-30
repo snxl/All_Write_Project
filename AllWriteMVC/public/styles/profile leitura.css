@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body,
+ul,
+li,
+p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    border: 1px solid #cacaca;
+}
+
+.logotipo {
+    position: absolute;
+    width: 94px;
+    height: 60px;
+    left: 89px;
+    top: 14px;
+}
+
+.logoVetor {
+    position: absolute;
+    width: 165px;
+    height: 40px;
+    left: 1500px;
+    top: 30px;
+    background: #FFFFFF;
+    border: 1px solid #C2C2C2;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.nomeVetor {
+    position: absolute;
+    width: 76px;
+    height: 14px;
+    left: 45px;
+    top: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #696767;
+}
+
+.menu {
+    display: flex;
+
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+
+}
+
+.search {
+    position: initial;
+    width: 404px;
+    height: 40px;
+    margin-right: 350px;
+    margin-top: 0px;
+    background: #ffffff;
+    border-radius: 20px;
+    border-color: #ddd9d9;
+}
+
+.minhasPublicacoes {
+    position: absolute;
+    width: 175px;
+    height: 23px;
+    left: 398px;
+    top: 240px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: #3e3e3e;
+    text-justify: distribute;
+}
+
+.mpLivro1 {
+    position: absolute;
+    width: 80px;
+    height: 123.81px;
+    top: 300px;
+    left: 398px;
+    border-radius: 15px;
+    background: url(baixar-livro-a-viagem-de-cilka-o-tatuador-de-auschwitz-vol-02-heather-morris-em-pdf-epub-mobi-ou-ler-online-174x270.jpg);
+
+}
+
+.nomeLivro1 {
+    position: absolute;
+    width: 115px;
+    height: 21px;
+    left: 492px;
+    top: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+}
+
+.dataPublicacao1 {
+    position: absolute;
+    width: 102px;
+    height: 16px;
+    left: 492px;
+    top: 320px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.view1 {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 494px;
+    top: 340px;
+}
+
+.mpLivro2 {
+    position: absolute;
+    width: 80px;
+    height: 123.81px;
+    top: 300px;
+    left: 638px;
+}
+
+.nomeLivro2 {
+    position: absolute;
+    width: 115px;
+    height: 21px;
+    left: 728px;
+    top: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+    color: #3E3E3E;
+}
+
+.dataPublicacao2 {
+    position: absolute;
+    width: 102px;
+    height: 16px;
+    left: 731px;
+    top: 320px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.view2 {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 731px;
+    top: 340px;
+}
+
+.minhaLeitura {
+    position: absolute;
+    width: 127px;
+    height: 23px;
+    left: 398px;
+    top: 470px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: #3E3E3E;
+}
+
+.mlLivro1 {
+    position: absolute;
+    width: 100px;
+    height: 155.17px;
+    left: 398px;
+    top: 530px;
+}
+
+.mlLivro2 {
+    position: absolute;
+    width: 100px;
+    height: 155.17px;
+    left: 638px;
+    top: 530px;
+    border-radius: 20px;
+}
+
+.mlLivro3 {
+    position: absolute;
+    width: 100px;
+    height: 155.17px;
+    left: 878px;
+    top: 530px;
+    border-radius: 20px;
+}
+
+.mlLivro4 {
+    position: absolute;
+    width: 100px;
+    height: 155.17px;
+    left: 1118px;
+    top: 530px;
+    border-radius: 20px;
+}
+
+
+.fotoUsuario {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    left: 69px;
+    top: 175px;
+}
+
+.Username {
+    position: absolute;
+    width: 193px;
+    height: 28px;
+    left: 69px;
+    top: 396px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #3e3e3e;
+    text-align: center;
+}
+
+.boxTexting {
+    position: absolute;
+    width: 190px;
+    height: 152px;
+    left: 69px;
+    top: 434px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: justify;
+    border: none;
+}
+
+.blobsTopo {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: 0px;
+    margin-top: 503px;
+}
+
+.rodape {
+    position: absolute;
+    width: 1917px;
+    height: 89px;
+    background: #FFFFFF;
+    border: 1px solid #CACACA;
+    top: 845px;
+}
+
+.boasVindas {
+    font-size: 13px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #3e3e3e;
+}
+
+.colorStatus1 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 69px;
+    top: 555px;
+    background: #4CA1DE;
+    border-radius: 3px;
+}
+
+.colorStatus2 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 104px;
+    top: 555px;
+    background: #F41EC5;
+    border-radius: 3px;
+}
+
+.colorStatus3 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 139px;
+    top: 555px;
+    background: #84BD57;
+    border-radius: 3px;
+}
+
+.suaBiblioteca {
+    position: absolute;
+    width: 277px;
+    height: 556px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 10px 10px 0px;
+    margin-top: 850px;
+}
+
+.nomeSuaBiblioteca{
+    position: absolute;
+    width: 148px;
+    height: 25px;
+    left: 22px;
+    top: 144px;    
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    color: #3E3E3E; 
+}
+
+.nomeLivro{
+    position: absolute;
+    width: 152px;
+    height: 25px;
+    left: 395px;
+    top: 140px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 25px;
+    color: #3E3E3E;
+}
+
+.campoLeitura{
+    position: absolute;
+    width: 864px;
+    height: 560px;
+    left: 385px;
+    top: 187px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
