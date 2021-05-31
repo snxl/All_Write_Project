@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 *{
   padding: 0;
@@ -423,6 +424,8 @@ padding: 30px;
 
 }
 =======
+=======
+>>>>>>> 4dd14287304dac070d2f1c9df8bca389e49f3998
 body, ul, li, p{
     margin: 0px;
     padding: 0px;  
@@ -748,5 +751,9 @@ a{
     top: 555px;
     background: #84BD57;
     border-radius: 3px;
+<<<<<<< HEAD
     }
 >>>>>>> f6b3b15ae3f7f510b5af9ca6ec6f32e8be969a56
+=======
+    }
+>>>>>>> 4dd14287304dac070d2f1c9df8bca389e49f3998
