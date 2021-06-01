@@ -1,5 +1,3 @@
-
 node_modules
-./database/config/config.js
-./controller/testesSequelize.js
-./routes/sequelize.js
+controller/testesSequelize.js
+database/config/config.js
