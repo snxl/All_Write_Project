@@ -43,5 +43,11 @@ module.exports = (sequelize, DataTypes) => {
         tableName: "Register",
         timestamps: false
     })
+
+    Register.associate = (model) =>{
+        Register.hasOne(model.Autores,{
+            
+        })
+    }
     return Register
 }
