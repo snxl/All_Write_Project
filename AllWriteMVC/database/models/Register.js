@@ -44,10 +44,5 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     })
 
-    Register.associate = (model) =>{
-        Register.hasOne(model.Autores,{
-            
-        })
-    }
     return Register
 }

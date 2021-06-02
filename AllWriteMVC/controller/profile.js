@@ -1,5 +1,3 @@
-import sequelize from "../database/models/index.js"
-
 class Profile{
     GET(req, res){
         return res.render('profile', {

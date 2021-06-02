@@ -12,10 +12,10 @@ import methodOverride from "method-override"
 
 import indexRouter from './routes/index.js';
 import dashboardRouter from "./routes/dashboard.js"
-import registerRouter from './routes/register.js';
 import profileRouter from './routes/profile.js';
 import loginRouter from "./routes/login.js"
 import resgistroRouter from "./routes/registros.js"
+import teste from "./routes/testesSequelize.js"
 
 //MIDDLEWARE
 import validateRoute from './middlewares/privateRoutes.js';
@@ -55,9 +55,9 @@ app.use(methodOverride("_method"))
 
 //PUBLIC ROUTES
 app.use('/',indexRouter);
-app.use('/register', registerRouter);
 app.use("/login", loginRouter)
-app.use("/registro", resgistroRouter)
+app.use("/register", resgistroRouter)
+app.use("/teste", teste)
 
 //PRIVATE MIDDLEWARES
 app.use(validateRoute.login)

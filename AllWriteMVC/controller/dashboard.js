@@ -1,6 +1,6 @@
 class Dashboard{
     GET(req, res){
-        res.render("profile", {
+        res.render("dashboard", {
             title: "all write",
             imagePerfil: req.cookies.imagePerfil
         })

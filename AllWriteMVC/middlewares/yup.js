@@ -3,6 +3,9 @@ import * as  yup  from  'yup'
 class Validation{
 
     register(req, res, next) {
+
+        console.log(req.body.name)
+
         const schema = yup.object().shape({
             user: yup.string().required("inserir usuario"),
             name: yup.string().required("inserir nome"),

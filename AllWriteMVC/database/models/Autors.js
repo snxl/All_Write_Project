@@ -21,7 +21,12 @@ module.exports = (sequelize, DataTypes) => {
     Autores.associate = (model)=>{
         Autores.belongsTo(model.Registro, {
             foreignKey: "register_id",
-            as: "Registro"
+            as: "Registros_register"
+        })
+
+        Autores.hasOne(model.Biblioteca, {
+            foreignKey: "register_id",
+            as: "Registros_library"
         })
     }
 
