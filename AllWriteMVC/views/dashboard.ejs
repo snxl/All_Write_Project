@@ -1,220 +1,322 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/dashboard.css" />
-    <link rel="shortcut icon" href="../img/allwrite_favicon_branco.ico" />
-    <title>All Write</title>
-  </head>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Write</title>
+  <link rel="shortcut icon" href="../img/allwrite_favicon_branco.ico" />
+  <link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+<body>
+  <header>
+    <a href="../index.ejs"><img class="fotoHeader" src="../img/logo.svg" alt="Logo" /></a>
+    <img class="menuMobile" src="../img/menuMobile.svg" alt="menuMobile">
+    <nav class="navHeader">
+      <div class="explorar">
+        <a href="#">Explorar</a>
+        <img src="../img/setaExplorar.svg" alt="setaExplorar" />
+      </div>
+      <div>
+        <a href="#">Sobre</a>
+      </div>
+    </nav>
+    <div class="login">
+      <div>
+        <img src="../img/usuario.svg" id="foto_usuario" alt="foto campo login" />
+      </div>
+      <div>
+        <span id="usuario">Usuário XPTO</span>
+      </div>
+      <div>
+        <a href="#"><img src="../img/gear.svg" id="usuario_config"></a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="banner">
+      <img src="../img/livros1.jpg" id="img_banner">
+    </div>
 
-  <body>
-    <header>
-      <div class="logoHeader">
-        <button  class="menu">
-          <img src="../img/menu.svg" alt="menuFoto">
-        </button>
-        <img src="../img/logo.jpeg" alt="Logo do site" />
+    <div class="categories">
+      <h2>Categorias</h2>
+      <div class="select_categories">
+        <a href="#"><button id="botao_genero" type="button"><span>Aventura</span><img src="../img/icon_aventura.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Ficção</span><img src="../img/icon_ficcao.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Infantil</span><img src="../img/icon_infantil.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Biografia</span><img src="../img/icon_biografia.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Exatas</span><img src="../img/icon_exatas.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Ação</span><img src="../img/icon_acao.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Poesia</span><img src="../img/icon_poesia.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Suspense</span><img src="../img/icon_suspense.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Mistério</span><img src="../img/icon_misterio.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Humanas</span><img src="../img/icon_humanas.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Fantasia</span><img src="../img/icon_fantasia.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Romance</span><img src="../img/icon_romance.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Terror</span><img src="../img/icon_terror.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Espiritual</span><img src="../img/icon_espiritual.svg"></button></a>
+        <a href="#"><button id="botao_genero" type="button"><span>Outras</span><img src="../img/icon_outras.svg"></button></a>
       </div>
-      <div class="profile">
-        <img src="../img/profile.webp" alt="imagem profile" />
-        <a href="#">Entrar</a>
-        <a href="./register">Cadastrar</a>
+    </div>
+
+    <div class="highlights">
+      <h2>Livros em Destaque</h2>
+        <div class="listaDestaque">
+          <button class="botaoDestaque">
+            <img src="../img/setaEsquerda.svg" alt="seta esquerda" />
+          </button>
+          <div class="listaDestaque_1"><a href="#">
+            <img src="../img/livro1.svg" alt="img" /></a>
+          </div>
+          <div class="listaDestaque_2"><a href="#">
+            <img src="../img/livro2.svg" alt="img" /></a>
+          </div>
+          <div class="listaDestaque_3"><a href="#">
+            <img src="../img/livro3.svg" alt="img" /></a>
+          </div>
+          <div class="listaDestaque_4"><a href="#">
+            <img src="../img/livro4.svg" alt="img" /></a>
+          </div>
+          <div class="listaDestaque_5"><a href="#">
+            <img src="../img/livro5.svg" alt="img" /></a>
+          </div>
+          <button class="botaoDestaque">
+            <img src="../img/setadireita.svg" alt="seta direita" />
+          </button>
+        </div>
+    </div>
+      
+    <div class="maisLidosNaSemana"> 
+      <h2>Mais lidos da semana</h2>
+      <div class="livroMaisLidoNaSemana1">
+        <img src="../img/livroMaisLidoNaSemana1.svg">
+      
+        <div class="info_livroMaisLidoNaSemana1">
+          <div class="txt_livroMaisLidoNaSemana1">  
+            <p><h1>A memória de Babel</h1></p><br>
+            <p><h2>Autora: Christelle Dabos</h2></p><br>
+            <span>Ophélie está isolada na arca de Anima há quase três anos, onde vive uma existência sem emoções. Mas, encorajada por novas revelações do livro de Farouk e por um segredo que pode ser a chave entre passado e futuro, é chegada a hora de agir.
+                  Sob uma identidade falsa, ela viaja até Babel, uma arca ultramoderna e cosmopolita, habitada pelos mais suspeitos residentes. Composta por mais de mil ilhas e conhecida como “a joia do universo”, a arca esconde inúmeras armadilhas atrás de seus rígidos regulamentos.           
+                  Ophélie precisa usar todas as suas forças...
+            </span></p>
+          </div>
+          <div class="views_rating">
+              <img id="views" src="../img/viewsIcon.svg">
+              <h3>114 views</h3>
+              <img id="rating" src="../img/ratingIcon.svg">
+              <h3>8,5685</h3>
+          </div>
+        </div> 
       </div>
-    </header>
-    <main>
-      <section>
-        <article>
-          <form action="/pesquisa" method="POST" class="pesquisa">
-            <input type="text" placeholder="Digite aqui o livro procurado" />
-          </form>
-        </article>
-      </section>
-      <section>
-        <article>
-          <div class="carrocel">
-            <div>
-              <ul type="none" class="listaCarrocel">
-                <li>
-                  <div class="carrocelImg">
-                    <img src="#" alt="imagem do carrocel" />
-                  </div>
-                  <div>
-                    <p class="carrocelTxt">
-                      texto do carrocel/usar JS ao passar mouse em cima aparecer
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="carroceltexto"></div>
+      <div class="boxLivrosMaisLidosNaSemana">
+        <div class="LivroMaisLidoNaSemana2">
+          <img src="../img/LivroMaisLidoNaSemana2.svg">
+            <div class="txt_boxLivroMaisLidoNaSemana">
+              <p><h2>Os noivos do inverno: 1 </h2></p><br>
+              <p><h3>Autora: Christelle Dabos</h3></p><br>
+              <p><h4>Honesta e cabeça-dura, Ophélie não se importa com as aparências. Mas, por baixo de seus óculos de aros largos e cachecol desgastado, a garota esconde poderes únicos: ela pode ler o passado dos objetos e atravessar espelhos. A vida tranquila que leva em Anima se transforma quando Ophélie é prometida em casamento a Thorn, herdeiro...</h4></p>
           </div>
-        </article>
-      </section>
-      <section>
-        <article>
-          <div id="principal">
-            <h1>Livro de destaque</h1>
+        </div>
+        <div class="LivroMaisLidoNaSemana3">
+          <img src="../img/LivroMaisLidoNaSemana3.svg">
+          <div class="txt_boxLivroMaisLidoNaSemana">
+            <p><h2>O Timbre: 3</h2></p><br>
+            <p><h3>Autor: Neal Shusterman</h3></p><br>
+            <p><h4>A humanidade alcançou um mundo ideal em que não há fome, doenças, guerras, miséria… nem morte. Mas, mesmo com todo o esforço da inteligência artificial da Nimbo-Cúmulo, parece que alguns problemas humanos, como a corrupção e a sede de poder, também são imortais. Desde que o ceifador Goddard começou a ganhar seguidores da nova ordem, entusiastas do prazer de matar...</h4></p>
           </div>
-          <div class="listaDestaque">
-            <button class="botaoDestaque">
-              <img src="../img/setaEsquerda.svg" alt="seta direita" />
-            </button>
-            <div class="um">
-              <img src="" alt="img" />
-            </div>
-            <div class="dois">
-              <img src="" alt="img" />
-            </div>
-            <div class="tres">
-              <img src="" alt="img" />
-            </div>
-            <div class="quartro">
-              <img src="" alt="img" />
-            </div>
-            <div class="cinco">
-              <img src="" alt="img" />
-            </div>
-            <button class="botaoDestaque">
-              <img src="../img/setadireita.svg" alt="seta direita" />
-            </button>
-          </div>
-        </article>
-      </section>
-      <section>
-        <article>
-          <h2 class="tituloGenero">Genêros</h2>
-          <div class="categorias">
-            <div class="coluna1">
-              <div>
-                <a href=""> Aventura </a>
-              </div>
-              <div>
-                <a href=""> Romance </a>
-              </div>
-              <div>
-                <a href=""> Terror </a>
-              </div>
-            </div>
-            <div class="coluna2">
-              <div>
-                <a href=""> Jovens / Adultos </a>
-              </div>
-              <div>
-                <a href=""> Mistério </a>
-              </div>
-              <div>
-                <a href=""> Biografia </a>
-              </div>
-            </div>
-            <div class="coluna3">
-              <div>
-                <a href=""> Auto ajuda </a>
-              </div>
-              <div>
-                <a href=""> Música </a>
-              </div>
-              <div>
-                <a href=""> História </a>
-              </div>
-            </div>
-            <div class="coluna4">
-              <div>
-                <a href=""> Ficção científica </a>
-              </div>
-              <div>
-                <a href=""> Política </a>
-              </div>
-              <div>
-                <a href=""> Mitologia </a>
-              </div>
+        </div>
+          <div class="LivroMaisLidoNaSemana4">
+            <img src="../img/LivroMaisLidoNaSemana4.svg">
+            <div class="txt_boxLivroMaisLidoNaSemana">
+              <p><h2>As Crônicas de Olam - Volume 2</h2></p><br>
+              <p><h3>Autor: L. L. Wurlitzer</h3></p><br>
+              <p><h4>A inesperada queda da cidade branca e o vácuo de poder provocam um estado de guerra generalizada entre as cidades de Olam. O caos avança enquanto dragões e behemots se enfrentam em batalhas mortais. Apesar de vitoriosos, os shedins são forçados a recuar para a cortina de trevas afim de se recuperarem das baixas causadas...</h4></p>
             </div>
           </div>
-        </article>
-      </section>
-      <section>
-        <article>
-          <div class="texts">
-            <span class="alinharSpan">
-              <h2 class="tituloResenha">Resenhas</h2>
-              <h2 class="toper">Top Perfis</h2>
-              <h2 class="count">Contador</h2>
-            </span>
-          </div>
-          <div class="final">
-            <div class="baixo">
-              <div class="resenhas">
-                <div class="resenha1">
-                  <div class="divResenha">
-                    <img src="" alt="img" />
-                  </div>
-                  <div>
-                    <p>
-                      Neque porro quisquam est qui dolorem ipsum quia dolor sit
-                      amet, consectetur, adipisci velit
-                    </p>
-                  </div>
+      </div> 
+    </div>
+
+    <div class="exploreLivrosNaComunidade">
+      <h2>Explore livros na comunidade</h2>
+      <div class="livros_comunidade">
+        
+        <div class="livro_comunidade"> <a href="#">
+          <img src="../img/livro_comunidade1.svg"></a>
+          <div class="info_livro_comunidade">
+            <h3>Nome do Livro Loren</h3><br>
+            <div class="info2_livro_comunidade">
+              <div id="views_rating_comunidade">
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/viewsIcon.svg">
+                  <h5>114 views</h5>
                 </div>
-                <div class="resenha2">
-                  <div class="divResenha">
-                    <img src="" alt="img" />
-                  </div>
-                  <div>
-                    <p>
-                      Neque porro quisquam est qui dolorem ipsum quia dolor sit
-                      amet, consectetur, adipisci velit
-                    </p>
-                  </div>
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/ratingIcon.svg">
+                  <h5>8,5685</h5>
                 </div>
               </div>
-              <div class="lateralCompleta">
-                <div class="baixoDireita">
-                  <div>
-                    <div class="topPerfis">
-                      <button>
-                        <a href="./profile">Marcelo Gamon</a>
-                      </button>
-                      <button>
-                        <a href="./profile">Paloma Lima</a>
-                      </button>
-                      <button>
-                        <a href="./profile">Barbara Fernandez</a>
-                      </button>
-                      <button>
-                        <a href="./profile">Nicolas Soares</a>
-                      </button>
-                      <button>
-                        <a href="./profile">Ariel Pellegrino</a>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="lateralDireita">
-                    <div class="contador">
-                      <p>Nº Paginas</p>
-                    </div>
-                    <div class="redes">
-                      <p>Sigam-nos</p>
-                      <div class="espacoRedes"></div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <h2>Sorteio</h2>
-                    <div class="sorteio"></div>
-                  </div>
-                </div>
-              </div>
+              <h3>Romance</h3>
             </div>
           </div>
-        </article>
-      </section>
-    </main>
-    <footer>
-      <div class="footer1"></div>
-      <div class="footer2"></div>
-      <div class="footer3"></div>
-    </footer>
-  </body>
+        </div>
+
+        <div class="livro_comunidade">  <a href="#">
+          <img src="../img/livro_comunidade2.svg"> </a>
+          <div class="info_livro_comunidade">
+            <h3>Nome do Livro Loren</h3><br>
+            <div class="info2_livro_comunidade">
+              <div id="views_rating_comunidade">
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/viewsIcon.svg">
+                  <h5>114 views</h5>
+                </div>
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/ratingIcon.svg">
+                  <h5>8,5685</h4>
+                </div>
+              </div>
+              <h3>Ação</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="livro_comunidade">  <a href="#">
+          <img src="../img/livro_comunidade3.svg"> </a>
+          <div class="info_livro_comunidade">
+            <h3>Nome do Livro Loren</h3><br>
+            <div class="info2_livro_comunidade">
+              <div id="views_rating_comunidade">
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/viewsIcon.svg">
+                  <h5>114 views</h5>
+                </div>
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/ratingIcon.svg">
+                  <h5>8,5685</h5>
+                </div>
+              </div>
+              <h3>Aventura</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="livro_comunidade">  <a href="#">
+          <img src="../img/livro_comunidade4.svg"> </a>
+          <div class="info_livro_comunidade">
+            <h3>Nome do Livro Loren</h3><br>
+            <div class="info2_livro_comunidade">
+              <div id="views_rating_comunidade">
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/viewsIcon.svg">
+                  <h5>114 views</h5>
+                </div>
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/ratingIcon.svg">
+                  <h5>8,5685</h5>
+                </div>
+              </div>
+              <h3>Terror</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="livro_comunidade">  <a href="#">
+          <img src="../img/livro_comunidade5.svg"> </a>
+          <div class="info_livro_comunidade">
+            <h3>Nome do Livro Loren</h3><br>
+            <div class="info2_livro_comunidade">
+              <div id="views_rating_comunidade">
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/viewsIcon.svg">
+                  <h5>114 views</h5>
+                </div>
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/ratingIcon.svg">
+                  <h5>8,5685</h5>
+                </div>
+              </div>
+              <h3>Biografia</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="livro_comunidade">  <a href="#">
+          <img src="../img/livro_comunidade6.svg"> </a>
+          <div class="info_livro_comunidade">
+            <h3>Nome do Livro Loren</h3><br>
+            <div class="info2_livro_comunidade">
+              <div id="views_rating_comunidade">
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/viewsIcon.svg">
+                  <h5>114 views</h5>
+                </div>
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/ratingIcon.svg">
+                  <h5>8,5685</h5>
+                </div>
+              </div>
+              <h3>Ficção</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="livro_comunidade">  <a href="#">
+          <img src="../img/livro_comunidade7.svg"> </a>
+          <div class="info_livro_comunidade">
+            <h3>Nome do Livro Loren</h3><br>
+            <div class="info2_livro_comunidade">
+              <div id="views_rating_comunidade">
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/viewsIcon.svg">
+                  <h5>114 views</h5>
+                </div>
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/ratingIcon.svg">
+                  <h5>8,5685</h5>
+                </div>
+              </div>
+              <h3>Mistério</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="livro_comunidade">  <a href="#">
+          <img src="../img/livro_comunidade8.svg"> </a>
+          <div class="info_livro_comunidade">
+            <h3>Nome do Livro Loren</h3><br>
+            <div class="info2_livro_comunidade">
+              <div id="views_rating_comunidade">
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/viewsIcon.svg">
+                  <h5>114 views</h5>
+                </div>
+                <div id="img_views_rating_comunidade" >
+                  <img src="../img/ratingIcon.svg">
+                  <h5>8,5685</h5>
+                </div>
+              </div>
+              <h3>Suspense</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="naoEncontrou">
+      <h2 id="text_naoEncontrou">Não encontrou o que procurava?</h2>
+      <img src="../img/naoEncontrou.svg">
+      <div id="naoEncontrou_pesquisa">
+        <input type="text"/>
+        <a id="naoEncontrou_lupa" href="#">
+        <img src="../img/lupa.svg">
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+    </div>
+  </footer>
+</body>
 </html>

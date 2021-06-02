@@ -43,5 +43,6 @@ module.exports = (sequelize, DataTypes) => {
         tableName: "Register",
         timestamps: false
     })
+
     return Register
 }

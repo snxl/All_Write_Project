@@ -16,24 +16,17 @@
     "express": "~4.16.1",
     "express-session": "^1.17.1",
     "form-data": "^4.0.0",
-<<<<<<< HEAD
     "http": "^0.0.1-security",
     "http-errors": "~1.6.3",
     "http2": "^3.3.7",
     "method-override": "^3.0.0",
-=======
-    "http-errors": "~1.6.3",
->>>>>>> 4dd14287304dac070d2f1c9df8bca389e49f3998
     "moment": "^2.29.1",
     "morgan": "~1.9.1",
     "multer": "^1.4.2",
     "mysql": "^2.18.1",
-<<<<<<< HEAD
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2",
     "socket.io": "^4.0.1",
-=======
->>>>>>> 4dd14287304dac070d2f1c9df8bca389e49f3998
     "yup": "^0.32.9"
   }
 }

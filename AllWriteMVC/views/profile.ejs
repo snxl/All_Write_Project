@@ -1,175 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/profile.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="../styles/profileLeitura.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+   
     <title>Profile</title>
 </head>
-
 <body>
-
-  <nav class="navbar">
-      <div class="logo"><p class="p-logo">Logo</p></div>
-      <div class="busca">
-          <input class="search icone"  type="text" placeholder="Busque por... " >          
-        </div>  
-        
-        <div class="div1"> <button class="btn-settings fa-2x" onclick="alerta()"><i class="fa fa-cog" ></i></button>
-        
-        </div>
-   
-  </nav>      
-
-    </div>   
-    
-    <div class="fundo">
-        
-            <div class="profile"><p class="p-profile">Foto de Perfil</p></div>
-            <p class="Username">Olá, #NomeUsuário</p>
-            
-            
-            <div class="box">
-                <span class="fa fa-book livros"></span>
-               <a class="perfil-link" href=""> <span>Meus Livros</span></a>                
-                
-            </div>    
-
-            <div class="box">
-                <span class="fa fa-users"></span>
-               <a class="perfil-link" href=""> <span>Comunidade</span></a>                
-                
-            </div>    
-
-            <div class="box">
-                <span class="fa fa-edit"></span>
-               <a class="perfil-link" href=""> <span>Minhas Publicações</span></a>                
-                
-            </div>    
-
-            <div class="box">
-                <span class="fa fa-link"></span>
-               <a class="perfil-link" href=""> <span>link-1</span></a>                
-                
-            </div>    
-
-            <div class="box">
-                <span class="fa fa-link"></span>
-               <a class="perfil-link" href=""> <span>link-2</span></a>                
-                
+    <!-------------------BARRA DE NAVEGAÇÃO------------------------------------->
+    <header class="header">
+        <a href="profile.html"><img src="/img/logo.png" alt="Logo All Write" class="logotipo"></a>       
+        <nav>            
+            <ul class="menu">
+                <li><a href="#">Explorar</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+            </ul>            
+        </nav>
+            <div class="logoVetor">
+            <span style="font-size: 22px; color:rgb(218, 110, 22); margin-left: 15px; margin-top: 5px;" class="fa fa-user"></span>
+            <a class="boasVindas" href="">Olá usuário</a>             
+            <span style="font-size: 22px; color: rgb(230, 159, 112); margin-left: 15px; margin-top: 5px;" class="fa fa-cog"></span>
             </div>
+    <!-------------------BARRA DE BUSCA------------------------------------->
+        <div>
+            <input class="search" type="text" placeholder="Busque por...">
+            <span style="font-size: 25px; color:rgb(123, 123, 128); position: absolute; margin-left: -400px; margin-top: 10px;" class="fa fa-search"></span>
+        </div>    
+
+    <!-------------------VETOR DO CANTO INFERIOR----------------------------->    
+        <div>
+            <img src="/img/blobsTopo (1).png" alt="bolhas" class="blobsTopo">
+        </div>
+
+    <!-------------------SUA BIBLIOTECA------------------------------------->
+    <div class= "suaBiblioteca"></div>
+    <div class= "nomeSuaBiblioteca"> Sua Biblioteca</div>
     
-        </div>
+    
+        
 
-    <div class="quadro-meio">
-        <span class="fa fa-book livros2"></span>
-        <p class="tit-meusLivros">Meus Livros</p>
-    </div>    
+    <!-------------------CAMPO DE LEITURA----------------------------------->
+        <div class="nomeLivro">Nome do Livro</div>
+        <div class="campoLeitura"></div>
 
-    <div class="quadro-lateral1">
-        <p>Adsense-Pub</p>
-    </div>
 
-    <div class="borda-divisoria"></div>
-
-    <div class="quadro-lateral2">
-        <p>Adsense-Pub</p>
-    </div>
-
-    <div class="cx-contadores"></div>
-
-    <div class="cx-contadores1">
-
-        <div class="txt-card">            
-               <a class="perfil-link" href=""> <span>Lidos</span></a>            
-               <h3 class="nmb-card">0</h3>            
-        </div>
-               
-    </div>
-
-    <div class="cx-contadores2">
-
-        <div class="txt-card">            
-               <a class="perfil-link" href=""> <span>Lendo</span></a>            
-               <h3 class="nmb-card">0</h3>            
-        </div>
-               
-    </div>
-
-    <div class="cx-contadores3">
-
-        <div class="txt-card">            
-               <a class="perfil-link" href=""> <span>Publicados</span></a>            
-               <h3 class="nmb-card">0</h3>            
-        </div>
-               
-    </div>
-
-    <div class="cx-contadores4">
-
-        <div class="txt-card">            
-               <a class="perfil-link" href=""> <span>Resenhas</span></a>            
-               <h3 class="nmb-card">0</h3>            
-        </div>
-               
-    </div>
-
-    <div class="cx-contadores5">
-
-        <div class="txt-card">            
-               <a class="perfil-link" href=""> <span>Ler depois</span></a>            
-               <h3 class="nmb-card">0</h3>            
-        </div>
-               
-    </div>
-
-    <div class="cx-contadores6">
-
-        <div class="txt-card">            
-               <a class="perfil-link" href=""> <span>Amigos</span></a>            
-               <h3 class="nmb-card">0</h3>            
-        </div>
-               
-    </div>
-
-    <div class="cx-contadores7">
-
-        <div class="txt-card">            
-               <a class="perfil-link" href=""> <span>Pág Lidas</span></a>            
-               <h3 class="nmb-card">0</h3>            
-        </div>
-               
-    </div>
-
-    <div class="cx-contadores8">
-
-        <div class="txt-card">            
-               <a class="perfil-link" href=""> <span>Metas</span></a>            
-               <h3 class="nmb-card">0</h3>            
-        </div>
-               
-    </div>
-
-    <div class="capasDashboard"></div>
-
-    <div class="botaoCaixinhas"></div>
-    <div class="botaoCaixinhas1"></div>
-    <div class="botaoCaixinhas2"></div>
-    <div class="botaoCaixinhas3"></div>
-    <div class="botaoCaixinhas4"></div>
-    <div class="botaoCaixinhas5"></div>
-    <div class="botaoCaixinhas6"></div>
-    <div class="botaoCaixinhas7s"></div>   
-   
+        
+    </header>
+    
+    <footer class="rodape"></footer>
+    
 </body>
-
-<footer class="rodape">
-
-</footer>
-<script src="script.js"></script>
-
 </html>
-

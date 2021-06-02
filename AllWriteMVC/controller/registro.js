@@ -53,13 +53,6 @@ class Registro{
             })
         }
 
-        return res.json({
-            name:name,
-            email:email,
-            password:password,
-            check_password:checkPassword
-        })
-
     }
 
     PUT(req, res){
