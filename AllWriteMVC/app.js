@@ -21,9 +21,10 @@ import teste from "./routes/testesSequelize.js"
 import validateRoute from './middlewares/privateRoutes.js';
 
 
+
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server);  
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -49,6 +50,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'web')));
 app.use(methodOverride("_method"))
 
 //PUBLIC MIDDLEWARES
@@ -58,6 +60,7 @@ app.use('/',indexRouter);
 app.use("/login", loginRouter)
 app.use("/register", resgistroRouter)
 app.use("/teste", teste)
+
 
 //PRIVATE MIDDLEWARES
 app.use(validateRoute.login)
