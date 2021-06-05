@@ -10,18 +10,24 @@
 body{
     scrollbar-width: none;
     scrollbar-color: dark;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar{
     background-color: transparent;
-    width: 1.2vw;
+    width: 0.6vw;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar-thumb{
-    background-color:#c637c9;
-    border-radius: 13px;
+    background-color:#f95773;
+    border-radius: 20px;
+    scroll-behavior: smooth;
 }
 
 body:hover::-webkit-scrollbar{
-    width: 0.5vw;
+    width: 0.6vw;
+    scroll-behavior: smooth;
+
+
 }
