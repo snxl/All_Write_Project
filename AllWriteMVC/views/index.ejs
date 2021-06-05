@@ -1,107 +1,139 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/index.css" />
+    <title>All Write</title>
+    <link rel="stylesheet" href="../styles/indexhtmlariel.css">
+    <link rel="stylesheet" href="../styles/global.css">
   </head>
   <body>
-    <header>
-      <img class="fotoHeader" src="../img/logo.svg" alt="Logo" />
-      <nav class="navHeader">
-        <div class="explorar">
-          <a href="#">Explorar</a>
-          <img src="../img/setaExplorar.svg" alt="setaExplorar" />
-        </div>
-        <div>
-          <a href="#">Sobre</a>
-        </div>
-      </nav>
-      <div class="login">
-        <div>
-          <img src="../img/profile.webp" alt="foto campo login" />
-        </div>
-        <a href="#" class="campoLogin">Entrar</a>
-        <p class="campoOU">|</p>
-        <a href="#">Registrar</a>
-      </div>
-    </header>
-    <main>
-      <section>
-        <article>
-          <div  class="textoPrincipal">
-            <h1>Somos a All Write</h1>
-            <h3>Escreva e publique seus livros na comunidade</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-              aliquam, purus sit amet luctus venenatis, lectus magna fringilla
-              urna, porttitor rhoncus.
-            </p>
-          </div>
-        </article>
-        <article class="lateralDireitaFoto">
-            <div class="imagemLateralCima">
-                <img
-                 src="../img/lateralCima.svg"
-                 alt="arte site">
-            </div>
-            <div class="notebookHome">
-              <img
-               src="../img/notebook.svg"
-               alt="notebook Home">
-            </div>
-        </article>
-      </section>
-      <section>
-        <article>
-          <div class="explicacao">
-            <img
-            src="../img/fundoLaranjaIndex.svg"
-            alt="fundo laranja - arte da pagina index"
-            class="artFundo">
-            <img 
-            src="../img/artFundoMaior.svg" 
-            alt="" 
-            class="artFundoMaior">
-            <h2 class="explicacao_texto">
-              Como funciona?
-            </h2>
-            <div class="como_usar">
-              <img
-               src="../img/explicacao_1.svg" 
-               alt=""
-               class="explicacao1">
-               <img
-                src="../img/explicao_seta_1.svg" 
-                alt=""
-                class="seta1">
-                <img 
-                src="../img/explicacao_2.svg" 
-                alt=""
-                class="explicacao2">
-                <img 
-                src="../img/esplicacao_seta_2.svg" 
-                alt=""
-                class="seta2">
-                <img 
-                src="../img/explicacao_3.svg" 
-                alt=""
-                class="explicacao3">
-            </div>
-          </div>
-        </article>
-      </section>
-      <section>
-        <article>
-          <div class="final">
-            <img src="../img/mao_completa.svg" alt="" class="mao">
-          </div>
-        </article>
-      </section>
-    </main>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="../javascripts/index.js"></script>
+
+    <!-- HEADER - Topo do  site-->
+        <header>
+           
+                   <a href="#" alt="Home page" class="logo__color"> </a>
+                          <nav >
+                              <ul class="menu">
+                                      <li> <a href="#">Explorar</a>
+                                             <ul>
+                                                    <li><a href="#"> Aventura </a></li>
+                                                    <li><a href="#"> Ação </a></li>
+                                                    <li><a href="#"> Fantasia </a></li>
+                                                    <li><a href="#"> Ficção </a></li>
+                                                    <li><a href="#"> Poesia </a></li>
+                                                    <li><a href="#"> Romance </a></li>
+                                                    <li><a href="#"> Suspense </a></li>
+                                                    <li><a href="#"> Terror </a></li>
+                                                    <li><a href="#"> Biografia </a></li>
+                                                    <li><a href="#"> Miterário </a></li>
+                                                    <li><a href="#"> Espiritual </a></li>
+                                              </ul>
+                                            </li>
+                                 
+                                      <li> <a href="#">Sobre</a></li>
+                              </ul>
+
+                          </nav>
+             
+
+                          <div class="field_user">
+                               
+                                        <p>
+                                                <a href="/login">Entrar </a>  | 
+                                                <a href ="/register">Registrar</a>
+                                        </p>
+                          </div>
+            </header>
+<!-- FIM do topo do site-->
+
+<!-- INICIO DO MAIN - CORPO DO SITE-->
+            <main>
+                  <article class="main__top">
+                                  <div class="text__">                                
+                                        <h1>Somos a All Write</h1>
+                                              <h3>Escreva e publique seus livros na comunidade</h3>
+                                                      <h4>
+                                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, 
+                                                      purus sit amet luctus venenatis, lectus magna fringilla urna, 
+                                                      porttitor rhoncus.
+                                                      </h4>                    
+                                  </div>
+                          <img src="../img/notebook.svg">
+                                </article>
+
+
+                  <article class="quite">
+                                <section class="text__explanation">                                
+                                                <h1>Como funciona?</h1>
+                                                <h5>Lorem ipsum dolor sit amet Lorem ipsum dolor <p>
+                                                        sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                                                </h5>
+                                </section>
+
+                                <section class="figure__1">
+                                        <h4>
+                                              1. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
+                                        </h4>
+                                       <!---  <img src="../public/img/IMG1_TARCER.png" ">-->
+
+                                </section>
+                                <div class="set__1">
+                                        <img src="../img/explicao_seta_1.svg">
+                                </div>
+
+                                <section class="figure__2">
+                                        <!--<img src="../public/img/IMG2_TARCER.png" >-->
+                                        <h4>
+                                               2. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
+                                        </h4>
+                                        
+                                </section>
+                               <div class="set__2">
+                                <img src="../img/explicacao_seta_2.svg">
+                                </div>
+
+                                <section class="figure__3">
+                                        <h4>
+                                                3. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
+                                        </h4>
+                                      <!--  <img src="../public/img/IMG3_TARCER.png"  -->
+                                </section>
+                                
+                  </article>
+
+
+                  <section class="main__bottom">
+                                <div class="text__explanation_left">
+                                        <h1>
+                                                Conecte-se com milhares
+                                                de escritores de todos os lugares.
+                                        </h1>
+                                        <h4>
+                                                Interaja com uma comunidade de escritores e 
+                                                <p>compartilhe suas ideias com </p>
+                                        </h4>
+
+                                </div>
+
+                                <div class="img__smoke_right"></div>
+                  </section>
+
+                  <div class="hand__smoke_bottom">
+                        
+                </div>
+
+            </main>
+
+
+
+
+<!-- FIM DO MAIN - CORPO DO SITE-->
+
+<footer>
+
+
+</footer>
   </body>
 </html>

@@ -2,7 +2,7 @@ import * as  yup  from  'yup'
 
 class Validation{
 
-    register(req, res, next) {
+    async register(req, res, next) {
 
         console.log(req.body.name)
 
@@ -17,11 +17,10 @@ class Validation{
             checkPassword: yup.string().oneOf([yup.ref('password'), null], 'senhas incorretas'),
         })
     
-        schema.validate(req.body, {abortEarly: false}).then(results =>{
-            Promise.resolve(
-                next()
-            )
-        }).catch(results =>{
+        try {
+            await schema.validate(req.body, {abortEarly: false})
+            next()
+        } catch (results) {
             let allError = results.errors
     
             let erro1 = undefined
@@ -48,8 +47,6 @@ class Validation{
                 if(element == "senhas incorretas") erro6 = element
             })
     
-            Promise.reject(
-    
                 res.render("registro",{
                     erro1,
                     erro2,
@@ -60,8 +57,7 @@ class Validation{
                     emailIsValid:true,
                     passwordIsValid:true
                 })
-            )
-        })
+        }
     }
 
 }

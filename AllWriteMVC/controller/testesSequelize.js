@@ -1,7 +1,5 @@
 import sequelize from "../database/models/index.js"
 
-import Register from "../database/models/Register.js"
-
 const teste = {
     findAll: async (req, res) => {
 
@@ -19,6 +17,21 @@ const teste = {
 
         res.json(data)
 
+    },
+    
+    findOne: async (req, res) =>{
+        const data = await sequelize.Registro.findOne({
+            where:{
+                id:1
+            },
+            include:[{
+                model:sequelize.Autores,
+                required:true,
+                as:"autors"
+            }]
+        })
+
+        res.json(data)
     }
 }
 
