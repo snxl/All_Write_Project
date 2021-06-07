@@ -30,8 +30,6 @@ class Registro {
             }
         })
 
-        console.log(checkEmail, checkUser)
-
         if(!checkEmail && !checkUser){
             const insert = await sequelize.Registro.create(fullRegister)
 

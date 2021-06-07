@@ -42,7 +42,7 @@ module.exports = {
         lastAcess:moment().format("YYYY-MM-DD HH:MM")
       },{
         user: "Barbara" ,
-        name:"Barbara do Fernandez" ,
+        name:"Barbara Fernandez" ,
         email:"barbara@allwrite.com",
         password: "AdmBarbara04",
         imageRoute:"undefined",
