@@ -25,35 +25,30 @@ const __dirname = path.dirname(__filename);
 
 class App{
   constructor(){
-    this.app = express()
+    this.app = express();
     this.server = http.createServer(this.app);
     this.io = new Server(this.server);
-    this.config()
-    this.socketIo()
-    this.globalMiddlewares()
-    this.publicRoutes()
-    this.privateMiddlewares()
-    this.privateRoutes()
-    this.handleError()
+    this.config();
+    this.socketIo();
+    this.globalMiddlewares();
+    this.routes()
   }
+
 
   config(){
     this.app.set('views', path.join(__dirname, 'views'));
     this.app.set('view engine', 'ejs');
   }
 
-  publicRoutes(){
-    this.app.use('/',indexRouter);
-    this.app.use("/login", loginRouter)
-    this.app.use("/register", resgistroRouter)
-    this.app.use("/teste", teste)
-    this.error404()
-  }
 
-  privateRoutes(){
+  routes(){
+    this.app.use('/',indexRouter);
+    this.app.use("/login", loginRouter);
+    this.app.use("/register", resgistroRouter);
+    this.app.use("/teste", teste);
+    this.validateLogin()
     this.app.use('/dashboard', dashboardRouter);
     this.app.use('/profile', profileRouter);
-    this.error404()
   }
 
   globalMiddlewares(){
@@ -68,10 +63,10 @@ class App{
       secret: "All write project",
       resave: false,
       saveUninitialized: true
-    }))
+    }));
   }
 
-  privateMiddlewares(){
+  validateLogin(){
     this.app.use(validateRoute.login)
   }
 
