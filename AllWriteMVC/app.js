@@ -8,6 +8,8 @@ import logger from 'morgan';
 import session from "express-session"
 import { Server } from "socket.io";
 import methodOverride from "method-override";
+import swaggerUi from "swagger-ui-express"
+import fs from "fs"
 
 //ROUTER
 import indexRouter from './routes/index.js';
@@ -17,11 +19,14 @@ import loginRouter from "./routes/login.js"
 import resgistroRouter from "./routes/registros.js"
 import teste from "./routes/testesSequelize.js"
 
+
+
 //MIDDLEWARE
 import validateRoute from './middlewares/privateRoutes.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 
 class App{
   constructor(){
@@ -46,9 +51,12 @@ class App{
     this.app.use("/login", loginRouter);
     this.app.use("/register", resgistroRouter);
     this.app.use("/teste", teste);
-    this.validateLogin()
+    this.app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(this.readSwaggerJson()))
+
+    //this.validateLogin()
     this.app.use('/dashboard', dashboardRouter);
     this.app.use('/profile', profileRouter);
+    this.error404()
   }
 
   globalMiddlewares(){
@@ -95,6 +103,13 @@ class App{
         console.log("user disconnect")
       })
     })
+  }
+
+  readSwaggerJson(){
+    fs.readFile('./swagger.json', (err, data) => {
+      if (err)throw err;
+      return JSON.stringify(data);
+    });
   }
 }
 

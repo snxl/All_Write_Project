@@ -14,27 +14,27 @@ class Registro{
     }
 
     async POST(req, res){
-        
+
         const {
             user,
             name,
             email,
-            password,
+            password_hash,
         } = req.body
 
         const register = await serviceRegister.adiciona({
             user,
             name,
             email,
-            password
+            password_hash
         })
 
         if(register){
 
             res.cookie("login", "logado", {
-                maxAge: 86400000   
+                maxAge: 86400000
             })
-    
+
             res.cookie("ultimo acesso", new Date(), {
                 maxAge: 86400000
             })

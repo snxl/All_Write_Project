@@ -24,7 +24,7 @@
                     <%}%>
                 </div>
 
-              
+
                  <div class="grupo_identificação">
                     <label for="input_name">Nome Completo</label>
                     <%if(erro2){%>
@@ -37,7 +37,7 @@
                  </div>
 
                  <div class="grupo_identificação">
-                    <label for="input_email">Endereço de E-mail</label> 
+                    <label for="input_email">Endereço de E-mail</label>
                     <%if(erro3){%>
                         <input class="error_input" type="email" name="email" id="input_email">
                         <p class="p_error"><%=erro3%></p>
@@ -45,7 +45,7 @@
                         <input class="input_field" type="email" name="email" id="input_email">
                     <%}%>
                 </div>
-                               
+
                 <div class="grupo_senha">
 
                         <div class="grupo_senha1">
@@ -54,31 +54,31 @@
                                 <input class="error_password" type="password" name="password" id="input_password">
                                 <p class="p_error"><%=erro4%></p>
                             <%}else{%>
-                                <input class="input_password" type="password" name="password" id="input_password">
+                                <input class="input_password" type="password" name="password_hash" id="input_password">
                             <%}%>
                         </div>
-        
+
                         <div class="grupo_senha2">
-                            <label for="input_check_password">Repetir Senha</label> 
+                            <label for="input_check_password">Repetir Senha</label>
                             <%if(erro5){%>
                                 <input class="error_password" type="password" name="checkPassword" id="input_password">
                                 <p class="p_error"> <wbr><%=erro5%><wbr></p>
                             <%}else{%>
                                 <input class="input_password" type="password" name="checkPassword" id="input_password">
                             <%}%>
-                        </div> 
-                         
+                        </div>
+
                 </div>
 
                 <div class="userTerm">
                     <input type="checkbox" class="radios" name="terms" id="terms" value="true" data-terms="" required>
                     <label for="terms" class="use_terms" href="#">Concordo com os <a href="#" class="term_radio">Termos</a> de Uso</label>
                 </div>
-                
+
                 <div class="send"> <button  class="login_register">CADASTRAR</button></div>
-        
-            
+
+
         </div>
     </form>
 </body>
-</html> 
+</html>

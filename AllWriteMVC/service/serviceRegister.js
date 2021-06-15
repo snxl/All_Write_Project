@@ -1,22 +1,13 @@
 import sequelize from "../database/models/index.js"
-import bcrypt from "bcryptjs"
-import moment from "moment"
-
 
 class Registro {
     async adiciona(register){
-        
-        const createDate = moment().format("YYYY-MM-DD HH:MM:SS")
-
-        const lastAcess = moment().format("YYYY-MM-DD HH:MM:SS")
-
-        register.password = bcrypt.hashSync(register.password, 12)
 
         const imageRoute = "undefined"
 
         const credential = 0
 
-        const fullRegister = {...register, imageRoute, credential, createDate, lastAcess}
+        const fullRegister = {...register, imageRoute, credential}
 
         const checkEmail = await sequelize.Registro.findOne({
             where:{
@@ -35,7 +26,7 @@ class Registro {
 
             return insert
         }else{
-            return false 
+            return false
         }
     }
 }
