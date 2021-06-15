@@ -472,12 +472,15 @@ fim FOOTER - rodape do site
 
 
 /* MOBAL TABLET */
-@media (min-width:320px) {
+                                                                                                                        @media (min-width:320px) {
      /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+
+     body{background-color: #c637c9;}
+
 header {
     width: 100%;
     height:  70px;
-    background-color: #fff;
+    background-color: rgb(199, 27, 27);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -502,9 +505,6 @@ header {
 
 /*  FIM HEADER - TOPO DO SITE */
 
-/************************************
-CONFIGURAÇÃO MENU
-*************************************/
 
 nav {
     max-width: 500px;
@@ -576,7 +576,7 @@ color:rgb(0, 0, 0);
         display:block;
         width:100px;
         }
-
+ 
 /************************************
 FIM - CONFIGURAÇÃO MENU
 *************************************/

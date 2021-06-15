@@ -1,759 +1,173 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-*{
-  padding: 0;
-  margin: 0;      
-}
-
-.navbar{
-  width: 100% ;
-  height: 75px;
-  background-color: #c4c4c4;
-  margin:0;
-}
-
-.logo{
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  margin-left: 70px;
-  margin-top: 8px;
-  position: absolute;
-  border-radius: 50%;
-  }
-
-.p-logo{
-  position:absolute;
-  top:30%;
-  left:15%;
-  text-transform: uppercase;
-  font-size: 10pt;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;  
-}
-
-.search{
-  width: 522px;
-  height: 48px;
-  left: 450px;
-  top: 12px;
-  position: absolute;
-  border:none;
-  border-radius:20px 20px 20px 20px;
-  padding-left: 10px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.icone{
-  background-image: url(icons/outline_search_black_24dp.png);
-  background-repeat: no-repeat;
-  background-size: 30px ;
-  background-position: 480px 10px;  
-  }
-
-  .retangulo{
-    width: 101px;
-    height: 37px;
-    background-color: #FFFFFF;
-    margin-top: 15px;
-    margin-left: 1730px;
-    position: absolute;
-    border-radius: 15px;
-  }
-
-  .Settings{
-  background-image: url(icons/config.png);
-  background-repeat: no-repeat;
-  width: 45px;
-  height: 45px;   
-  }
-
-  .profile{
-    width: 131px;
-    height: 131px;
-    background-color: #EEEEEE;
-    margin-left: 35px;
-    margin-top: 20px;
-    position: absolute;
-    border-radius: 50%;
-    }
-
-    .p-profile{
-      position:relative;
-      top:30%;
-      left:15%;
-      text-transform: uppercase;
-      font-size: 10pt;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 700;        
-    }
-
-    .fundo{
-      background-color: #c4c4c4;
-      position: absolute;
-      width: 214px;
-      height: 445px;
-      top:100px;
-      border-radius: 0px 15px 15px 0px;      
-    }
-
-    .btn-settings{
-      width: 60px;
-      height: 60px;
-      position: absolute;
-      margin-left: 1200px;
-      color: white;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      box-shadow: none;
-      margin-top: 5px;
-    }
-
-    .btn-settings:hover{
-      color: grey;
-    }
-
-    .div1{
-      border: none;
-    }
-  
-    .Username{
-      margin:180px 0px 0px 35px;
-      font-family: 'Roboto', sans-serif;
-    }
-
-  .box{
-    width: 170px;
-    height: 50px;
-    margin-top: 20px;
-    margin-left: 35px;    
-  }  
-
-.livros{
-  display: inline;
-  margin-right: 5px;
-}
-
-.perfil-link{
-  text-decoration:none;
-  color: black;  
-  margin-left: -1px;
-  
-}
-
-.quadro-meio{
-  float:right;
-  background-color: #ededed;
-  width: 865px;
-  height: 350px;
-  position: absolute;
-  margin-left: 275px;
-  margin-top: 120px;
-  border-radius: 5px;
-}
-
-.livros2{
-padding: 30px;
-}
-
-.quadro-lateral1{
-  float: right;
-  background-color: #c4c4c4;
-  position: absolute;
-  width: 150px;
-  height: 190px;
-  border-radius: 10px;
-  margin-left:1193px;
-  top: 100px;
-  font-variant-position:unset ;
-}
-
-.quadro-lateral2{
-  float: right;
-  background-color: #c4c4c4;
-  position: absolute;
-  width: 150px;
-  height: 190px;
-  border-radius: 10px;
-  margin-left:1193px;
-  margin-top: 281px;
-  font-variant-position:unset ;
-
-}
-
-.borda-divisoria{
-  background-color: white;
-  width:150px ;
-  height: 5px;
-  float:right;
-  margin-top:265px;
-  position: absolute;
-  margin-left:1193px;
-}
-
-.cx-contadores{
-  background-color:#ededed ;
-  width: 865px;
-  height: 81px;
-  margin-top: 30px;
-  margin-left: 274px;
-  border-radius: 5px;
-}
-
-.cx-contadores1{
-  width: 85px;
-  height: 70px;
-  margin-top: -76px;
-  margin-left: 280px;
-  border-radius: 5px;
-  background-color: #c4c4c4;
-  position: absolute;
-
-}
-
-.cx-contadores2{
-  width: 85px;
-  height: 70px;
-  margin-top: -76px;
-  margin-left: 395px;
-  border-radius: 5px;
-  background-color: #c4c4c4;
-  position: absolute;
-
-}
-
-.cx-contadores3{
-  width: 85px;
-  height: 70px;
-  margin-top: -76px;
-  margin-left: 520px;
-  border-radius: 5px;
-  background-color: #c4c4c4;
-  position: absolute;
-
-}
-
-.cx-contadores4{
-  width: 85px;
-  height: 70px;
-  margin-top: -76px;
-  margin-left: 630px;
-  border-radius: 5px;
-  background-color: #c4c4c4;
-  position: absolute;
-
-}
-
-.cx-contadores5{
-  width: 85px;
-  height: 70px;
-  margin-top: -76px;
-  margin-left: 735px;
-  border-radius: 5px;
-  background-color: #c4c4c4;
-  position: absolute;
-
-}
-
-.cx-contadores6{
-  width: 85px;
-  height: 70px;
-  margin-top: -76px;
-  margin-left: 840px;
-  border-radius: 5px;
-  background-color: #c4c4c4;
-  position: absolute;
-
-}
-
-.cx-contadores7{
-  width: 85px;
-  height: 70px;
-  margin-top: -76px;
-  margin-left: 945px;
-  border-radius: 5px;
-  background-color: #c4c4c4;
-  position: absolute;
-
-}
-
-.cx-contadores8{
-  width: 85px;
-  height: 70px;
-  margin-top: -76px;
-  margin-left: 1047px;
-  border-radius: 5px;
-  background-color: #c4c4c4;
-  position: absolute;
-
-}
-
-
-.txt-card{
-  margin-left: 20px;
-  margin-top: 10px;
-  
-}
-
-.nmb-card{
-  margin-left:15px;   
-}
-
-.tit-meusLivros{
-  margin-top: -49px;
-  margin-left: 50px;
-}
-
-.capasDashboard{
-  width: 803px;
-  height: 128px;
-  margin-top: 70px;
-  margin-left: 305px;
-  position: absolute;
-  background-color: #ededed;
-  border: 1px solid rgb(182, 179, 179);
-  border-radius: 15px;
-}
-
-.botaoCaixinhas{
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  margin-top: 95px;
-  margin-left: 330px;
-  background-color: #c4c4c4;
-  border: 1px;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-.botaoCaixinhas1{
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  margin-top: 95px;
-  margin-left: 440px;
-  background-color: #c4c4c4;
-  border: 1px;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-.botaoCaixinhas2{
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  margin-top: 95px;
-  margin-left: 550px;
-  background-color: #c4c4c4;
-  border: 1px;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-.botaoCaixinhas3{
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  margin-top: 95px;
-  margin-left: 660px;
-  background-color: #c4c4c4;
-  border: 1px;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-.botaoCaixinhas4{
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  margin-top: 95px;
-  margin-left: 770px;
-  background-color: #c4c4c4;
-  border: 1px;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-.botaoCaixinhas5{
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  margin-top: 95px;
-  margin-left: 880px;
-  background-color: #c4c4c4;
-  border: 1px;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-.botaoCaixinhas6{
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  margin-top: 95px;
-  margin-left: 990px;
-  background-color: #c4c4c4;
-  border: 1px;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-.botaoCaixinhas7{
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  margin-top: 95px;
-  margin-left: 1050px;
-  background-color: #c4c4c4;
-  border: 1px;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-.rodape{
-  background-color: #c4c4c4;
-  position: absolute;
+header {
   width: 100%;
-  height: 15%;
-  margin-top:370px ;
-
-}
-=======
-=======
->>>>>>> 4dd14287304dac070d2f1c9df8bca389e49f3998
-body, ul, li, p{
-    margin: 0px;
-    padding: 0px;  
-    list-style: none;
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #FFFFFF;
-    }
-
-a{
-    text-decoration: none;
+  height:  70px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:  1px solid #C2C2C2;
+  flex-wrap:nowrap;
 }
 
-.header{
-    display: flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap: wrap;
-    padding: 20px;
-    border: 1px solid #cacaca;
+.logo__color  {
+  width: 95px;
+  height: 60px;
+  margin-left: 150px;
+  background-image: url(../img/logo_color.png);
+  transition: all 0.3s;
 }
 
-.logotipo{
-      position: absolute;
-      width: 94px;
-      height: 60px;
-      left: 89px;
-      top: 14px;       
+.logo__color:hover  {
+  width: 95px;
+  height: 60px;
+  margin-left: 150px;
+  background-image: url(../img/logo_color_hover.png);
 }
 
-.logoVetor{
-    position: absolute;
-    width: 165px;
-    height: 40px;
-    left: 1500px;
-    top: 30px;
-    background: #FFFFFF;
-    border: 1px solid #C2C2C2;
-    box-sizing: border-box;
-    border-radius: 20px;
+/*  FIM HEADER - TOPO DO SITE */
+
+/************************************
+CONFIGURAÇÃO MENU
+*************************************/
+
+nav {
+  max-width: 500px;
 }
 
-.nomeVetor{
-    position: absolute;
-    width: 76px;
-    height: 14px;
-    left: 45px;
-    top: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
-    color: #696767;
+.menu {
+  list-style: none;
+  float: left;
+  margin-left: -400px;
+  margin: 0 auto;
+  width: 400px;
+
 }
 
-.menu{
-    display: flex;
+.menu ul {
+  width: 300px;
 
 }
 
 .menu li{
-    margin-left: 10px;
-}
+  position:relative;
+  float:left;
+
+  font-weight:500;
+  color:rgb(75, 75, 75); 
+
+
+  }
 
 .menu li a{
-    display: block;
-    padding: 10px;
-    
+color:rgb(75, 75, 75); 
+text-decoration:none; 
+padding:5px 15px;
+display:block;
+font-weight: none;
 }
 
-.search{
-    position: absolute;
-    width: 404px;
-    height: 40px;
-    left: 604px;
-    top: 135px;
-    background: #ffffff;
-    border-radius: 20px;
-    border-color:#ddd9d9;
+.menu li a:hover{
+
+color:rgb(0, 0, 0);
+
+
 }
 
-.minhasPublicacoes{
-    position: absolute;
-    width: 175px;
-    height: 23px;
-    left: 398px;
-    top: 240px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 23px;
-    color: #3e3e3e;
-    text-justify:distribute;
+.menu li  ul{
+  position:absolute;
+  width: 200px;
+  height: 180px;
+  top:25px;
+  left:0;
+  background-color: #ebeaea;
+  background-position: top;
+  background-repeat: no-repeat;
+  display:none;
+  border:1px solid #fdfdfd;
+  padding: 1rem;
+  border-radius: 0 15px 20px 30px;
+  transition: 0.3s;
+  color: #c637c9;
+  }
+
+  .menu li:hover ul, .menu li.over ul{
+      display:block;
+  
+  }
+
+  .menu li ul li{
+ 
+      display:block;
+      width:100px;
+      }
+
+/************************************
+FIM - CONFIGURAÇÃO MENU
+*************************************/
+
+
+/************************************
+INICIO - CAMPO DO USUÁRIO - SENHA
+*************************************/
+
+.field_user {
+  width: 155px;
+  height: 30px;
+  background-color: #ffffff;
+  border: #C2C2C2 solid 1px;
+  border-radius: 30px;
+  margin-right: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px  5px  5px;
+  text-align: center;
+  align-items: center;
 }
 
-.mpLivro1{
-    position: absolute;
-    width: 80px;
-    height: 123.81px;
-    top: 300px;
-    left: 398px;
-    border-radius: 15px;
-    background: url(baixar-livro-a-viagem-de-cilka-o-tatuador-de-auschwitz-vol-02-heather-morris-em-pdf-epub-mobi-ou-ler-online-174x270.jpg);
-       
+.field_user  p{
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0 auto;
+
+
 }
 
-.nomeLivro1{
-    position: absolute;
-    width: 115px;
-    height: 21px;
-    left: 492px;
-    top: 300px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 21px;
+.field_user  a{
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  font-weight:500;
+  color:rgb(95, 95, 95); 
 }
 
-.dataPublicacao1{
-    position: absolute;
-    width: 102px;
-    height: 16px;
-    left: 492px;
-    top: 320px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
+.field_user  a:hover{
+color: rgba(247, 25, 136, 1);
+transition: 0.4s
 }
 
-.view1{
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    left: 494px;
-    top: 340px;
+.img_login {
+
 }
 
-.mpLivro2{
-    position: absolute;
-    width: 80px;
-    height: 123.81px;
-    top: 300px;
-    left: 638px;
-}
-
-.nomeLivro2{
-    position: absolute;
-    width: 115px;
-    height: 21px;
-    left: 728px;
-    top: 300px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 21px;
-    color: #3E3E3E;
-}
-
-.dataPublicacao2{
-    position: absolute;
-    width: 102px;
-    height: 16px;
-    left: 731px;
-    top: 320px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
-}
-
-.view2{
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    left: 731px;
-    top: 340px;
-}
-
-.minhaLeitura{
-    position: absolute;
-    width: 127px;
-    height: 23px;
-    left: 398px;
-    top: 470px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 23px;
-    color: #3E3E3E;
-}
-
-.mlLivro1{
-    position: absolute;
-    width: 100px;
-    height: 155.17px;
-    left: 398px;
-    top: 530px;
-}
-
-.mlLivro2{
-    position: absolute;
-    width: 100px;
-    height: 155.17px;
-    left: 638px;
-    top: 530px;
-    border-radius: 20px;
-}
-
-.mlLivro3{
-    position: absolute;
-    width: 100px;
-    height: 155.17px;
-    left: 878px;
-    top: 530px;
-    border-radius: 20px;
-}
-
-.mlLivro4{
-    position: absolute;
-    width: 100px;
-    height: 155.17px;
-    left: 1118px;
-    top: 530px;
-    border-radius: 20px;
-}
+/************************************
+FIM - CAMPO DO USUÁRIO - SENHA
+*************************************/
 
 
-.fotoUsuario{
-    position:absolute;
-    width: 190px;
-    height: 190px;
-    left: 69px;
-    top: 175px;    
-}
+/************************************
+INICIO - MAIN
+*************************************/
 
-.Username{
-    position: absolute;
-    width: 193px;
-    height: 28px;
-    left: 69px;
-    top: 396px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;    
-    font-size: 24px;
-    line-height: 28px;
-    color: #3e3e3e;
-    text-align: center;
-}
+  main {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #c637c9;
 
-.boxTexting{
-    position: absolute;
-    width: 190px;
-    height: 152px;
-    left: 69px;
-    top: 434px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
-    text-align: justify;
-    border: none;
-}
+  }
 
-.blobsTopo{
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    right: 0px;
-    margin-top: 503px;    
-}
 
-.rodape{
-    position: absolute;
-    width: 1917px;
-    height: 89px;
-    background: #FFFFFF;
-    border: 1px solid #CACACA;
-    top: 845px;
-}
 
-.boasVindas{
-    font-size: 13px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: #3e3e3e;
-    }
-
-    .colorStatus1{
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    left: 69px;
-    top: 555px;        
-    background: #4CA1DE;
-    border-radius: 3px;
-    }
-
-    .colorStatus2{
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    left: 104px;
-    top: 555px;
-    background: #F41EC5;
-    border-radius: 3px;
-    }
-
-    .colorStatus3{
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    left: 139px;
-    top: 555px;
-    background: #84BD57;
-    border-radius: 3px;
-<<<<<<< HEAD
-    }
->>>>>>> f6b3b15ae3f7f510b5af9ca6ec6f32e8be969a56
-=======
-    }
->>>>>>> 4dd14287304dac070d2f1c9df8bca389e49f3998
+/************************************
+INICIO - MAIN
+*************************************/
