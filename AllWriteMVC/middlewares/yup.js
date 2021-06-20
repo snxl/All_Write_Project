@@ -1,10 +1,19 @@
 import * as  yup  from  'yup'
 
+import database from "../database/models/index.js"
+
+let email = false
+let user = false
+let erro1 = undefined
+let erro2 = undefined
+let erro3 = undefined
+let erro4 = undefined
+let erro5 = undefined
+let erro6 = undefined
+
 class Validation{
 
     async register(req, res, next) {
-
-        console.log(req.body.name)
 
         const schema = yup.object().shape({
             user: yup.string().required("inserir usuario"),
@@ -17,18 +26,44 @@ class Validation{
             checkPassword: yup.string().oneOf([yup.ref('password_hash'), null], 'senhas incorretas'),
         })
 
+
+        const checkEmail = await database.Registro.findOne({
+          where:{
+            email : req.body.email
+          }
+        })
+
+        const checkUser = await database.Registro.findOne({
+          where: {
+            user : req.body.user
+          }
+        })
+
+        checkUser != null? user = "usuário existente" : user = false;
+        checkEmail != null ? email = "email existente": email = false;
+
+
+        if(user && email){
+          return res.render("registro",{
+            erro1,
+            erro2,
+            erro3,
+            erro4,
+            erro5,
+            erro6,
+            email,
+            user
+        })
+        }
+
         try {
+
             await schema.validate(req.body, {abortEarly: false})
-            next()
+
+            if(checkEmail === null && checkUser === null) return next()
+
         } catch (results) {
             let allError = results.errors
-
-            let erro1 = undefined
-            let erro2 = undefined
-            let erro3 = undefined
-            let erro4 = undefined
-            let erro5 = undefined
-            let erro6 = undefined
 
             const checkPassword = allError.forEach(element=> {
                 if(element === "Deve inserir a senha") return true
@@ -47,16 +82,16 @@ class Validation{
                 if(element == "senhas incorretas") erro6 = element
             })
 
-                res.render("registro",{
-                    erro1,
-                    erro2,
-                    erro3,
-                    erro4,
-                    erro5,
-                    erro6,
-                    emailIsValid:true,
-                    passwordIsValid:true
-                })
+            return res.render("registro",{
+              erro1,
+              erro2,
+              erro3,
+              erro4,
+              erro5,
+              erro6,
+              email,
+              user
+            })
         }
     }
 

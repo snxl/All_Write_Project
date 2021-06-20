@@ -10,11 +10,47 @@ module.exports = {
       user: "SNXL" ,
       name: "Nicolas Soares Gomes" ,
       email: "nicolas@allwrite.com",
-      password: "AdmNicolas00",
+      password:  await bcrypt.hash( "AdmNicolas00" ,12),
       imageRoute: "undefined",
       credential: 1,
-      createDate:moment().format("YYYY-MM-DD HH:MM"),
-      lastAcess:moment().format("YYYY-MM-DD HH:MM")
+      createdAt:moment().format("YYYY-MM-DD HH:MM"),
+      updatedAt:moment().format("YYYY-MM-DD HH:MM")
+      },{
+        user:"Marcelo" ,
+        name: "Marcelo Gamon",
+        email:"marcelo@allwrite.com",
+        password: await bcrypt.hash("admMarcelo01",12),
+        imageRoute:"undefined",
+        credential:1,
+        createdAt:moment().format("YYYY-MM-DD HH:MM"),
+        updatedAt:moment().format("YYYY-MM-DD HH:MM")
+      },{
+        user: "Paloma" ,
+        name: "Paloma lima" ,
+        email:"paloma@allwrite.com",
+        password: await bcrypt.hash( "AdmPaloma02" ,12),
+        imageRoute:"undefined",
+        credential:1,
+        createdAt:moment().format("YYYY-MM-DD HH:MM"),
+        updatedAt:moment().format("YYYY-MM-DD HH:MM")
+      },{
+        user: "Ariel" ,
+        name:"Ariel Pellegrino" ,
+        email:"ariel@allwrite.com",
+        password: await bcrypt.hash("AdmAriel03",12) ,
+        imageRoute:"undefined",
+        credential:1,
+        createdAt:moment().format("YYYY-MM-DD HH:MM"),
+        updatedAt:moment().format("YYYY-MM-DD HH:MM")
+      },{
+        user: "Barbara" ,
+        name:"Barbara Fernandez" ,
+        email:"barbara@allwrite.com",
+        password: await bcrypt.hash( "AdmBarbara04" ,12),
+        imageRoute:"undefined",
+        credential:1,
+        createdAt:moment().format("YYYY-MM-DD HH:MM"),
+        updatedAt:moment().format("YYYY-MM-DD HH:MM")
       }
       ], {})
   },
@@ -26,32 +62,4 @@ module.exports = {
 };
 
 
-// ,{
-//   user:"Marcelo" ,
-//   name: "Marcelo Gamon",
-//   email:"marcelo@allwrite.com",
-//   password: "admMarcelo01",
-//   imageRoute:"undefined",
-//   credential:1
-// },{
-//   user: "Paloma" ,
-//   name: "Paloma lima" ,
-//   email:"paloma@allwrite.com",
-//   password: "AdmPaloma02",
-//   imageRoute:"undefined",
-//   credential:1
-// },{
-//   user: "Ariel" ,
-//   name:"Ariel Pellegrino" ,
-//   email:"ariel@allwrite.com",
-//   password: "AdmAriel03",
-//   imageRoute:"undefined",
-//   credential:1
-// },{
-//   user: "Barbara" ,
-//   name:"Barbara Fernandez" ,
-//   email:"barbara@allwrite.com",
-//   password: "AdmBarbara04",
-//   imageRoute:"undefined",
-//   credential:1,
-// }
+

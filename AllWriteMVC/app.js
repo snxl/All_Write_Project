@@ -10,6 +10,9 @@ import { Server } from "socket.io";
 import methodOverride from "method-override";
 import swaggerUi from "swagger-ui-express"
 import fs from "fs"
+import dotenv from "dotenv"
+
+dotenv.config()
 
 //ROUTER
 import indexRouter from './routes/index.js';

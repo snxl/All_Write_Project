@@ -16,9 +16,14 @@
 
                 <div class="grupo_usuario">
                     <label for="input_user">Usuário</label>
-                    <%if(erro1){%>
+                    <%if(erro1 || user){%>
                         <input class="error_input" type="text" name="user" id="input_user">
-                        <p class="p_error"><%=erro1%></p>
+                        <%if(erro1){%>
+                          <p class="p_error"><%=erro1%></p>
+                        <%}%>
+                        <%if(user){%>
+                          <p class="p_error"><%=user%></p>
+                        <%}%>
                     <%}else{%>
                         <input class="input_field" type="text" name="user" id="input_user">
                     <%}%>
@@ -38,9 +43,14 @@
 
                  <div class="grupo_identificação">
                     <label for="input_email">Endereço de E-mail</label>
-                    <%if(erro3){%>
+                    <%if(erro3 || email){%>
                         <input class="error_input" type="email" name="email" id="input_email">
-                        <p class="p_error"><%=erro3%></p>
+                        <%if(erro3){%>
+                          <p class="p_error"><%=erro3%></p>
+                        <%}%>
+                        <%if(email){%>
+                          <p class="p_error"><%=email%></p>
+                        <%}%>
                     <%}else{%>
                         <input class="input_field" type="email" name="email" id="input_email">
                     <%}%>

@@ -1,4 +1,6 @@
 import serviceRegister from "../service/serviceRegister.js"
+import findUsers from "../service/findOneUser.js"
+import jwt from "jsonwebtoken"
 
 class Registro{
     GET(req, res){
@@ -9,7 +11,9 @@ class Registro{
             erro3: false,
             erro4: false,
             erro5: false,
-            erro6: false
+            erro6: false,
+            user: false,
+            email: false
        })
     }
 
@@ -22,37 +26,35 @@ class Registro{
             password_hash,
         } = req.body
 
-        const register = await serviceRegister.adiciona({
-            user,
-            name,
-            email,
-            password_hash
+        const registerUser = await serviceRegister.adiciona({
+          user,
+          name,
+          email,
+          password_hash
+         })
+
+        if(registerUser){
+
+        res.cookie("login", "logado", {
+          maxAge: 86400000
         })
 
-        if(register){
+        res.cookie("ultimo acesso", new Date(), {
+            maxAge: 86400000
+        })
 
-            res.cookie("login", "logado", {
-                maxAge: 86400000
-            })
+        const dataUser = await findUsers.findOneUser(email)
 
-            res.cookie("ultimo acesso", new Date(), {
-                maxAge: 86400000
-            })
 
-            return res.redirect("/profile")
-        }else{
-            res.render("registro",{
-                erro1: false,
-                erro2: false,
-                erro3: false,
-                erro4: false,
-                erro5: false,
-                erro6: false,
-                emailIsValid:true,
-                passwordIsValid:true
-            })
+        let token = await jwt.sign({id: dataUser.id, email: dataUser.email}, process.env.TOKEN_SECRET, {
+          expiresIn: process.env.TOKEN_EXPIRATION
+        })
+
+
+        res.json(token)
+        // return res.redirect("/profile")
+
         }
-
     }
 
     PUT(req, res){

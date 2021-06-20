@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     password:{
         type: DataTypes.STRING(200),
-        allowNull:false
+        allowNull:true
     },
     password_hash:{
       type: DataTypes.VIRTUAL
@@ -48,11 +48,11 @@ module.exports = (sequelize, DataTypes) => {
       tableName: "register"
     } )
 
-  //   Register.addHook("beforeSave", async Registro => {
+    Register.addHook("beforeSave", async Registro => {
 
-  //     if(Registro.password_hash) Registro.password_hash = await bcrypt.hash(user.password, 12)
+      if(Registro.password_hash) Registro.password = await bcrypt.hash(Registro.password_hash, 12)
 
-  // })
+    })
 
     Register.associate = (model)=>{
         Register.hasOne(model.Autores,{
@@ -63,3 +63,4 @@ module.exports = (sequelize, DataTypes) => {
 
     return Register
 }
+

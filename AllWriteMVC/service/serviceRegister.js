@@ -9,25 +9,10 @@ class Registro {
 
         const fullRegister = {...register, imageRoute, credential}
 
-        const checkEmail = await sequelize.Registro.findOne({
-            where:{
-                email: register.email
-            }
-        })
+        const insert = await sequelize.Registro.create(fullRegister)
 
-        const checkUser = await sequelize.Registro.findOne({
-            where:{
-                user: register.email
-            }
-        })
+        return insert
 
-        if(!checkEmail && !checkUser){
-            const insert = await sequelize.Registro.create(fullRegister)
-
-            return insert
-        }else{
-            return false
-        }
     }
 }
 
