@@ -177,6 +177,7 @@ body {
 
   .align__search {
     width: 100%;
+    margin-bottom: 20px;
 
   }
 
@@ -186,8 +187,8 @@ body {
     width:400px;
     height: 40px;
     margin:0 auto;
-    border: solid 1px #C2C2C2 ;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 17px -5px, rgba(50, 50, 93, 0.2) 0px 2px 6px -5px;
   }
   
   #search{
@@ -241,7 +242,7 @@ body {
 .text__profile {
   width: 250px;
   height: 150px;
-  background-color: #fff;
+
   padding: 5px;
 }
 
@@ -252,11 +253,12 @@ body {
   text-decoration: none;
   margin-bottom: 100px;
   transition: all 0.3s;
+  text-align: center;
 }
 
 .text__profile h1 a:hover{
   font-size: 22px;
-  color: #f0aa12;
+  color: #e912f0;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s;
@@ -268,6 +270,7 @@ body {
   font-weight: 400;
   text-align: justify;
   margin-top: 10px;
+  line-height: 15px;
 
 }
 
@@ -288,8 +291,34 @@ body {
   height: 200px;
   background-color:#fff;
   border-radius: 20px;
-
+  display: flex;
+  flex-direction: column;
+  
 }
+
+      .title__publication {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+
+        }
+
+        .title__publication h1 {
+          font-size: 20px;
+          margin-left: 15px;
+          color: #3E3E3E;
+          font-weight: bold;
+
+          }
+
+          .my__books {
+            background-color: #c637c9;
+            width: 100%;
+            height: 150px;
+
+
+          }
 
 .community {
   width: 370px;
@@ -298,12 +327,40 @@ body {
   border-radius: 20px;
 }
 
+.title__community {
+  width: 100%;
+  margin-top: 10px;
+
+  }
+
+  .title__community h1 {
+    font-size: 20px;
+    margin-left: 15px;
+    color: #3E3E3E;
+    font-weight: bold;
+    }
+
 .my__reading {
   width: 870px;
   height: 290px;
   background-color:#fff;
   border-radius: 20px;
 }
+
+          .title__reading {
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            }
+
+            .title__reading h1 {
+              font-size: 20px;
+              margin-left: 10px;
+              color: #3E3E3E;
+              font-weight: bold;
+              }
 
 /************************************
 INICIO - MAIN
