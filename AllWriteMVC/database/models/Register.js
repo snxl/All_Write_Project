@@ -1,4 +1,5 @@
 const bcrypt = require("bcryptjs")
+const database = require("./index.js")
 
 module.exports = (sequelize, DataTypes) => {
     const Register = sequelize.define("Registro",{
@@ -24,9 +25,11 @@ module.exports = (sequelize, DataTypes) => {
     password:{
         type: DataTypes.STRING(200),
         allowNull:true
+        //true enquanto campo de senha virtual existir
     },
     password_hash:{
-      type: DataTypes.VIRTUAL
+      type: DataTypes.VIRTUAL,
+      allowNull: false
     },
     imageRoute:{
         type: DataTypes.STRING(500),
@@ -60,6 +63,13 @@ module.exports = (sequelize, DataTypes) => {
             as:"autors"
         })
     }
+
+    // Register.addHook("afterCreate", async Registro =>{
+    //   await database.Autores.create({
+    //     acceptContact: 0,
+    //     register_id: Registro.id
+    //   })
+    // })
 
     return Register
 }

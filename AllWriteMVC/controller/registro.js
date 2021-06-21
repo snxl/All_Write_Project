@@ -1,5 +1,4 @@
 import serviceRegister from "../service/serviceRegister.js"
-import findUsers from "../service/findOneUser.js"
 import jwt from "jsonwebtoken"
 
 class Registro{
@@ -35,24 +34,25 @@ class Registro{
 
         if(registerUser){
 
-        res.cookie("login", "logado", {
-          maxAge: 86400000
-        })
-
-        res.cookie("ultimo acesso", new Date(), {
-            maxAge: 86400000
-        })
-
-        const dataUser = await findUsers.findOneUser(email)
-
-
-        let token = await jwt.sign({id: dataUser.id, email: dataUser.email}, process.env.TOKEN_SECRET, {
+        let token = await jwt.sign(
+        {
+          id: registerUser.id, user: registerUser.user, email: registerUser.email
+        },
+          process.env.TOKEN_SECRET,
+        {
           expiresIn: process.env.TOKEN_EXPIRATION
         })
 
 
-        res.json(token)
-        // return res.redirect("/profile")
+        res.cookie("ultimo acesso", new Date(), {
+            maxAge: 604900000
+        })
+
+        res.cookie("token", token, {
+          maxAge: 604900000
+        })
+
+        return res.redirect("/profile")
 
         }
     }

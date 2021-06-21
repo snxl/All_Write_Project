@@ -4,16 +4,13 @@ class findUsers{
 
 
   async findOneUser(email){
-    const find = await database.Registro.findOne({
+    return await database.Registro.findOne({
       where:{
         email
       },
-      attributes:["id", "email"]
+      attributes:["id", "email", "user"]
     })
-
-    return find
   }
-
 
 }
 

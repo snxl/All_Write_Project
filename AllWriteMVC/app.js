@@ -56,7 +56,7 @@ class App{
     this.app.use("/teste", teste);
     this.app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(this.readSwaggerJson()))
 
-    //this.validateLogin()
+    this.validateLogin()
     this.app.use('/dashboard', dashboardRouter);
     this.app.use('/profile', profileRouter);
     this.error404()
