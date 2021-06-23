@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    scrollbar-width: none;
+    scrollbar-color: dark;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    background-color: transparent;
+    width: 0.6vw;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color:#f95773;
+    border-radius: 20px;
+    scroll-behavior: smooth;
+}
+
+body:hover::-webkit-scrollbar{
+    width: 0.6vw;
+    scroll-behavior: smooth;
+
+
+}

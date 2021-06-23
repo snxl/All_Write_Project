@@ -5,7 +5,8 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www", 
+    "migrate": "node_modules/.bin/sequelize db:migrate"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

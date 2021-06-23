@@ -38,11 +38,18 @@ module.exports = (sequelize, DataTypes) => {
         lastAcess:{
             type: DataTypes.DATE,
             allowNull:true
-        }
+        },
     }, {
-        tableName: "Register",
+        tableName: "register",
         timestamps: false
     })
+
+    Register.associate = (model)=>{
+        Register.hasOne(model.Autores,{
+            foreignKey: "register_id",
+            as:"autors"
+        })
+    }
 
     return Register
 }
