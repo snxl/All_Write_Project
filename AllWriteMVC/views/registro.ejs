@@ -17,7 +17,7 @@
                 <div class="grupo_usuario">
                     <label for="input_user">Usuário</label>
                     <%if(erro1 || user){%>
-                        <input class="error_input" type="text" name="user" id="input_user">
+                        <input class="error_input" data-user="" type="text" name="user" id="input_user">
                         <%if(erro1){%>
                           <p class="p_error"><%=erro1%></p>
                         <%}%>
@@ -25,7 +25,7 @@
                           <p class="p_error"><%=user%></p>
                         <%}%>
                     <%}else{%>
-                        <input class="input_field" type="text" name="user" id="input_user">
+                        <input class="input_field" data-user type="text" name="user" id="input_user">
                     <%}%>
                 </div>
 
@@ -33,10 +33,10 @@
                  <div class="grupo_identificação">
                     <label for="input_name">Nome Completo</label>
                     <%if(erro2){%>
-                        <input class="error_input" type="text" name="name" id="input_name">
+                        <input class="error_input" data-name type="text" name="name" id="input_name">
                         <p class="p_error"><%=erro2%></p>
                     <%}else{%>
-                        <input class="input_field" type="text" name="name" id="input_name">
+                        <input class="input_field" data-name="" type="text" name="name" id="input_name">
                     <%}%>
 
                  </div>
@@ -44,7 +44,7 @@
                  <div class="grupo_identificação">
                     <label for="input_email">Endereço de E-mail</label>
                     <%if(erro3 || email){%>
-                        <input class="error_input" type="email" name="email" id="input_email">
+                        <input class="error_input" data-email="" type="email" name="email" id="input_email">
                         <%if(erro3){%>
                           <p class="p_error"><%=erro3%></p>
                         <%}%>
@@ -52,7 +52,7 @@
                           <p class="p_error"><%=email%></p>
                         <%}%>
                     <%}else{%>
-                        <input class="input_field" type="email" name="email" id="input_email">
+                        <input class="input_field" data-email="" type="email" name="email" id="input_email">
                     <%}%>
                 </div>
 
@@ -61,20 +61,20 @@
                         <div class="grupo_senha1">
                             <label for="input_password">Senha</label>
                             <%if(erro4){%>
-                                <input class="error_password" type="password" name="password" id="input_password">
+                                <input class="error_password" data-password_hash="" type="password" name="password_hash" id="input_password">
                                 <p class="p_error"><%=erro4%></p>
                             <%}else{%>
-                                <input class="input_password" type="password" name="password_hash" id="input_password">
+                                <input class="input_password" data-password_hash type="password" name="password_hash" id="input_password">
                             <%}%>
                         </div>
 
                         <div class="grupo_senha2">
                             <label for="input_check_password">Repetir Senha</label>
                             <%if(erro5){%>
-                                <input class="error_password" type="password" name="checkPassword" id="input_password">
+                                <input class="error_password" data-checkPassword="" type="password" name="checkPassword" id="input_password">
                                 <p class="p_error"> <wbr><%=erro5%><wbr></p>
                             <%}else{%>
-                                <input class="input_password" type="password" name="checkPassword" id="input_password">
+                                <input class="input_password" data-checkPassword type="password" name="checkPassword" id="input_password">
                             <%}%>
                         </div>
 
@@ -85,10 +85,12 @@
                     <label for="terms" class="use_terms" href="#">Concordo com os <a href="#" class="term_radio">Termos</a> de Uso</label>
                 </div>
 
-                <div class="send"> <button  class="login_register">CADASTRAR</button></div>
+                <div class="send" data-sendBtn=""> <button  class="login_register">CADASTRAR</button></div>
 
 
         </div>
     </form>
+
+    <script src="../javascripts/registro.js"></script>
 </body>
 </html>

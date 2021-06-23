@@ -1,5 +1,6 @@
 import createError from 'http-errors';
 import http from "http"
+import https from "https"
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -35,6 +36,11 @@ class App{
   constructor(){
     this.app = express();
     this.server = http.createServer(this.app);
+    this.serverTLS = https.createServer({
+      key: fs.readFileSync('./certificate/server.key'),
+      cert: fs.readFileSync('./certificate/server.cert')
+    }, this.app)
+    //this.checkSecure()
     this.io = new Server(this.server);
     this.config();
     this.socketIo();
@@ -59,14 +65,15 @@ class App{
     this.validateLogin()
     this.app.use('/dashboard', dashboardRouter);
     this.app.use('/profile', profileRouter);
-    this.error404()
   }
 
   globalMiddlewares(){
     this.app.use(logger('dev'));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
-    this.app.use(cookieParser());
+    this.app.use(cookieParser(process.env.TOKEN_SESSION, {
+      httpOnly: true
+    }));
     this.app.use(express.static(path.join(__dirname, 'public')));
     this.app.use(express.static(path.join(__dirname, 'web')));
     this.app.use(methodOverride("_method"))
@@ -114,6 +121,16 @@ class App{
       return JSON.stringify(data);
     });
   }
+
+  checkSecure(){
+    this.app.use((req, res)=>{
+      if(!req.secure){
+
+        res.redirect("https://localhost:3000"+ req.url);
+
+      }
+    })
+  }
 }
 
-export default new App().server
+export default new App()

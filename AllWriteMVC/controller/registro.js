@@ -1,5 +1,6 @@
 import serviceRegister from "../service/serviceRegister.js"
 import jwt from "jsonwebtoken"
+import  crypt from "crypto"
 
 class Registro{
     GET(req, res){
@@ -45,11 +46,21 @@ class Registro{
 
 
         res.cookie("ultimo acesso", new Date(), {
-            maxAge: 604900000
+            maxAge: 604900000,
         })
 
         res.cookie("token", token, {
           maxAge: 604900000
+        })
+
+        const stringTeste = "uma string qualquer"
+
+        // const stringCrypt = crypt.createSign("RSA-SHA256").write(stringTeste)
+
+        res.cookie("teste", stringCrypt , {
+          maxAge : 604900000,
+          httpOnly: true,
+          signed: true
         })
 
         return res.redirect("/profile")

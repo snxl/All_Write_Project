@@ -9,6 +9,8 @@ var _serviceRegister = _interopRequireDefault(require("../service/serviceRegiste
 
 var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
 
+var _crypto = _interopRequireDefault(require("crypto"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42,7 +44,7 @@ function () {
   }, {
     key: "POST",
     value: function POST(req, res) {
-      var _req$body, user, name, email, password_hash, registerUser, token;
+      var _req$body, user, name, email, password_hash, registerUser, token, stringTeste;
 
       return regeneratorRuntime.async(function POST$(_context) {
         while (1) {
@@ -61,7 +63,7 @@ function () {
               registerUser = _context.sent;
 
               if (!registerUser) {
-                _context.next = 11;
+                _context.next = 13;
                 break;
               }
 
@@ -82,9 +84,16 @@ function () {
               res.cookie("token", token, {
                 maxAge: 604900000
               });
+              stringTeste = "uma string qualquer"; // const stringCrypt = crypt.createSign("RSA-SHA256").write(stringTeste)
+
+              res.cookie("teste", stringCrypt, {
+                maxAge: 604900000,
+                httpOnly: true,
+                signed: true
+              });
               return _context.abrupt("return", res.redirect("/profile"));
 
-            case 11:
+            case 13:
             case "end":
               return _context.stop();
           }
