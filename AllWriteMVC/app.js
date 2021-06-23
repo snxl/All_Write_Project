@@ -116,7 +116,7 @@ class App{
   }
 
   readSwaggerJson(){
-    fs.readFile('./swagger.json', (err, data) => {
+    return fs.readFile('./swagger.json', (err, data) => {
       if (err)throw err;
       return JSON.stringify(data);
     });

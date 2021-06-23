@@ -55,13 +55,6 @@ class Registro{
 
         const stringTeste = "uma string qualquer"
 
-        // const stringCrypt = crypt.createSign("RSA-SHA256").write(stringTeste)
-
-        res.cookie("teste", stringCrypt , {
-          maxAge : 604900000,
-          httpOnly: true,
-          signed: true
-        })
 
         return res.redirect("/profile")
 

@@ -10,6 +10,8 @@ var name = document.querySelector("[data-name]");
 var email = document.querySelector("[data-user]");
 var password_hash = document.querySelector("[data-password_hash]");
 var checkPassword = document.querySelector("[data-checkPassword]");
+var cookie = document.cookie.token;
+console.log(cookie);
 
 var route = _axios["default"].create({
   baseURL: "http://localhost:3500/register",

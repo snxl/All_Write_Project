@@ -63,7 +63,7 @@ function () {
               registerUser = _context.sent;
 
               if (!registerUser) {
-                _context.next = 13;
+                _context.next = 12;
                 break;
               }
 
@@ -84,16 +84,10 @@ function () {
               res.cookie("token", token, {
                 maxAge: 604900000
               });
-              stringTeste = "uma string qualquer"; // const stringCrypt = crypt.createSign("RSA-SHA256").write(stringTeste)
-
-              res.cookie("teste", stringCrypt, {
-                maxAge: 604900000,
-                httpOnly: true,
-                signed: true
-              });
+              stringTeste = "uma string qualquer";
               return _context.abrupt("return", res.redirect("/profile"));
 
-            case 13:
+            case 12:
             case "end":
               return _context.stop();
           }

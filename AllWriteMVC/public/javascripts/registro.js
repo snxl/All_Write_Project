@@ -7,7 +7,10 @@ const name = document.querySelector("[data-name]")
 const email = document.querySelector("[data-user]")
 const password_hash = document.querySelector("[data-password_hash]")
 const checkPassword = document.querySelector("[data-checkPassword]")
+const cookie = document.cookie.token
 
+
+console.log(cookie)
 
 const route = axios.create({
   baseURL: "http://localhost:3500/register",
