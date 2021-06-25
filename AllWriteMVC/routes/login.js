@@ -5,8 +5,8 @@ const router = express.Router();
 
 
 /* GET home page. */
-router.get('/', multerConfigs.any, login.GET);
-router.post("/entry", multerConfigs.any, login.POST)
+router.get('/', login.GET);
+router.post("/", login.POST)
 //router.put("/", login.POST)
 //router.delete("/", login.DELETE)
 

@@ -1,10 +1,14 @@
+import database from "../database/models/index.js"
+
 class Login{
     GET(req, res){
         res.status(200).render("login")
     }
-    
+
     POST(req, res){
-        return res.send(req.body)
+        const { email, password } = req.body
+
+        res.json({ url:"" , email, password})
     }
 
     PUT(req, res){
@@ -18,4 +22,3 @@ class Login{
 
 
 export default new Login
-    

@@ -93,6 +93,64 @@ class Validation{
               user
             })
         }
+
+    }
+
+    async login(req, res, next){
+
+      const schema = yup.shape.object({
+        email: yup.string().required("inserir e-mail"),
+        password: yup.string().required("inserir senha")
+      })
+
+      const checkEmail = await database.Registro.findOne({
+        where:{
+          email : req.body.email
+        }
+      })
+
+      checkEmail != null ? email = "email existente": email = false;
+
+      if(!checkEmail) return res.render("login", {
+        erro1,
+        erro2,
+        erro3,
+        erro4,
+        erro5,
+        erro6,
+        email,
+        user
+      })
+
+      try {
+        await schema.validate(req.body, {abortEarly: false})
+
+        if(checkEmail === null && checkUser === null) return next()
+      } catch (error) {
+
+        let allError = results.errors
+
+        const checkPassword = allError.forEach(element=> {
+            if(element === "Deve inserir a senha") return true
+        })
+
+        allError.forEach(element=>{
+             if(element == "inserir usuario") erro1 = element
+             if(element == "inserir nome") erro2 = element
+            })
+
+        return res.render("registro",{
+          erro1,
+          erro2,
+          erro3,
+          erro4,
+          erro5,
+          erro6,
+          email,
+          user
+        })
+      }
+
     }
 
 }

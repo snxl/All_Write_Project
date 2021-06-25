@@ -5,7 +5,7 @@ var _app = _interopRequireDefault(require("../app.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var port = process.env.PORT || '3000';
-var portTLS = process.env.PORT_TLS || '3000';
+var portTLS = process.env.PORT_TLS || '3100';
 
 _app["default"].server.listen(port, function () {
   return console.log("server HTTP running: ".concat(port));

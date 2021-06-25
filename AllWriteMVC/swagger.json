@@ -9,15 +9,34 @@
       "url": "https://opensource.org/licenses/MIT"
     }
   },
-  "host": "localhost:3000",
+  "host": "localhost:3600",
   "basePath": "/",
   "tags": [
     {
-      "name": "teste",
-      "description": "teste all Write"
+      "name": "CADASTRO",
+      "description": "documentação do cadastro"
     }
   ],
-  "schemes": ["http"],
+  "paths":[
+    {
+      "/register" : {
+        "post" : {
+          "tags" : ["CADASTRO"],
+          "description" : "rota de cadastro",
+          "produces": [ "application/json"],
+          "responses" : {
+            "200" : {
+              "schema":{
+                "$ref" : "#/definitions/CADASTRO"
+              } ,
+              "description": "cria cookies e redireciona"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "schemes": ["https"],
   "consumes": ["application/json"],
   "produces": ["application/json"]
 }

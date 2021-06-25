@@ -11,6 +11,7 @@ import { Server } from "socket.io";
 import methodOverride from "method-override";
 import swaggerUi from "swagger-ui-express"
 import fs from "fs"
+import cors from "cors"
 import dotenv from "dotenv"
 
 dotenv.config()
@@ -40,7 +41,7 @@ class App{
       key: fs.readFileSync('./certificate/server.key'),
       cert: fs.readFileSync('./certificate/server.cert')
     }, this.app)
-    //this.checkSecure()
+    this.checkSecure()
     this.io = new Server(this.server);
     this.config();
     this.socketIo();
@@ -55,12 +56,12 @@ class App{
   }
 
 
-  routes(){
+  routes(){~
     this.app.use('/',indexRouter);
     this.app.use("/login", loginRouter);
     this.app.use("/register", resgistroRouter);
     this.app.use("/teste", teste);
-    this.app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(this.readSwaggerJson()))
+    this.app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(JSON.parse(fs.readFileSync("./swaggerNew.json", "utf-8"))))
 
     this.validateLogin()
     this.app.use('/dashboard', dashboardRouter);
@@ -68,6 +69,7 @@ class App{
   }
 
   globalMiddlewares(){
+    this.app.use(cors())
     this.app.use(logger('dev'));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
@@ -115,20 +117,15 @@ class App{
     })
   }
 
-  readSwaggerJson(){
-    return fs.readFile('./swagger.json', (err, data) => {
-      if (err)throw err;
-      return JSON.stringify(data);
-    });
-  }
-
   checkSecure(){
-    this.app.use((req, res)=>{
+    this.app.use((req, res, next)=>{
       if(!req.secure){
 
-        res.redirect("https://localhost:3000"+ req.url);
+        res.redirect(`https://localhost:${process.env.PORT_TLS || 3100}${req.url}`);
 
       }
+
+      next()
     })
   }
 }
