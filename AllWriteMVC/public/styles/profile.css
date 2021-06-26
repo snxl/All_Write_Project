@@ -277,7 +277,6 @@ body {
 .user_books {
   width: 870px;
   height: 530px;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -324,19 +323,21 @@ body {
             overflow: hidden;
             display: flex;
             padding: 5px;
+            margin: 0 auto;
           }
 
           .book__block {
-            width: 220px;
+            width: 120px;
             height: 125px;
             background-color: #6f70c5;
             display: flex;
             flex-wrap: nowrap;
             justify-content: space-between;
             align-items: center;
-            margin-right: 10px;
+
           }
 
+          
 
 
           .title__book__block {
