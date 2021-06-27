@@ -89,56 +89,73 @@
  
                       
                     <section class="user_books">
-                          <div class="my__publications">
-                              <div class="title__publication">
-                                  <h1>Minhas publicações</h1>
+                                  <article class="my__publications"> <!-- ELEMENTO PAI  DO CARROSSEL-->
+                                                <div class="title__publication">
+                                                    <h1>Minhas publicações</h1>
+                                                    <!--
+                                                              <div class="btn__my__publication">                                         
+                                                                            <img class="carousel__botao carousel__botao--anterior" src="../public/img/previus__img.svg">
+                                                                            <img class="carousel__botao carousel__botao--proximo" src="../public/img/next__img.svg">
+                                                              </div>
+                                                              -->
+                                                              <div class="align__sets">
+                                                              <button class="carrossel__botao carrossel__botao--anterior" data-anterior aria-label="Botao de voltar"></button>
+                                                              <button class="carrossel__botao carrossel__botao--proximo" data-proximo aria-label="Botao de avançar"></button>
+                                                            </div>
+                                                </div>  
+                                                <!-- Carrossel JS primeiro bloco = Meus livros -->
+                                                <div class="my__books__carrossel" >
+                                                            <ul class="carrossel__lista-livros" data-lista-livros>
+                                                                  <a href="#" class="carrosel__livros">
+                                                                        <li class="carrossel__imagem-container">
+                                                                          <img src="../public/img/book_libary_test.svg" alt="" class="carrossel__imagem">
+                                                                          <a href="#" class="h1__carrossel"><h1>Nome do Livro</h1></a>
+                                                                          <h3>Data publicação</h3>
+                                                                          <h4>nº de views</h4>
+                                                                        </li>
+                                                                  </a>
+                                                                  <a href="#" class="carrosel__livros">
+                                                                          <li class="carrossel__imagem-container">
+                                                                            <img src="../public/img/book_libary_test.svg" alt="" class="carrossel__imagem">
+                                                                          </li>
+                                                                  </a>
+                                                                  <a href="#" class="carrosel__livros">
+                                                                          <li class="carrossel__imagem-container">
+                                                                            <img src="../public/img/book_libary_test.svg" alt="" class="carrossel__imagem">
+                                                                          </li>
+                                                                  </a>
+                                                                  <a href="#" class="carrosel__livros">
+                                                                          <li class="carrossel__imagem-container">
+                                                                            <img src="../public/img/book_libary_test.svg" alt="" class="carrossel__imagem">
+                                                                          </li>
+                                                                  </a>
+                                                                  <a href="#" class="carrosel__livros">
+                                                                          <li class="carrossel__imagem-container">
+                                                                            <img src="../public/img/book_libary_test.svg" alt="" class="carrossel__imagem">
+                                                                          </li>
+                                                                  </a>
+                                                                  <a href="#" class="carrosel__livros">
+                                                                          <li class="carrossel__imagem-container">
+                                                                            <img src="../public/img/book_libary_test.svg" alt="" class="carrossel__imagem">
+                                                                          </li>
+                                                                  </a>
 
-                                            <div class="btn__my__publication">
+
+
+
+
+
+                                                            </ul>
+                                                                               
+
+                                                </div>
                                               
-                                                          <img class="slick-prev slick-arrow"" src="../public/img/previus__img.svg">
-                                                          <img id="next__books" src="../public/img/next__img.svg">
-                                          </div>
+                                              
+                                                <div class="btn__publication">
 
-                              </div>
-
-                              <!-- Carrossel JS primeiro bloco = Meus livros -->
-                              <article class="my__books"   id="carrossel__my__books">
-
-                                                <div class="book__block">
-                                              a
                                                 </div>
 
-                                                  <div class="book__block">
-                                                    b
-                                                   </div>
-
-                                                <div class="book__block">
-                                               c
-                                                 </div>
-
-                                                <div class="book__block">
-                                                    d
-                                                </div>
-
-                                                <div class="book__block">
-                                                    e
-                                                </div>
-
-                                                <div class="book__block">
-                                                    f
-                                                </div>
-                         
-                              </article>
-          
-                            
-
-  
-
-                              <div class="btn__publication">
-
-                              </div>
-
-                          </div>
+                                  </article>
 
                           <div class="community">
                             <div class="title__community">
@@ -171,7 +188,7 @@
 
 
             </main>
-
+            <script src="../public/javascript/index_js_carrossel.js" type="module"></script>
 
 
 
