@@ -13,6 +13,9 @@
 <body>
         <form data-form method="POST">
             <div class="container">
+                <%if(invalidData){%>
+                  <p class="error">Dados inválidos</p>
+                <%}%>
                 <label>E-mail</label>
                 <input class="input_login" data-email="" type="email" placeholder="" name="email" required autocomplete="email">
                 <label>Senha</label>

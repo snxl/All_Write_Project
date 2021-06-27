@@ -47,14 +47,13 @@ class Registro{
 
         res.cookie("ultimo acesso", new Date(), {
             maxAge: 604900000,
+            httpOnly: true
         })
 
         res.cookie("token", token, {
-          maxAge: 604900000
+          maxAge: 604900000,
+          httpOnly: true
         })
-
-        const stringTeste = "uma string qualquer"
-
 
         return res.redirect("/profile")
 

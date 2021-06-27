@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _index = _interopRequireDefault(require("../database/models/index.js"));
+var _bcryptjs = _interopRequireDefault(require("bcryptjs"));
 
-var _serviceLogin = _interopRequireDefault(require("../service/serviceLogin.js"));
+var _index = _interopRequireDefault(require("../database/models/index.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -17,7 +17,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var Login =
+var _default = new (
 /*#__PURE__*/
 function () {
   function Login() {
@@ -25,56 +25,36 @@ function () {
   }
 
   _createClass(Login, [{
-    key: "GET",
-    value: function GET(req, res) {
-      res.status(200).render("login", {
-        invalidData: false
-      });
-    }
-  }, {
-    key: "POST",
-    value: function POST(req, res) {
-      var _req$body, email, password, responseUser, responseInvalidData;
-
-      return regeneratorRuntime.async(function POST$(_context) {
+    key: "searchUser",
+    value: function searchUser(email) {
+      return regeneratorRuntime.async(function searchUser$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              responseInvalidData = function _ref() {
-                res.render("login", {
-                  invalidData: true
-                });
-              };
+              _context.next = 2;
+              return regeneratorRuntime.awrap(_index["default"].Registro.findOne({
+                where: {
+                  email: email
+                },
+                attributes: ["email", "id", "password"]
+              }));
 
-              _req$body = req.body, email = _req$body.email, password = _req$body.password;
-              _context.next = 4;
-              return regeneratorRuntime.awrap(_serviceLogin["default"].searchUser(email));
+            case 2:
+              return _context.abrupt("return", _context.sent);
 
-            case 4:
-              responseUser = _context.sent;
-
-              if (!(responseUser == null)) {
-                _context.next = 7;
-                break;
-              }
-
-              return _context.abrupt("return", responseInvalidData());
-
-            case 7:
-              res.json(responseUser);
-
-            case 8:
+            case 3:
             case "end":
               return _context.stop();
           }
         }
       });
     }
+  }, {
+    key: "validateData",
+    value: function validateData() {}
   }]);
 
   return Login;
-}();
-
-var _default = new Login();
+}())();
 
 exports["default"] = _default;

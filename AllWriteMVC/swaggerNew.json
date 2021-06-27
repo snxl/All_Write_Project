@@ -13,17 +13,45 @@
   "basePath": "/",
   "tags": [
     {
-      "name": "Cadastro",
+      "name": "search",
+      "description": "pesquisa de livros"
+    },
+    {
+      "name": "register book",
+      "description": "registrar livros"
+    },
+    {
+      "name": "login",
+      "description": "login de usuarios"
+    },
+    {
+      "name": "register",
       "description": "cadastro de user"
+    },
+    {
+      "name": "index",
+      "description" : "página inicial"
+    },
+    {
+      "name": "dashboard",
+      "description" : "página para mostrar livros"
+    },
+    {
+      "name": "profile",
+      "description" : "página de perfil"
+    },
+    {
+      "name": "books",
+      "description": "página de livro"
     }
   ],
-  "schemes": ["https"],
+  "schemes": ["https", "http"],
   "consumes": ["application/json"],
   "produces": ["application/json", "text/html"],
   "paths": {
       "/register": {
           "get": {
-              "tags": ["Cadastro"],
+              "tags": ["register"],
               "summary": "Carregar a pagina de castro",
               "responses": {
                   "200": {

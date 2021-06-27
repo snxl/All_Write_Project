@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _express = _interopRequireDefault(require("express"));
 
-var _login = _interopRequireDefault(require("../controller/login.js"));
+var _profile = _interopRequireDefault(require("../controller/profile.js"));
 
 var _multerMiddleware = _interopRequireDefault(require("../middlewares/multerMiddleware.js"));
 
@@ -17,9 +17,9 @@ var router = _express["default"].Router();
 /* GET home page. */
 
 
-router.get('/', _login["default"].GET);
-router.post("/", _multerMiddleware["default"].any(), _login["default"].POST); //router.put("/", login.POST)
-//router.delete("/", login.DELETE)
-
+router.get('/', _profile["default"].GET);
+router.put("/update", _multerMiddleware["default"].single("file"), _profile["default"].PUT);
+router["delete"]("/delete", _multerMiddleware["default"].any(), _profile["default"].DELETE);
+router.get("/exit", _multerMiddleware["default"].any(), _profile["default"].DELETE);
 var _default = router;
 exports["default"] = _default;

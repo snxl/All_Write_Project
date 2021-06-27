@@ -42,7 +42,6 @@ class Validation{
         checkUser != null? user = "usuário existente" : user = false;
         checkEmail != null ? email = "email existente": email = false;
 
-
         if(user && email){
           return res.render("registro",{
             erro1,

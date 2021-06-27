@@ -44,7 +44,7 @@ function () {
   }, {
     key: "POST",
     value: function POST(req, res) {
-      var _req$body, user, name, email, password_hash, registerUser, token, stringTeste;
+      var _req$body, user, name, email, password_hash, registerUser, token;
 
       return regeneratorRuntime.async(function POST$(_context) {
         while (1) {
@@ -63,7 +63,7 @@ function () {
               registerUser = _context.sent;
 
               if (!registerUser) {
-                _context.next = 12;
+                _context.next = 11;
                 break;
               }
 
@@ -79,15 +79,16 @@ function () {
             case 7:
               token = _context.sent;
               res.cookie("ultimo acesso", new Date(), {
-                maxAge: 604900000
+                maxAge: 604900000,
+                httpOnly: true
               });
               res.cookie("token", token, {
-                maxAge: 604900000
+                maxAge: 604900000,
+                httpOnly: true
               });
-              stringTeste = "uma string qualquer";
               return _context.abrupt("return", res.redirect("/profile"));
 
-            case 12:
+            case 11:
             case "end":
               return _context.stop();
           }

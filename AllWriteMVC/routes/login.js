@@ -1,12 +1,12 @@
 import express from'express';
 import login from'../controller/login.js';
-import multerConfigs from "../middlewares/multerMiddleware.js"
+import multer from "../middlewares/multerMiddleware.js"
 const router = express.Router();
 
 
 /* GET home page. */
 router.get('/', login.GET);
-router.post("/", login.POST)
+router.post("/", multer.any(), login.POST)
 //router.put("/", login.POST)
 //router.delete("/", login.DELETE)
 

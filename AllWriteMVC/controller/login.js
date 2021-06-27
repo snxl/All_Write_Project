@@ -1,22 +1,31 @@
 import database from "../database/models/index.js"
+import serviceLogin from "../service/serviceLogin.js"
 
 class Login{
     GET(req, res){
-        res.status(200).render("login")
+        res.status(200).render("login", {
+          invalidData: false
+        })
     }
 
-    POST(req, res){
-        const { email, password } = req.body
+    async POST(req, res){
 
-        res.json({ url:"" , email, password})
-    }
+      const { email, password } = req.body
 
-    PUT(req, res){
-        return
-    }
+      const responseUser = await serviceLogin.searchUser(email)
 
-    DELETE(req, res){
-        return
+      if(responseUser == null){
+        return responseInvalidData()
+      }
+
+      res.json(responseUser)
+
+      function responseInvalidData(){
+        res.render("login", {
+          invalidData: true
+        })
+      }
+
     }
 }
 
