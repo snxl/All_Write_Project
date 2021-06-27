@@ -1,47 +1,60 @@
+const bcrypt = require("bcryptjs")
+const database = require("./index.js")
+
 module.exports = (sequelize, DataTypes) => {
-    const Register = sequelize.define("Registro", {
-        id : {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-        },
-        user: {
-            type: DataTypes.STRING(50),
-            allowNull:true,
-            unique:true
-        },
-        name:{
-            type: DataTypes.STRING(50),
-            allowNull:true
-        },
-        email:{
-            type: DataTypes.STRING(90),
-            allowNull:true, 
-            unique:true
-        },
-        password:{
-            type: DataTypes.STRING(200),
-            allowNull:true
-        },
-        imageRoute:{
-            type: DataTypes.STRING(500),
-            allowNull:false
-        },
-        credential:{
-            type: DataTypes.INTEGER,
-            allowNull: true
-        },
-        createDate:{
-            type: DataTypes.DATE,
-            allowNull:true
-        },
-        lastAcess:{
-            type: DataTypes.DATE,
-            allowNull:true
-        },
-    }, {
-        tableName: "register",
-        timestamps: false
+    const Register = sequelize.define("Registro",{
+      id : {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+    },
+    user: {
+        type: DataTypes.STRING(50),
+        allowNull:false,
+        unique:true
+    },
+    name:{
+        type: DataTypes.STRING(50),
+        allowNull:false
+    },
+    email:{
+        type: DataTypes.STRING(200),
+        allowNull:false,
+        unique:true
+    },
+    password:{
+        type: DataTypes.STRING(200),
+        allowNull:true
+        //true enquanto campo de senha virtual existir
+    },
+    password_hash:{
+      type: DataTypes.VIRTUAL,
+      allowNull: false
+    },
+    imageRoute:{
+        type: DataTypes.STRING(500),
+        allowNull:false
+    },
+    credential:{
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    createdAt:{
+        type: DataTypes.DATE,
+        allowNull:false
+    },
+    updatedAt:{
+        type: DataTypes.DATE,
+        allowNull:false
+    }
+    },{
+      tableName: "register"
+    } )
+
+    Register.addHook("beforeSave", async Registro => {
+
+      if(Registro.password_hash) Registro.password = await bcrypt.hash(Registro.password_hash, 12)
+
     })
 
     Register.associate = (model)=>{
@@ -51,5 +64,13 @@ module.exports = (sequelize, DataTypes) => {
         })
     }
 
+    // Register.addHook("afterCreate", async Registro =>{
+    //   await database.Autores.create({
+    //     acceptContact: 0,
+    //     register_id: Registro.id
+    //   })
+    // })
+
     return Register
 }
+

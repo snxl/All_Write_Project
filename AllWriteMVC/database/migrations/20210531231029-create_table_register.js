@@ -3,44 +3,44 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
      await queryInterface.createTable('register',{
-      id : {
+    id : {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
     user: {
         type: Sequelize.STRING(50),
-        allowNull:true,
+        allowNull:false,
         unique:true
     },
     name:{
         type: Sequelize.STRING(50),
-        allowNull:true
+        allowNull:false
     },
     email:{
-        type: Sequelize.STRING(90),
-        allowNull:true, 
+        type: Sequelize.STRING(200),
+        allowNull:false,
         unique:true
     },
     password:{
         type: Sequelize.STRING(200),
-        allowNull:true
+        allowNull:false
     },
     imageRoute:{
-        type: Sequelize.STRING(500),
+        type: Sequelize.STRING(200),
         allowNull:false
     },
     credential:{
         type: Sequelize.INTEGER,
-        allowNull: true
+        allowNull: false
     },
-    createDate:{
+    createdAt:{
         type: Sequelize.DATE,
-        allowNull:true
+        allowNull:false
     },
-    lastAcess:{
+    updatedAt:{
         type: Sequelize.DATE,
-        allowNull:true
+        allowNull:false
     }
      });
   },

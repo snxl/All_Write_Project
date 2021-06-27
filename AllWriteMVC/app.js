@@ -1,5 +1,6 @@
 import createError from 'http-errors';
 import http from "http"
+import https from "https"
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,9 +8,15 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import session from "express-session"
 import { Server } from "socket.io";
-import methodOverride from "method-override"
+import methodOverride from "method-override";
+import swaggerUi from "swagger-ui-express"
+import fs from "fs"
+import cors from "cors"
+import dotenv from "dotenv"
 
+dotenv.config()
 
+//ROUTER
 import indexRouter from './routes/index.js';
 import dashboardRouter from "./routes/dashboard.js"
 import profileRouter from './routes/profile.js';
@@ -17,72 +24,110 @@ import loginRouter from "./routes/login.js"
 import resgistroRouter from "./routes/registros.js"
 import teste from "./routes/testesSequelize.js"
 
+
+
 //MIDDLEWARE
 import validateRoute from './middlewares/privateRoutes.js';
 
-
-
-const app = express();
-const server = http.createServer(app);
-const io = new Server(server);  
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-io.on("connect", (socket)=>{
-  console.log("user connect")
-  socket.on("disconnect",(socket) => {
-    console.log("user disconnect")
-  })
-})
 
-app.use(session({
-  secret: "All write project",
-  resave: false,
-  saveUninitialized: true
-}))
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'web')));
-app.use(methodOverride("_method"))
-
-//PUBLIC MIDDLEWARES
-
-//PUBLIC ROUTES
-app.use('/',indexRouter);
-app.use("/login", loginRouter)
-app.use("/register", resgistroRouter)
-app.use("/teste", teste)
+class App{
+  constructor(){
+    this.app = express();
+    this.server = http.createServer(this.app);
+    this.serverTLS = https.createServer({
+      key: fs.readFileSync('./certificate/server.key'),
+      cert: fs.readFileSync('./certificate/server.cert')
+    }, this.app)
+    this.checkSecure()
+    this.io = new Server(this.server);
+    this.config();
+    this.socketIo();
+    this.globalMiddlewares();
+    this.routes()
+  }
 
 
-//PRIVATE MIDDLEWARES
-app.use(validateRoute.login)
-//PRIVATE ROUTES
-app.use('/dashboard', dashboardRouter);
-app.use('/profile', profileRouter);
-
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
-});
-
-// error handler
-app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
+  config(){
+    this.app.set('views', path.join(__dirname, 'views'));
+    this.app.set('view engine', 'ejs');
+  }
 
 
-export  {server};
+  routes(){~
+    this.app.use('/',indexRouter);
+    this.app.use("/login", loginRouter);
+    this.app.use("/register", resgistroRouter);
+    this.app.use("/teste", teste);
+    this.app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(JSON.parse(fs.readFileSync("./swaggerNew.json", "utf-8"))))
+
+    this.validateLogin()
+    this.app.use('/dashboard', dashboardRouter);
+    this.app.use('/profile', profileRouter);
+  }
+
+  globalMiddlewares(){
+    this.app.use(cors())
+    this.app.use(logger('dev'));
+    this.app.use(express.json());
+    this.app.use(express.urlencoded({ extended: false }));
+    this.app.use(cookieParser(process.env.TOKEN_SESSION, {
+      httpOnly: true
+    }));
+    this.app.use(express.static(path.join(__dirname, 'public')));
+    this.app.use(express.static(path.join(__dirname, 'web')));
+    this.app.use(methodOverride("_method"))
+    this.app.use(session({
+      secret: "All write project",
+      resave: false,
+      saveUninitialized: true
+    }));
+  }
+
+  validateLogin(){
+    this.app.use(validateRoute.login)
+  }
+
+  error404(){
+    this.app.use(function (req, res, next) {
+      next(createError(404));
+    });
+  }
+
+  handleError(){
+    this.app.use(function (err, req, res, next) {
+      // set locals, only providing error in development
+      res.locals.message = err.message;
+      res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+      // render the error page
+      res.status(err.status || 500);
+      res.render('error');
+    });
+  }
+
+  socketIo(){
+    this.io.on("connect", (socket)=>{
+      console.log("user connect")
+      socket.on("disconnect",(socket) => {
+        console.log("user disconnect")
+      })
+    })
+  }
+
+  checkSecure(){
+    this.app.use((req, res, next)=>{
+      if(!req.secure){
+
+        res.redirect(`https://localhost:${process.env.PORT_TLS || 3100}${req.url}`);
+
+      }
+
+      next()
+    })
+  }
+}
+
+export default new App()

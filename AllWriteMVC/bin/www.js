@@ -1,6 +1,9 @@
-import {server} from "../app.js"
+import server from "../app.js"
 
 const port = process.env.PORT || '3000'
 
-server.listen(port, () => console.log(`server running: ${port}`))
+const portTLS = process.env.PORT_TLS || '3100'
+
+server.server.listen(port, () => console.log(`server HTTP running: ${port}`))
+server.serverTLS.listen(portTLS, () => console.log(`server HTTPS running: ${portTLS}`))
 
