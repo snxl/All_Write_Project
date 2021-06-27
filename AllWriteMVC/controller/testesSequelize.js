@@ -1,4 +1,5 @@
 import sequelize from "../database/models/index.js"
+import crypt from "crypto"
 
 const teste = {
     findAll: async (req, res) => {
@@ -15,10 +16,12 @@ const teste = {
             }]
         })
 
+        const Decrypt = crypt.Decipher()
+
         res.json(data)
 
     },
-    
+
     findOne: async (req, res) =>{
         const data = await sequelize.Registro.findOne({
             where:{

@@ -4,7 +4,7 @@ module.exports = {
     "password": "Shine130102",
     "database": "register-allwrite",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": `mysql`
   },
   "test": {
     "username": "root",

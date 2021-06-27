@@ -1,4 +1,6 @@
 import serviceRegister from "../service/serviceRegister.js"
+import jwt from "jsonwebtoken"
+import  crypt from "crypto"
 
 class Registro{
     GET(req, res){
@@ -9,50 +11,53 @@ class Registro{
             erro3: false,
             erro4: false,
             erro5: false,
-            erro6: false
+            erro6: false,
+            user: false,
+            email: false
        })
     }
 
     async POST(req, res){
-        
+
         const {
             user,
             name,
             email,
-            password,
+            password_hash,
         } = req.body
 
-        const register = await serviceRegister.adiciona({
-            user,
-            name,
-            email,
-            password
+        const registerUser = await serviceRegister.adiciona({
+          user,
+          name,
+          email,
+          password_hash
+         })
+
+        if(registerUser){
+
+        let token = await jwt.sign(
+        {
+          id: registerUser.id, user: registerUser.user, email: registerUser.email
+        },
+          process.env.TOKEN_SECRET,
+        {
+          expiresIn: process.env.TOKEN_EXPIRATION
         })
 
-        if(register){
 
-            res.cookie("login", "logado", {
-                maxAge: 86400000   
-            })
-    
-            res.cookie("ultimo acesso", new Date(), {
-                maxAge: 86400000
-            })
+        res.cookie("ultimo acesso", new Date(), {
+            maxAge: 604900000,
+            httpOnly: true
+        })
 
-            return res.redirect("/profile")
-        }else{
-            res.render("registro",{
-                erro1: false,
-                erro2: false,
-                erro3: false,
-                erro4: false,
-                erro5: false,
-                erro6: false,
-                emailIsValid:true,
-                passwordIsValid:true
-            })
+        res.cookie("token", token, {
+          maxAge: 604900000,
+          httpOnly: true
+        })
+
+        return res.redirect("/profile")
+
         }
-
     }
 
     PUT(req, res){
