@@ -5,12 +5,13 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./bin/www", 
+    "start": "nodemon ./bin/www",
     "migrate": "node_modules/.bin/sequelize db:migrate"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "cjs": "0.0.11",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
@@ -26,6 +27,7 @@
     "multer": "^1.4.2",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
+    "npm": "^7.19.0",
     "sequelize": "^6.6.2",
     "socket.io": "^4.0.1",
     "yup": "^0.32.9"
