@@ -170,8 +170,56 @@ body {
 
   main {
     max-width: 1440px;
-    height: 700px;
+    height: 600px;
     margin: 0 auto;
-    padding-top: 20px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+   
     background-color: #c637c9;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+  }
+
+  .form__suport {
+    width: 700px;
+    height: 600px;
+    background-color: aqua;
+
+}
+
+  .text__top {
+    width: 700px;
+    height: 200px;
+    background-color: chartreuse;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+ form label {
+   font-weight: 600;
+   color: darkslategrey;
+ }
+
+
+
+  #name {
+    width: 350px;
+    height: 40px;
+    background-color: #c9c737;
+  }
+
+  #email {
+    width: 350px;
+    height: 40px;
+    background-color: #c9c737;
+  }
+
+  #message{
+    width: 700px;
+    height: 40px;
+    background-color: #c9c737;
   }
