@@ -277,7 +277,6 @@ body {
 .user_books {
   width: 870px;
   height: 530px;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -306,8 +305,8 @@ body {
         margin-top: 10px;
         display: flex;
         justify-content: space-between;
-
         }
+        
 
         .title__publication h1 {
           font-size: 20px;
@@ -317,27 +316,58 @@ body {
 
           }
 
-          .my__books {
+          .my__books__carrossel {
+            position: relative;
             background-color: #00ff73;
             width: 460px;
             height: 140px;
             overflow: hidden;
             display: flex;
             padding: 5px;
+            margin: 0 auto;
           }
 
-          .book__block {
-            width: 220px;
-            height: 125px;
-            background-color: #6f70c5;
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            align-items: center;
+          .carrosel__livros {
+            position: absolute;
+            top: 10px;
+            bottom:0;
+            left: 20px;
+          }
+
+          .carrossel__imagem-container {
+            list-style: none;
+            background-color: #a00909;
+            width: 430px;
+            height: 130px;
+          }
+
+          .arrossel__imagem {
+            object-fit: cover;
+          }
+          .align__sets {
             margin-right: 10px;
+            font-weight: bold;
           }
 
+          .carrossel__botao {
+            border: none;
+            padding: 2px;
+            font-weight: 400;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+          }
 
+          .carrossel__botao--anterior {
+            background-image: url(../img/setaEsquerda.svg);
+            background-size: 20px;
+          }
+          .carrossel__botao--proximo {
+            background-image: url(../img/setadireita.svg);
+            background-size: 20px;
+          }
+        
+        
 
           .title__book__block {
 
@@ -419,18 +449,11 @@ body {
 
 
 
-              #previus__books, #next__books {
-                cursor: pointer;
-              }
+
 
 
 /************************************
-INICIO - MAIN
+FIM - MAIN
 *************************************/
-footer {
-  width: 100%;
-  height: 90px;
-  border-top: solid 1px #C2C2C2;
-  background-color: #fff;
-  
-}
+
+

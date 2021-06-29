@@ -28,6 +28,20 @@ body::-webkit-scrollbar-thumb{
 body:hover::-webkit-scrollbar{
     width: 0.6vw;
     scroll-behavior: smooth;
+}
 
+
+footer {
+    width: 100%;
+    height: 80px;
+    border-top: solid 1px #C2C2C2;
+    background-color: #fff;
+    
+  }
+
+.logo__footer {
+    width: 70px;
+    height: 70px;
 
 }
+

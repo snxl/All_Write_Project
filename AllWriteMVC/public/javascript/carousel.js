@@ -1,26 +1,19 @@
-/*   Carrossel da page PROFILE*/
+export class Carrossel {
 
-window.load = slide(1);
+        constructor(anterior, proximo, listaLivros){
+          this.anterior = document.querySelector(anterior)  
+          this.proximo = document.querySelector(proximo)
+          this.listaLivros = document.querySelector(listaLivros) 
 
-let bgNumber = 1;
+          this.slides = this.getListaSlides()
+          
 
-function slide(n){
-      let allBooks = 4;
+        }
 
-          document.getElementById('carrossel__my__books').style.backgroundImage =
-            "url('../public/img" + n + "'.jpg');";
+        getListaSlides(){
+          return Array.from(this.listaLivros.children)
+        }
+
+       
 }
 
-function previus__books() {
-      if (bgNumber > 1) {
-            bgNumber--;
-            slide(bgNumber);
-  }
-}
-
-function next__books() {
-  if (bgNumber < 1) {
-        bgNumber++;
-        slide(bgNumber);
-}
-}
