@@ -23,6 +23,7 @@ import profileRouter from './routes/profile.js';
 import loginRouter from "./routes/login.js"
 import resgistroRouter from "./routes/registros.js"
 import teste from "./routes/testesSequelize.js"
+import books from "./routes/books.js"
 
 
 
@@ -56,7 +57,8 @@ class App{
   }
 
 
-  routes(){~
+  routes(){
+    this.app.use("/books", books)
     this.app.use('/',indexRouter);
     this.app.use("/login", loginRouter);
     this.app.use("/register", resgistroRouter);

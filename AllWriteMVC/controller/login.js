@@ -15,8 +15,10 @@ class Login{
       const responseUser = await serviceLogin.searchUser(email)
 
       if(responseUser == null){
-        return responseInvalidData()
+        //return responseInvalidData()
       }
+
+      console.log(email, responseUser)
 
       res.json(responseUser)
 
