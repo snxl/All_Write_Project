@@ -1,4 +1,5 @@
 node_modules
+package-lock.json
 controller/testesSequelize.js
 database/config/config.js
 .vercel

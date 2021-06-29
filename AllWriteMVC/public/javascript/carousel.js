@@ -8,9 +8,6 @@ export class Carrossel {
           this.slides = this.getListaSlides()
           
 
-          console.log(this.getListaSlides());
-
-
         }
 
         getListaSlides(){

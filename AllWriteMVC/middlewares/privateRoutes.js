@@ -1,10 +1,15 @@
+import jwt from "jsonwebtoken"
+
 const validateRoute = {
-    login:function(req, res, next){
-        if(req.cookies.login == "logado"){
-            next()
-        }else{
-            res.redirect("/register")
-        }
+    login:async function(req, res, next){
+
+      const { token } = req.cookies
+
+      if(token){
+        next()
+      }else{
+        res.redirect("/")
+      }
     },
 }
 

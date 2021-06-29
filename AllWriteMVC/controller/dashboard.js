@@ -4,11 +4,10 @@ class Dashboard{
             title: "all write",
             imagePerfil: req.cookies.imagePerfil
         })
-        console.log(req.cookies.perfilImg)
     }
 
     POST(req, res){
-        return 
+        return
     }
 
     PUT(req, res){
@@ -22,4 +21,3 @@ class Dashboard{
 
 
 export default new Dashboard
-    
