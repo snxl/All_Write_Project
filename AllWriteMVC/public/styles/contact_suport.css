@@ -172,9 +172,10 @@ body {
     max-width: 1440px;
     height: 600px;
     margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 80px;
-   
+    margin-top: 60px;
+    margin-bottom: 60px;
+    color: #696767;
+    font-weight: 400;
     background-color: #c637c9;
     display: flex;
     justify-content: center;
