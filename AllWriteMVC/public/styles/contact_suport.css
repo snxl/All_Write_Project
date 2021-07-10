@@ -1,5 +1,5 @@
 body{
-  background-color: #E5E5E5;
+  background-color: #ffffff;
 }
 
 
@@ -176,7 +176,13 @@ body {
     margin-bottom: 60px;
     color: #696767;
     font-weight: 400;
-    background-color: #c637c9;
+    box-sizing: border-box;
+    background-color: #e7e7e7;
+    background-image: url(../img/bg__suport__article.svg);
+    background-position: top 50px left 30px;
+    background-repeat: no-repeat;
+
+    border: #C2C2C2 solid 1px;
     display: flex;
     justify-content: center;
     align-items:flex-end;
@@ -185,42 +191,154 @@ body {
   .form__suport {
     width: 700px;
     height: 600px;
-    background-color: aqua;
-
+    
 }
 
   .text__top {
-    width: 700px;
+    width: 640px;
     height: 200px;
-    background-color: chartreuse;
+
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
-  form {
-    width: 100%;
+  .text__top h1 {
+    margin-top: 40px;
+    margin-left: 10px;
+    font-size: 26px;
+    color: #696767;
+    
+  }
+
+  .text__top h3 {
+    margin-top: 20px;
+    margin-left: 10px;
+    color: #696767;
+    font-size: 22px;
+    text-align: justify;
+    width: 600px;
+    font-weight: 400;
+  }
+
+  label {
+    color: #696767;
+    font-weight:500;
+  }
+
+
+
+  #contactSuport{
     display: flex;
-    justify-content: space-between;
-  }
- form label {
-   font-weight: 600;
-   color: darkslategrey;
- }
-
-
-
-  #name {
-    width: 350px;
-    height: 40px;
-    background-color: #c9c737;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
-  #email {
-    width: 350px;
-    height: 40px;
-    background-color: #c9c737;
+
+
+  #form-aling-name {
+    width: 300px;
+    height: 100%;
+    border: none;
+    outline: none;
+
+    margin-left: 15px;
+    
   }
 
-  #message{
-    width: 700px;
+  #form-aling-name input {
+    background-color: #ffffff;
+    width: 270px;
+    height: 30px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    font-weight: 600;
+    margin-top: 5px;
+    transition: all 0.3s;
+    border: 1px solid #ffffff;
+  }
+
+  #form-aling-name input:hover {
+      border: 1px solid #FF6A30;
+      transition: all 0.3s;
+  }
+
+
+  #form-aling-email {
+    width: 300px;
+    height: 100%;
+    border: none;
+    outline: none;
+
+  }
+
+  #form-aling-email input {
+
+    width: 270px;
+    height: 30px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    font-weight: 600;
+    margin-top: 5px;
+    transition: all 0.3s;
+    border: 1px solid #ffffff;
+  }
+
+  #form-aling-email input:hover {
+    border: 1px solid #FF6A30;
+    transition: all 0.3s;
+  }
+
+
+  #form-aling-message {
+    width: 625px;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+  }
+
+  #form-aling-message input {
+    width: 605px;
+    height: 210px;
+    border: none;
+    outline: none;
+    background-color:#fff;
+    margin-top: 10px;
+    padding: 10px;
+    text-align:start;
+    border: 1px solid #ffffff;
+    transition: all 0.3s;
+  }
+
+  #form-aling-message input:hover {
+    border: 1px solid #FF6A30;
+    transition: all 0.3s;
+  }
+
+
+#form-aling-button{
+
+  width: 625px;
+}
+
+  #submit {
+    width: 235px;
     height: 40px;
-    background-color: #c9c737;
+    background-color: #FF6A30;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  #submit:hover {
+    background-color: #fd4007;
+    transition: all 0.3s;
+ 
   }
