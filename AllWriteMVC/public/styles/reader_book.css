@@ -170,12 +170,29 @@ body {
 
   main {
     max-width: 1440px;
-    height: 700px;
+    height: 800px;
     background-color: #c637c9;
     padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
   }
 
+  .my__book{
+    width: 255px;
+    height: 530px;
+    background-color: aqua;
+    border-radius: 15px;
+    padding: 10px;
+  }
 
+.top__reader{
+  width: 830px;
+  height: 680px;
+  background-color: blueviolet;
+  border-radius: 15px;
+  margin-right: 50px;
+  padding: 10px;
+}
 
 
 /************************************
