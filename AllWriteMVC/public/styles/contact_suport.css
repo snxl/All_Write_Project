@@ -174,15 +174,15 @@ body {
     margin: 0 auto;
     margin-top: 60px;
     margin-bottom: 60px;
-    color: #696767;
+    color: #b6b6b6;
     font-weight: 400;
     box-sizing: border-box;
-    background-color: #e7e7e7;
+    background-color: #f5f5f5;
     background-image: url(../img/bg__suport__article.svg);
     background-position: top 50px left 30px;
     background-repeat: no-repeat;
 
-    border: #C2C2C2 solid 1px;
+    border: #dddddd solid 1px;
     display: flex;
     justify-content: center;
     align-items:flex-end;
@@ -256,7 +256,7 @@ body {
     font-weight: 600;
     margin-top: 5px;
     transition: all 0.3s;
-    border: 1px solid #ffffff;
+    border: 1px solid #eeeeee;
   }
 
   #form-aling-name input:hover {
@@ -283,7 +283,7 @@ body {
     font-weight: 600;
     margin-top: 5px;
     transition: all 0.3s;
-    border: 1px solid #ffffff;
+    border: 1px solid #eeeeee;
   }
 
   #form-aling-email input:hover {
@@ -309,7 +309,7 @@ body {
     margin-top: 10px;
     padding: 10px;
     text-align:start;
-    border: 1px solid #ffffff;
+    border: 1px solid #eeeeee;
     transition: all 0.3s;
   }
 
@@ -323,6 +323,8 @@ body {
 
   width: 625px;
 }
+
+
 
   #submit {
     width: 235px;
