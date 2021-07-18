@@ -3,7 +3,7 @@ const database = require("./index.js")
 
 module.exports = (sequelize, DataTypes) => {
     const Register = sequelize.define("Registro",{
-      id : {
+    id : {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
