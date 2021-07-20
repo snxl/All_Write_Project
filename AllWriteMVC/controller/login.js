@@ -14,15 +14,11 @@ class Login{
 
       const responseUser = await serviceLogin.searchUser(email)
 
-      if(!responseUser) return res.status(403).render("login", {
-        invalidData:true
-      })
+      if(!responseUser) return responseInvalidData()
 
       const validateDatas = await serviceLogin.validateDatas(responseUser, password)
 
-      if(validateDatas.status !== "OK") return res.render("login",{
-        invalidData: true
-      })
+      if(validateDatas.status !== "OK") return responseInvalidData()
 
       res.cookie("token", validateDatas.webtoken,{
         maxAge: 604900000,
