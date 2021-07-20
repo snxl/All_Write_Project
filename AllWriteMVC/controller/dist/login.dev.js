@@ -53,14 +53,10 @@ function () {
             case 4:
               responseUser = _context.sent;
 
-              if (!(responseUser == null)) {
-                _context.next = 7;
-                break;
+              if (responseUser == null) {//return responseInvalidData()
               }
 
-              return _context.abrupt("return", responseInvalidData());
-
-            case 7:
+              console.log(email, responseUser);
               res.json(responseUser);
 
             case 8:
