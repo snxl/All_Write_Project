@@ -25,7 +25,7 @@ class Login{
         httpOnly: true
       })
 
-      res.status(200).redirect("profile")
+      res.status(200).redirect("dashboard")
 
       function responseInvalidData(){
         res.render("login", {

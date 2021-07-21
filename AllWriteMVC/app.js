@@ -14,6 +14,7 @@ import fs from "fs"
 import cors from "cors"
 import dotenv from "dotenv"
 
+
 dotenv.config()
 
 //ROUTER
@@ -22,9 +23,10 @@ import dashboardRouter from "./routes/dashboard.js"
 import profileRouter from './routes/profile.js';
 import loginRouter from "./routes/login.js"
 import resgistroRouter from "./routes/registros.js"
+import contact_supportRouter from "./routes/contact_support.js"
 import teste from "./routes/testesSequelize.js"
+import successRouter from "./routes/success.js"
 import books from "./routes/books.js"
-
 
 
 //MIDDLEWARE
@@ -48,6 +50,7 @@ class App{
     this.socketIo();
     this.globalMiddlewares();
     this.routes()
+
   }
 
 
@@ -63,11 +66,14 @@ class App{
     this.app.use("/login", loginRouter);
     this.app.use("/register", resgistroRouter);
     this.app.use("/teste", teste);
+    this.app.use("/contact_support", contact_supportRouter);
+    this.app.use('/success', successRouter);
     this.app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(JSON.parse(fs.readFileSync("./swaggerNew.json", "utf-8"))))
 
     this.validateLogin()
     this.app.use('/dashboard', dashboardRouter);
     this.app.use('/profile', profileRouter);
+
   }
 
   globalMiddlewares(){
@@ -130,6 +136,6 @@ class App{
       next()
     })
   }
-}
 
+}
 export default new App()

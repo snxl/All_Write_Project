@@ -6,31 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Write</title>
   <link rel="shortcut icon" href="../img/allwrite_favicon_branco.ico" />
+  <link rel="stylesheet" href="../styles/global.css">
   <link rel="stylesheet" href="../styles/dashboard.css">
 </head>
 <body>
   <header>
-    <a href="../index.ejs"><img class="fotoHeader" src="../img/logo.svg" alt="Logo" /></a>
-    <img class="menuMobile" src="../img/menuMobile.svg" alt="menuMobile">
-    <nav class="navHeader">
-      <div class="explorar">
-        <a href="#">Explorar</a>
-        <img src="../img/setaExplorar.svg" alt="setaExplorar" />
-      </div>
-      <div>
-        <a href="#">Sobre</a>
-      </div>
+    <a href="/dashboard" alt="Home page" class="logo__color"> </a>
+    <nav >
+      <ul class="menu">
+        <li> <a href="#">Explorar</a>
+          <ul>
+            <li><a href="#"> Aventura </a></li>
+            <li><a href="#"> Ação </a></li>
+            <li><a href="#"> Fantasia </a></li>
+            <li><a href="#"> Ficção </a></li>
+            <li><a href="#"> Poesia </a></li>
+            <li><a href="#"> Romance </a></li>
+            <li><a href="#"> Suspense </a></li>
+            <li><a href="#"> Terror </a></li>
+            <li><a href="#"> Biografia </a></li>
+            <li><a href="#"> Miterário </a></li>
+            <li><a href="#"> Espiritual </a></li>
+          </ul>
+        </li>
+        <li> <a href="#">Sobre</a></li>
+        <li> <a href="/contact_support">Suporte</a></li>
+      </ul>
     </nav>
-    <div class="login">
-      <div>
-        <img src="../img/usuario.svg" id="foto_usuario" alt="foto campo login" />
-      </div>
-      <div>
-        <span id="usuario">Usuário XPTO</span>
-      </div>
-      <div>
-        <a href="#"><img src="../img/gear.svg" id="usuario_config"></a>
-      </div>
+
+    <div class="field_user">
+      <img class="img_login" src="../img/foto_icon_user.svg">
+        <a href="/profile" id="user__">ID_usuário</a>
+      <img class="enginer__icon" src="../img/engrenagem.svg">
     </div>
   </header>
   <main>
@@ -61,44 +68,43 @@
 
     <div class="highlights">
       <h2>Livros em Destaque</h2>
-        <div class="listaDestaque">
-          <button class="botaoDestaque">
-            <img src="../img/setaEsquerda.svg" alt="seta esquerda" />
-          </button>
-          <div class="listaDestaque_1"><a href="#">
-            <img src="../img/livro1.svg" alt="img" /></a>
-          </div>
-          <div class="listaDestaque_2"><a href="#">
-            <img src="../img/livro2.svg" alt="img" /></a>
-          </div>
-          <div class="listaDestaque_3"><a href="#">
-            <img src="../img/livro3.svg" alt="img" /></a>
-          </div>
-          <div class="listaDestaque_4"><a href="#">
-            <img src="../img/livro4.svg" alt="img" /></a>
-          </div>
-          <div class="listaDestaque_5"><a href="#">
-            <img src="../img/livro5.svg" alt="img" /></a>
-          </div>
-          <button class="botaoDestaque">
-            <img src="../img/setadireita.svg" alt="seta direita" />
-          </button>
+      <div class="listaDestaque">
+        <button class="botaoDestaque">
+          <img src="../img/setaEsquerda.svg" alt="seta esquerda" />
+        </button>
+        <div class="listaDestaque_1"><a href="#">
+          <img src="../img/livro1.svg" alt="img" /></a>
         </div>
+        <div class="listaDestaque_2"><a href="#">
+          <img src="../img/livro2.jpg" alt="img" /></a>
+        </div>
+        <div class="listaDestaque_3"><a href="#">
+          <img src="../img/livro3.svg" alt="img" /></a>
+        </div>
+        <div class="listaDestaque_4"><a href="#">
+          <img src="../img/livro4.svg" alt="img" /></a>
+        </div>
+        <div class="listaDestaque_5"><a href="#">
+          <img src="../img/livro5.svg" alt="img" /></a>
+        </div>
+        <button class="botaoDestaque">
+          <img src="../img/setadireita.svg" alt="seta direita" />
+        </button>
+      </div>
     </div>
       
     <div class="maisLidosNaSemana"> 
       <h2>Mais lidos da semana</h2>
       <div class="livroMaisLidoNaSemana1">
         <img src="../img/livroMaisLidoNaSemana1.svg">
-      
         <div class="info_livroMaisLidoNaSemana1">
           <div class="txt_livroMaisLidoNaSemana1">  
-            <p><h1>A memória de Babel</h1></p><br>
-            <p><h2>Autora: Christelle Dabos</h2></p><br>
+            <h1>A memória de Babel</h1><br>
+            <h2>Autora: Christelle Dabos</h2><br>
             <span>Ophélie está isolada na arca de Anima há quase três anos, onde vive uma existência sem emoções. Mas, encorajada por novas revelações do livro de Farouk e por um segredo que pode ser a chave entre passado e futuro, é chegada a hora de agir.
                   Sob uma identidade falsa, ela viaja até Babel, uma arca ultramoderna e cosmopolita, habitada pelos mais suspeitos residentes. Composta por mais de mil ilhas e conhecida como “a joia do universo”, a arca esconde inúmeras armadilhas atrás de seus rígidos regulamentos.           
                   Ophélie precisa usar todas as suas forças...
-            </span></p>
+            </span>
           </div>
           <div class="views_rating">
               <img id="views" src="../img/viewsIcon.svg">
@@ -112,25 +118,25 @@
         <div class="LivroMaisLidoNaSemana2">
           <img src="../img/LivroMaisLidoNaSemana2.svg">
             <div class="txt_boxLivroMaisLidoNaSemana">
-              <p><h2>Os noivos do inverno: 1 </h2></p><br>
-              <p><h3>Autora: Christelle Dabos</h3></p><br>
-              <p><h4>Honesta e cabeça-dura, Ophélie não se importa com as aparências. Mas, por baixo de seus óculos de aros largos e cachecol desgastado, a garota esconde poderes únicos: ela pode ler o passado dos objetos e atravessar espelhos. A vida tranquila que leva em Anima se transforma quando Ophélie é prometida em casamento a Thorn, herdeiro...</h4></p>
+              <h2>Os noivos do inverno: 1 </h2>
+              <h3>Christelle Dabos</h3><br>
+              <h4>Honesta e cabeça-dura, Ophélie não se importa com as aparências. Mas, por baixo de seus óculos de aros largos e cachecol desgastado, a garota esconde poderes únicos: ela pode ler o passado dos objetos e atravessar espelhos. A vida tranquila que leva em Anima se transforma quando Ophélie é prometida em casamento a Thorn, herdeiro...</h4>
           </div>
         </div>
         <div class="LivroMaisLidoNaSemana3">
           <img src="../img/LivroMaisLidoNaSemana3.svg">
           <div class="txt_boxLivroMaisLidoNaSemana">
-            <p><h2>O Timbre: 3</h2></p><br>
-            <p><h3>Autor: Neal Shusterman</h3></p><br>
-            <p><h4>A humanidade alcançou um mundo ideal em que não há fome, doenças, guerras, miséria… nem morte. Mas, mesmo com todo o esforço da inteligência artificial da Nimbo-Cúmulo, parece que alguns problemas humanos, como a corrupção e a sede de poder, também são imortais. Desde que o ceifador Goddard começou a ganhar seguidores da nova ordem, entusiastas do prazer de matar...</h4></p>
+            <h2>O Timbre: 3</h2>
+            <h3>Neal Shusterman</h3><br>
+            <h4>A humanidade alcançou um mundo ideal em que não há fome, doenças, guerras, miséria… nem morte. Mas, mesmo com todo o esforço da inteligência artificial da Nimbo-Cúmulo, parece que alguns problemas humanos, como a corrupção e a sede de poder, também são imortais. Desde que o ceifador Goddard começou a ganhar seguidores da nova ordem, entusiastas do prazer de matar...</h4>
           </div>
         </div>
           <div class="LivroMaisLidoNaSemana4">
             <img src="../img/LivroMaisLidoNaSemana4.svg">
             <div class="txt_boxLivroMaisLidoNaSemana">
-              <p><h2>As Crônicas de Olam - Volume 2</h2></p><br>
-              <p><h3>Autor: L. L. Wurlitzer</h3></p><br>
-              <p><h4>A inesperada queda da cidade branca e o vácuo de poder provocam um estado de guerra generalizada entre as cidades de Olam. O caos avança enquanto dragões e behemots se enfrentam em batalhas mortais. Apesar de vitoriosos, os shedins são forçados a recuar para a cortina de trevas afim de se recuperarem das baixas causadas...</h4></p>
+              <h2>As Crônicas de Olam - Volume 2</h2>
+              <h3>L. L. Wurlitzer</h3><br>
+              <h4>A inesperada queda da cidade branca e o vácuo de poder provocam um estado de guerra generalizada entre as cidades de Olam. O caos avança enquanto dragões e behemots se enfrentam em batalhas mortais. Apesar de vitoriosos, os shedins são forçados a recuar para a cortina de trevas afim de se recuperarem das baixas causadas...</h4>
             </div>
           </div>
       </div> 
@@ -302,20 +308,17 @@
 
       </div>
     </div>
-
+  </main>
+  <footer>    
     <div class="naoEncontrou">
       <h2 id="text_naoEncontrou">Não encontrou o que procurava?</h2>
-      <img src="../img/naoEncontrou.svg">
+      <img class="naoEncontrou_img" src="../img/naoEncontrou.svg">
       <div id="naoEncontrou_pesquisa">
         <input type="text"/>
         <a id="naoEncontrou_lupa" href="#">
-        <img src="../img/lupa.svg">
+        <img src="../img/lupaNew.svg">
         </a>
       </div>
-    </div>
-  </main>
-  <footer>
-    <div class="footer">
     </div>
   </footer>
 </body>
