@@ -186,19 +186,96 @@ body {
     margin-top: 0px;
     -webkit-box-shadow: 0px 0px 31px 4px rgba(104, 101, 101, 0.54); 
     box-shadow: 0px 0px 31px 4px rgba(104, 101, 101, 0.54);
-    overflow: hidden;
+    overflow: auto;
+    scroll-behavior: smooth;
   }
+
+
+  .my__book{
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.my__book::-webkit-scrollbar{
+  width: 10px;
+    scroll-behavior: smooth;
+ 
+}
+
+.my__book::-webkit-scrollbar-thumb{
+  background-color: rgb(252, 100, 100);
+  border-radius: 20PX;
+  scroll-behavior: smooth;
+}
+
+.my__book:hover::-webkit-scrollbar-thumb{
+  background-color: rgb(252, 100, 100);
+  border-radius: 20PX;
+  scroll-behavior: smooth;
+
+}
+
+.my__book:hover::-webkit-scrollbar{
+
+  scroll-behavior: smooth;
+
+}
+
+
 
   .my__book  ul {
 
-    width: 205px;
-    background-color: aqua;
+    width: 250px;
     display: flex;
     list-style: none;
     flex-direction: column;
     justify-content: space-around;
     align-items:flex-start
 
+  }
+
+  .my__book li {
+    width: 250px;
+    height:200px ;
+
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .data__book_reader {
+    margin-left: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 150px;
+  }
+
+  .link__style_nameBook{
+    font-size: 18px;
+    text-decoration: none;
+    font-weight:500;
+    color: #3E3E3E;
+    margin-top: 10px;
+
+  }
+
+  .link__style_dateBook{
+    font-size: 14px;
+    text-decoration: none;
+    font-weight:400;
+    color: #3E3E3E;
+    margin-top: 10px;
+
+  }
+
+  .link__style_viewsBook{
+    font-size: 14px;
+    text-decoration: none;
+    font-weight:400;
+    color: #3E3E3E;
+    margin-top: 10px;
 
   }
 
