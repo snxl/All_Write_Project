@@ -27,7 +27,20 @@ import contact_supportRouter from "./routes/contact_support.js"
 import teste from "./routes/testesSequelize.js"
 import successRouter from "./routes/success.js"
 import books from "./routes/books.js"
-
+import profile__configRouter from "./routes/profile__config.js"
+import aventuraRouter from "./routes/categorias/aventura.js"
+import acaoRouter from "./routes/categorias/acao.js"
+import biografiaRouter from "./routes/categorias/biografia.js"
+import espiritualRouter from "./routes/categorias/espiritual.js"
+import fantasiaRouter from "./routes/categorias/fantasia.js"
+import ficcaoRouter from "./routes/categorias/ficcao.js"
+import literarioRouter from "./routes/categorias/literario.js"
+import poesiaRouter from "./routes/categorias/poesia.js"
+import romanceRouter from "./routes/categorias/romance.js"
+import suspenseRouter from "./routes/categorias/suspense.js"
+import terrorRouter from "./routes/categorias/terror.js"
+import infantilRouter from "./routes/categorias/infantil.js"
+import misterioRouter from "./routes/categorias/misterio.js"
 
 //MIDDLEWARE
 import validateRoute from './middlewares/privateRoutes.js';
@@ -73,7 +86,20 @@ class App{
     this.validateLogin()
     this.app.use('/dashboard', dashboardRouter);
     this.app.use('/profile', profileRouter);
-
+    this.app.use('/profile__config', profile__configRouter);
+    this.app.use('/aventura', aventuraRouter);
+    this.app.use('/acao', acaoRouter);
+    this.app.use('/biografia', biografiaRouter);
+    this.app.use('/espiritual', espiritualRouter);
+    this.app.use('/fantasia', fantasiaRouter);
+    this.app.use('/ficcao', ficcaoRouter);
+    this.app.use('/literario', literarioRouter);
+    this.app.use('/poesia', poesiaRouter);
+    this.app.use('/romance', romanceRouter);
+    this.app.use('/suspense', suspenseRouter);
+    this.app.use('/terror', terrorRouter);
+    this.app.use('/infantil', infantilRouter);
+    this.app.use('/misterio', misterioRouter);
   }
 
   globalMiddlewares(){
