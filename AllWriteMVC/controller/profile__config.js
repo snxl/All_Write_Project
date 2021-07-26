@@ -7,10 +7,9 @@ class Profile__config{
     }
 
     POST(req, res){
-        res.render("profile__config", {
-            title: "all write",
 
-        })
+
+      const { name, user, bio, imageRoute } = req.body
     }
 
 
