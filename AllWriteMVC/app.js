@@ -28,6 +28,7 @@ import teste from "./routes/testesSequelize.js"
 import successRouter from "./routes/success.js"
 import books from "./routes/books.js"
 import profile__configRouter from "./routes/profile__config.js"
+import reader_bookRouter from "./routes/reader_book.js"
 import aventuraRouter from "./routes/categorias/aventura.js"
 import acaoRouter from "./routes/categorias/acao.js"
 import biografiaRouter from "./routes/categorias/biografia.js"
@@ -87,6 +88,7 @@ class App{
     this.app.use('/dashboard', dashboardRouter);
     this.app.use('/profile', profileRouter);
     this.app.use('/profile__config', profile__configRouter);
+    this.app.use('/reader_book', reader_bookRouter);    
     this.app.use('/aventura', aventuraRouter);
     this.app.use('/acao', acaoRouter);
     this.app.use('/biografia', biografiaRouter);

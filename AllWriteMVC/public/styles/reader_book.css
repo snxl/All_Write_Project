@@ -1,16 +1,19 @@
+
+
+
 body{
-  background-color: #E5E5E5;
+  background-color: var(--color-text);
 }
 
 
 header {
   width: 100%;
   height:  70px;
-  background-color: #fff;
+  background-color: var(--bg-panel);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom:  1px solid #C2C2C2;
+  border-bottom:  1px solid var(--color-text);
   flex-wrap:nowrap;
 }
 
@@ -84,11 +87,11 @@ color:rgb(0, 0, 0);
   height: 180px;
   top:25px;
   left:0;
-  background-color: #ffffff;
+  background-color: var(--bg-panel);
   background-position: top;
   background-repeat: no-repeat;
   display:none;
-  border:1px solid #fdfdfd;
+  border:1px solid var(--color-text);
   padding: 1rem;
   border-radius: 0 15px 20px 30px;
   transition: 0.3s;
@@ -118,8 +121,8 @@ INICIO - CAMPO DO USUÁRIO - SENHA
 .field_user {
   width: 155px;
   height: 30px;
-  background-color: #ffffff;
-  border: #C2C2C2 solid 1px;
+  background-color: var(--bg-panel);
+  border: var(--color-text) solid 1px;
   border-radius: 30px;
   margin-right: 250px;
   display: flex;
@@ -170,14 +173,241 @@ body {
 
   main {
     max-width: 1440px;
-    height: 700px;
-    background-color: #c637c9;
+    height: 800px;
+
     padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
   }
 
+  .my__book{
+    width: 265px;
+    height: 530px;
+    background-color: var(--bg-panel);
+    border-radius: 15px;
+    margin-top: 0px;
+    border: 1px solid var(--color-text);
+    overflow: auto;
+    scroll-behavior: smooth;
+    margin-left:5px;
+  }
+
+.my__book h1{
+
+  background-color: var(--bg-panel);
+  margin-top: 5px;
+  border-radius: 20px;
+  width: 225px;
+  height: 30px;
+  text-align: center;
+
+}
+
+  .my__book{
+    scroll-behavior: smooth;
+    margin-right: 3px;
+}
+
+.my__book::-webkit-scrollbar{
+     width: 10px;
+    scroll-behavior: smooth;
+}
+
+.my__book::-webkit-scrollbar-thumb{
+  background-color: var(--color-text);
+  border-radius: 20PX;
+  scroll-behavior: smooth;
+}
+
+.my__book:hover::-webkit-scrollbar-thumb{
+  
+  background-color: var(--color-headings);
+  border-radius: 20PX;
+  scroll-behavior: smooth;
+  margin-right: 3px;
+
+}
+
+.my__book:hover::-webkit-scrollbar{
+
+  scroll-behavior: smooth;
 
 
+}
+
+
+
+  .my__book  ul {
+    width: 245px;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:flex-start;
+
+  }
+
+  .my__book li {
+    width: 240px;
+    height:200px ;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .data__book_reader {
+    margin-left: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 150px;
+  }
+
+  .link__style_nameBook{
+    font-size: 18px;
+    text-decoration: none;
+    font-weight:500;
+    color: #3E3E3E;
+    margin-top: 10px;
+
+  }
+
+  .link__style_dateBook{
+    font-size: 14px;
+    text-decoration: none;
+    font-weight:400;
+    color: #3E3E3E;
+    margin-top: 10px;
+
+  }
+
+  .link__style_viewsBook{
+    font-size: 14px;
+    text-decoration: none;
+    font-weight:400;
+    color: #3E3E3E;
+    margin-top: 10px;
+
+  }
+
+.top__reader{
+  width: 980px;
+  height: 680px;
+  margin-right: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  
+}
+
+.top__reader h1 {
+
+height: 30px;
+width: 850px;
+margin-bottom: 20px;
+text-align: center;
+background-color: var(--bg-panel);
+border-radius: 25px;
+border: 1px solid var(--color-text)
+
+}
+
+.toggle__button{
+  width: 60px;
+  height: 31px;
+
+  border-radius: 25px;
+
+}
+
+.reader__book{
+  width: 950px;
+  height: 640px;
+  background-color: var(--bg-panel);
+  border-radius: 10px;
+  border: 1px solid var(--color-text)
+}
+
+#book__{
+  background-color: #c637c9;
+  width: 920px;
+  height: 620px;
+  margin: 0 auto;
+
+}
 
 /************************************
 FIM - MAIN
 *************************************/
+
+/* TOOGLE DARK MODE */
+
+html{
+  --bg: #FCFCFC;
+  --bg-panel: #fff;
+  --color-headings:#424242;
+  --color-text: #dbdbdb;  
+  --body:#ffffff;
+  
+  }
+
+
+h1 {
+    margin: 0;
+    color: var(--color-headings);
+}
+
+
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 60px;
+    height: 30px;
+    background: grey;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+
+label::after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked + label {
+    background-color: var(--color-headings);
+}
+
+input:checked + label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 45px;
+}
+  
+
+
+/*  FIMTOOGLE DARK MODE */
+
+footer{
+  background-color: var(--bg);
+  border:var(--color-text) ;
+}
