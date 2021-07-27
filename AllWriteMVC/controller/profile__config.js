@@ -9,7 +9,11 @@ class Profile__config{
     POST(req, res){
 
 
-      const { name, user, bio, imageRoute } = req.body
+      const { name, user, bio } = req.body
+
+      const {file} = req
+      return console.log({name, user, bio, file})
+      return res.redirect("/profile")
     }
 
 

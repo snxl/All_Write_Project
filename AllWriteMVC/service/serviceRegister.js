@@ -14,6 +14,10 @@ class Registro {
         return insert
 
     }
+
+    async put(data){
+
+    }
 }
 
 const register = new Registro

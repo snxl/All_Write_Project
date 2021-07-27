@@ -46,6 +46,10 @@ module.exports = (sequelize, DataTypes) => {
     updatedAt:{
         type: DataTypes.DATE,
         allowNull:false
+    },
+    bio:{
+      type: DataTypes.STRING(1000),
+      allowNull:true
     }
     },{
       tableName: "register"
