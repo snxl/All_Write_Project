@@ -39,6 +39,13 @@ footer {
     
   }
 
+  footer h1 {
+      font-size: 18px;
+      text-align: center;
+      margin-top: 25px;
+      font-weight: 400;
+  }
+
 .logo__footer {
     width: 70px;
     height: 70px;

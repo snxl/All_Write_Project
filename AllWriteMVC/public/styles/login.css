@@ -1,7 +1,8 @@
 
 
 body{
-    background-color: white;
+    background: url(../img/book_login_bg.jpg) no-repeat;
+    background-size:100%;
     min-height:100vh;
     min-width: 100vw;
     display: flex;
@@ -13,21 +14,21 @@ body{
 
 .container{
 
-    box-shadow: 0px 0px 8px #ccc;
+    box-shadow: 0px 0px 21px rgb(0, 0, 0);
     background-color: #ffffff;
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     width: 250px ;
     padding-top: 40px;
     font-size: 16px;
+    margin-right: 100px;
 }
 /*entrar triângulo */
 
 
 .input_login{
-    border-radius: 10px;
     width: 220px;
     height: 20px;
     padding: 5px;
@@ -36,29 +37,55 @@ body{
     display: block;
     margin-bottom: 15px;
     outline: none;
-
+    border: #3E3E3E 1px solid;
+    margin-top: 5px;
+    transition:  all 0.3s;
 }
+
+.input_login:hover{
+    border: #ff9100 1px solid;
+    transition:  all 0.3s;
+}
+
 
 .login_submit{
 
         border-radius: 5px;
-        background-color: #FF8A5B ;
-        width: 150px;
+        background-color: #ff4800 ;
+        width: 230px;
         text-align: center;
         padding: 10px 20px;
         color: #ffffff;
         border: 0px;
         display: block;
         margin-bottom: 10px;
-        margin-left: 55px;
+        margin-top: 35px;
         font-weight: bold;
-   
-      
+        cursor: pointer;
+        transition: all 0.3s;
 }
+
+
+.login_submit:hover{
+    transition: all 0.3s;
+    background-color: #fd1010 ;
+
+  
+}
+
 
 .login_reset{
     margin-top: 10px;
     font-size: 12px;
     color: #7D7D7D;
     margin-left: 75px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    margin-right: 100px;
+    color: #ffffff;
+    text-shadow: 0px 0px 21px rgb(0, 0, 0);
 }

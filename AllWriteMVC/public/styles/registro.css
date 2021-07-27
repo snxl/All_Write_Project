@@ -11,7 +11,8 @@ input{
 }
 
 body{
-    background-color: white;
+    background: url(../img/smoke__bg_register2.png) no-repeat;
+    background-size: 110%;
     min-width: 100vw;
     min-height: 100vh;
     display: flex;
@@ -21,10 +22,10 @@ body{
 }
 
 .container{
-    box-shadow: 0px 49px 60px #ccc;
+    box-shadow: 0px 0px 60px rgb(0, 0, 0);
     background-color: #ffffff;
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 5px;
     text-align: center;
     margin: auto;
     max-width: 26vw ;
@@ -33,15 +34,14 @@ body{
     padding-top: 40px;
     float: right;
     font-size: 16px;
-    border-style:solid ;
-    border-color: rgb(207 202 202);
     
 }
 
 p{
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin-bottom: 15px;
+    font-weight: 400;
 }
+
 
 .grupo_usuario, .grupo_senha{
     margin-bottom: 7px;
@@ -76,21 +76,23 @@ p{
 }
 
 .input_field{
-    border-radius: 8px;
+    border: 1px solid #7D7D7D;
     width: 24.6vw;
     height: 16px;
     padding: 5px;
     outline: 0;
     color: #7D7D7D;
+    margin-top: 5px;
 }
 
 .input_password{
-    border-radius: 8px;
+
     width: 9vw;
     height: 20px;
     padding: 5px;
     color: #7D7D7D;
     outline: none;
+    border: 1px solid #7D7D7D;
 }
 
 
@@ -100,6 +102,7 @@ p{
     color: #7D7D7D;
     margin-left: 25px;
     margin-bottom: 20px;
+
 }
 
 .send{
@@ -113,16 +116,21 @@ p{
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background-color: #FF8A5B ;
-    width: 150px;
+    background-color: #ff5a18 ;
+    width: 360px;
     text-align: center;
     padding: 10px 20px;
     color: #ffffff;
     border: 0px;
-
+    transition: all 0.3s;
     font-weight: bold;
     margin-top: 25px;
     cursor: pointer;
+}
+
+.login_register:hover{
+    transition: all 0.3s;
+    background-color: #fa2828;
 }
 
 .term_radio{
