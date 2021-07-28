@@ -11,7 +11,7 @@ module.exports = {
       name: "Nicolas Soares Gomes" ,
       email: "nicolas@allwrite.com",
       password:  await bcrypt.hash( "AdmNicolas00" ,12),
-      imageRoute: "undefined",
+      imageRoute: null,
       credential: 1,
       createdAt:moment().format("YYYY-MM-DD HH:MM"),
       updatedAt:moment().format("YYYY-MM-DD HH:MM")
@@ -20,7 +20,7 @@ module.exports = {
         name: "Marcelo Gamon",
         email:"marcelo@allwrite.com",
         password: await bcrypt.hash("admMarcelo01",12),
-        imageRoute:"undefined",
+        imageRoute:null,
         credential:1,
         createdAt:moment().format("YYYY-MM-DD HH:MM"),
         updatedAt:moment().format("YYYY-MM-DD HH:MM")
@@ -29,7 +29,7 @@ module.exports = {
         name: "Paloma lima" ,
         email:"paloma@allwrite.com",
         password: await bcrypt.hash( "AdmPaloma02" ,12),
-        imageRoute:"undefined",
+        imageRoute:null,
         credential:1,
         createdAt:moment().format("YYYY-MM-DD HH:MM"),
         updatedAt:moment().format("YYYY-MM-DD HH:MM")
@@ -38,7 +38,7 @@ module.exports = {
         name:"Ariel Pellegrino" ,
         email:"ariel@allwrite.com",
         password: await bcrypt.hash("AdmAriel03",12) ,
-        imageRoute:"undefined",
+        imageRoute:null,
         credential:1,
         createdAt:moment().format("YYYY-MM-DD HH:MM"),
         updatedAt:moment().format("YYYY-MM-DD HH:MM")
@@ -47,7 +47,7 @@ module.exports = {
         name:"Barbara Fernandez" ,
         email:"barbara@allwrite.com",
         password: await bcrypt.hash( "AdmBarbara04" ,12),
-        imageRoute:"undefined",
+        imageRoute:null,
         credential:1,
         createdAt:moment().format("YYYY-MM-DD HH:MM"),
         updatedAt:moment().format("YYYY-MM-DD HH:MM")

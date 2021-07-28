@@ -35,6 +35,12 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING(500),
         allowNull:false
     },
+    route:{
+      type: DataTypes.VIRTUAL,
+      get:()=>{
+        return `https://localhost:3600/files/${this.imageRoute}`
+      }
+    },
     credential:{
         type: DataTypes.INTEGER,
         allowNull: false
