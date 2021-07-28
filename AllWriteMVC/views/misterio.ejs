@@ -23,38 +23,9 @@
 	<script src="../javascripts/wow.min.js"></script>
 </head>
 <body>
-	<header>
-		<a href="/dashboard" alt="Home page" class="logo__color"> </a>
-		<nav >
-		  <ul class="menu">
-			<li> <a href="#">Explorar</a>
-				<ul>
-					<li><a href="/aventura"> Aventura </a></li>
-					<li><a href="/acao"> Ação </a></li>
-					<li><a href="/fantasia"> Fantasia </a></li>
-					<li><a href="/ficcao"> Ficção </a></li>
-					<li><a href="/poesia"> Poesia </a></li>
-					<li><a href="/romance"> Romance </a></li>
-					<li><a href="/suspense"> Suspense </a></li>
-					<li><a href="/terror"> Terror </a></li>
-					<li><a href="/biografia"> Biografia </a></li>
-					<li><a href="/literario"> Literário </a></li>
-					<li><a href="/espiritual"> Espiritual </a></li>
-				  </ul>
-					</li>
-			<li> <a href="#">Sobre</a></li>
-			<li> <a href="/contact_support">Suporte</a></li>
-		  </ul>
-		</nav>
-	
-		<div class="field_user">
-		  <img class="img_login" src="../img/foto_icon_user.svg">
-			<a href="/profile" id="user__">ID_usuário</a>
-			<a href="/profile__config"><img class="enginer__icon" src="../img/engrenagem.svg"></a>
-	
-		</div>
-	  </header>
-<main>  
+<main>
+	<%- include('./header.ejs') %>
+  
 	<section>
 		<div class="contentSite">
 			<div class="btAcao"><a href="">MISTÉRIO</a></div>

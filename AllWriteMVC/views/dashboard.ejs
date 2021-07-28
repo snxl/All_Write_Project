@@ -1,45 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Write</title>
-  <link rel="shortcut icon" href="../img/favicon.png" />
-  <link rel="stylesheet" href="../styles/global.css">
-  <link rel="stylesheet" href="../styles/dashboard.css">
-</head>
-<body>
-  <header>
-    <a href="/dashboard" alt="Home page" class="logo__color"> </a>
-    <nav >
-      <ul class="menu">
-        <li> <a href="#">Explorar</a>
-          <ul>
-            <li><a href="/aventura"> Aventura </a></li>
-            <li><a href="/acao"> Ação </a></li>
-            <li><a href="/fantasia"> Fantasia </a></li>
-            <li><a href="/ficcao"> Ficção </a></li>
-            <li><a href="/poesia"> Poesia </a></li>
-            <li><a href="/romance"> Romance </a></li>
-            <li><a href="/suspense"> Suspense </a></li>
-            <li><a href="/terror"> Terror </a></li>
-            <li><a href="/biografia"> Biografia </a></li>
-            <li><a href="/literario"> Literário </a></li>
-            <li><a href="/espiritual"> Espiritual </a></li>
-          </ul>
-        </li>
-        <li> <a href="#">Sobre</a></li>
-        <li> <a href="/contact_support">Suporte</a></li>
-      </ul>
-    </nav>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Write</title>
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+  </head>
+  <body>
 
-    <div class="field_user">
-      <img class="img_login" src="../img/foto_icon_user.svg">
-        <a href="/profile" id="user__">ID_usuário</a>
-      <img class="enginer__icon" src="../img/engrenagem.svg">
-    </div>
-  </header>
+    <%- include('./header.ejs') %>
+
   <main>
     <div class="banner">
       <img src="../img/livros1.jpg" id="img_banner">

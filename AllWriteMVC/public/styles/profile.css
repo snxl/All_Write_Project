@@ -368,10 +368,8 @@ body {
             background-size: 20px;
           }
 
-
-
           .title__book__block {
-
+            display: none;
           }
 
           .title__book__block h1 a {
