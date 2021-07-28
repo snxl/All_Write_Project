@@ -375,14 +375,14 @@ text-decoration: none;
     margin: 4vw 0 0 9vw;
 }
 
-.livroMaisLidoNaSemana1 > img{
-    padding: 15px;
+.livroMaisLidoNaSemana1 > a img{
+    margin: 18px 13px 0px 13px;
     transition: all 0.5s;
     cursor: pointer;
-    width: 15vw;
+
 }
     
-.LivroMaisLidoNaSemana1 > img:hover{
+.LivroMaisLidoNaSemana1 > a img:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
 }
@@ -401,7 +401,7 @@ text-decoration: none;
 
 .txt_livroMaisLidoNaSemana1 > h1{
         padding: 0px 40px;
-        font-size: calc(0.4rem + 2vw);
+        font-size: calc(0.4rem + 1.5vw);
     }
 
 .txt_livroMaisLidoNaSemana1 > h2{
@@ -409,7 +409,7 @@ text-decoration: none;
     font-size: 18px;
     text-align: justify;
     padding: 0px 40px;
-    font-size: calc(0.1rem + 1.4vw);
+    font-size: calc(0.1rem + 1.2vw);
 
 }
 
@@ -418,14 +418,14 @@ text-decoration: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: justify;
     padding: 0px 55px 0px 40px;
-    font-size: calc(0.1rem + 1.2vw);
+    font-size: calc(0.1rem + 1vw);
 
 }
 
 .views_rating{
     display: flex;
     flex-direction: row;
-    padding: 10px 0px 20px 40px
+    padding: 10px 0px 10px 40px
 }
 
 .views_rating > img{
@@ -434,7 +434,8 @@ text-decoration: none;
 
 .views_rating > h3{
     padding: 0px 50px 0px 10px;
-    font-size: calc(0.1rem + 1.2vw);
+    font-size: calc(0.1rem + 1vw);
+    align-self: center;
 }
 
 .boxLivrosMaisLidosNaSemana{
@@ -453,14 +454,14 @@ text-decoration: none;
     background-color: #F1F0F0;
 }
 
-.LivroMaisLidoNaSemana2 > img{
-    padding: 15px;
+.LivroMaisLidoNaSemana2 > a img{
+    margin: 25px 15px 0px 15px;
     transition: all 0.5s;
     cursor: pointer;
     width: 11vw;
     }
     
-.LivroMaisLidoNaSemana2 > img:hover{
+.LivroMaisLidoNaSemana2 > a img:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
 }
@@ -493,14 +494,14 @@ text-decoration: none;
     background-color: #F1F0F0;
 }
 
-.LivroMaisLidoNaSemana3 > img{
-    padding: 15px;
+.LivroMaisLidoNaSemana3 > a img{
+    margin: 25px 15px 0px 15px;
     transition: all 0.5s;
     cursor: pointer;
     width: 11vw;
 }
     
-.LivroMaisLidoNaSemana3 > img:hover{
+.LivroMaisLidoNaSemana3 > a img:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
 }
@@ -512,14 +513,14 @@ text-decoration: none;
     background-color: #F1F0F0;
 }
 
-.LivroMaisLidoNaSemana4 > img{
-    padding: 15px;
+.LivroMaisLidoNaSemana4 > a img{
+    margin: 25px 15px 0px 15px;
     transition: all 0.5s;
     cursor: pointer;
     width: 11vw;
 }
     
-.LivroMaisLidoNaSemana4 > img:hover{
+.LivroMaisLidoNaSemana4 > a img:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
 }
@@ -608,7 +609,7 @@ text-decoration: none;
 
 #img_views_rating_comunidade > h5{
     font-size: calc(0.05rem + 1vw);
-    padding-top: 5px;
+    align-self: center;
 }
 
 .info2_livro_comunidade > h3{
