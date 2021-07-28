@@ -33,7 +33,13 @@ module.exports = (sequelize, DataTypes) => {
     },
     imageRoute:{
         type: DataTypes.STRING(500),
-        allowNull:false
+        allowNull:true
+    },
+    route:{
+      type: DataTypes.VIRTUAL,
+      get:function(){
+        return `https://localhost:3600/files/${this.imageRoute}`
+      }
     },
     credential:{
         type: DataTypes.INTEGER,
@@ -46,6 +52,10 @@ module.exports = (sequelize, DataTypes) => {
     updatedAt:{
         type: DataTypes.DATE,
         allowNull:false
+    },
+    bio:{
+      type: DataTypes.STRING(1000),
+      allowNull:true
     }
     },{
       tableName: "register"

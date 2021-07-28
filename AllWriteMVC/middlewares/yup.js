@@ -1,19 +1,22 @@
 import * as  yup  from  'yup'
+import db from '../database/models/index.js'
 
 import database from "../database/models/index.js"
 
-let email = false
-let user = false
-let erro1 = undefined
-let erro2 = undefined
-let erro3 = undefined
-let erro4 = undefined
-let erro5 = undefined
-let erro6 = undefined
+
 
 class Validation{
 
     async register(req, res, next) {
+
+        let email
+        let user
+        let erro1 = false
+        let erro2 = false
+        let erro3 = false
+        let erro4 = false
+        let erro5 = false
+        let erro6 = false
 
         const schema = yup.object().shape({
             user: yup.string().required("inserir usuario"),
@@ -33,14 +36,26 @@ class Validation{
           }
         })
 
-        const checkUser = await database.Registro.findOne({
+        const checkUser =  await database.Registro.findOne({
           where: {
             user : req.body.user
           }
         })
 
-        checkUser != null? user = "usuário existente" : user = false;
-        checkEmail != null ? email = "email existente": email = false;
+        console.log(checkEmail)
+        console.log(req.body.email)
+
+        if(!checkUser){
+          user = false
+        }else{
+          user = "usuário existente"
+        }
+
+        if(!checkEmail){
+          email = false
+        }else{
+          email = "email existente"
+        }
 
         if(user && email){
           return res.render("registro",{
@@ -61,33 +76,40 @@ class Validation{
 
             if(checkEmail === null && checkUser === null) return next()
 
+            console.log(checkEmail, checkUser)
+
         } catch (results) {
             let allError = results.errors
 
-            const checkPassword = allError.forEach(element=> {
-                if(element === "Deve inserir a senha") return true
+            console.log()
+            let checkPassword
+
+            allError.find(element=> {
+              if(element === "Deve inserir a senha") checkPassword = false
             })
 
             allError.forEach(element=>{
-                if(element == "inserir usuario") erro1 = element
-                if(element == "inserir nome") erro2 = element
-                if(element == "inesir e-mail") erro3 = element
-                if(element == "Deve inserir a senha") erro4 = element
-                if(element == "Senha deve conter 1 maiúculo 1 minúsculo e 8 digitos" && checkPassword){
-                    erro5 = false
+                if(element === "inserir usuario") return erro1 = element
+                if(element === "inserir nome") return erro2 = element
+                if(element === "inesir e-mail") return erro3 = element
+                if(element === "Deve inserir a senha") return erro4 = element
+                if(element === "senhas incorretas") return erro6 = element
+                if(!(element === "Senha deve conter 1 maiúculo 1 minúsculo e 8 digitos")){
+                  console.log(element)
+                  return erro5 = element
                 }else{
-                    erro5 = element
+                    console.log(element)
+                    return erro5 = false
                 }
-                if(element == "senhas incorretas") erro6 = element
             })
 
             return res.render("registro",{
-              erro1,
-              erro2,
-              erro3,
-              erro4,
-              erro5,
-              erro6,
+              erro1: erro1,
+              erro2: erro2,
+              erro3: erro3,
+              erro4: erro4,
+              erro5: erro5,
+              erro6: erro6,
               email,
               user
             })
@@ -150,6 +172,23 @@ class Validation{
         })
       }
 
+    }
+
+    async put(req, res, next){
+
+      const checkUser = await db.Registro.findOne({
+        where:{
+          user: req.body.user
+        }
+      })
+
+      if(checkUser){
+
+        return res.render("profile__config",{
+          errorUser: true,
+        })
+
+      }else next()
     }
 
 }

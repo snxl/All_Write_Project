@@ -1,29 +1,26 @@
 import db from "../database/models/index.js"
+import jwt from "jsonwebtoken"
+import {promisify} from "util"
 import bcrypt from "bcryptjs"
 
 export default new class updateProfile{
 
-  async oldPassword(id, passwordOld){
+  async update(data, unique){
 
-    const selectCheck = await db.Registro.findOne({
-      where:{id},
-    })
+    try {
 
-    const compareHash = await bcrypt.compare(passwordOld, selectCheck.password )
+      const decodeToken = await promisify(jwt.verify)(unique, process.env.TOKEN_SECRET)
 
-    if(compareHash) return true
+      const { id, name, user, email } = await db.Registro.update(data, {
+        where:{
+          id: decodeToken.id
+        }
+      })
 
-    return false
+    } catch (error) {
 
-  }
-
-  async updateData(updateObj, id){
-
-    return await db.Registro.update({
-      ...updateObj
-    },{
-      where: {id}
-    })
+    }
 
   }
+
 }

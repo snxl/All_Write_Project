@@ -8,15 +8,51 @@
     <link rel="shortcut icon" href="../img/favicon.png" />
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/profile__config.css">
-    <script type="text/javascript" src="../javascript/carousel.js"></script>  
   </head>
   <body>
 
-    <%- include('./header.ejs') %>
+    <!-- HEADER - Topo do  site-->
+        <header>
+
+                   <a href="/dashboard" alt="Home page" class="logo__color"> </a>
+                          <nav >
+                              <ul class="menu">
+                                      <li> <a href="#">Explorar</a>
+                                        <ul>
+                                          <li><a href="/aventura"> Aventura </a></li>
+                                          <li><a href="/acao"> Ação </a></li>
+                                          <li><a href="/fantasia"> Fantasia </a></li>
+                                          <li><a href="/ficcao"> Ficção </a></li>
+                                          <li><a href="/poesia"> Poesia </a></li>
+                                          <li><a href="/romance"> Romance </a></li>
+                                          <li><a href="/suspense"> Suspense </a></li>
+                                          <li><a href="/terror"> Terror </a></li>
+                                          <li><a href="/biografia"> Biografia </a></li>
+                                          <li><a href="/literario"> Literário </a></li>
+                                          <li><a href="/espiritual"> Espiritual </a></li>
+                                        </ul>
+                                                                          </li>
+
+                                      <li> <a href="#">Sobre</a></li>
+                                      <li> <a href="/contact_support">Suporte</a></li>
+                              </ul>
+
+                          </nav>
+
+
+                          <div class="field_user">
+
+
+                                            <img class="img_login" src="../img/foto_icon_user.svg">
+                                                <a href="/profile" id="user__">ID_usuário</a>
+                                                <a href="/profile__config"><img class="enginer__icon" src="../img/engrenagem.svg"></a>
+                                              </div>
+            </header>
+<!-- FIM do topo do site-->
 
 <!-- INICIO DO MAIN - CORPO DO SITE-->
             <main>
-                
+
                 <!--Incio Campo de busca-->
                 <div class="align__search">
                 <div class="search__field">
@@ -40,45 +76,53 @@
                                                   Caixa de texto com uma descrição do perfil do usuário
 
                                                   Lorem ipsum dolor sit amet,
-                                                  consectetur adipiscing elit ut aliquam, 
+                                                  consectetur adipiscing elit ut aliquam,
                                                   purus sit amet luctus venenatis
                                                   Lorem ipsum dolor sit amet,
-                                                  consectetur adipiscing elit ut aliquam, 
+                                                  consectetur adipiscing elit ut aliquam,
                                                   purus sit amet luctus venenatis
                                               </h2>
                               </div>
                       </section>
-                  
- 
-                      
+
+
+
                     <section class="user_books">
                           <h1>Configurações</h1>
-                        <form id="form-edit-data">
+
+                          <ul data-errorList class="dataError">
+
+                          </ul>
+
+                        <form id="form-edit-data" method="POST" data-form>
                                 <div class="aling-form-edit">
                                                         <div id="form-edit-name">
                                                               <label for="name">Nome *</label>
-                                                              <input type="text" name="name" id="name">
+                                                              <input type="text" name="name" id="name" data-name>
                                                         </div>
 
                                                         <div id="form-edit-user">
                                                                 <label for="user">Usuário *</label>
-                                                                <input type="text" name="user" id="user">
+                                                                <input type="text" name="user" id="user" data-user>
+                                                                <%if(errorUser){%>
+                                                                    <p> erro </p>
+                                                                <%}%>
                                                         </div>
 
                                                         <div id="form-edit-bios">
                                                                 <label for="bios">Editar Bios</label>
-                                                                <input type="text" name="bios" id="bios">
+                                                                <input type="text" name="bio" id="bios" data-bio>
                                                         </div>
 
                                                         <button type="submit" id="save" name="save">Salvar</button>
-                                </div>        
+                                </div>
 
                                 <div class="aling-form-photo">
-                                              <div class="photo__profile" id="photo__profile">    </div>
+                                              <img src="img/user_null.png" class="photo__profile_" id="photo__profile_" data-image-update>
                                               <h1>Alterar foto de perfil</h1>
-                                             <input type="file" name="change-photo" id="change-photo" placeholder="Alterar foto" alt="Alterar foto">
-                                        
-                              
+                                             <input  data-image type="file" name="change-photo" id="change-photo" placeholder="Alterar foto" alt="Alterar foto">
+
+
 
                                 </div>
 
@@ -91,14 +135,14 @@
 
 
             </main>
-            <script src="../javascript/index_js_carrossel.js" type="module"></script>
 
+            <script src="/javascripts/update.js"></script>
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 
 <!-- FIM DO MAIN - CORPO DO SITE-->
 
 <footer>
-a
 
 </footer>
   </body>

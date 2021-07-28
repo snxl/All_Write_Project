@@ -1,12 +1,28 @@
 import jwt from "jsonwebtoken"
 import destroyProfile from "../service/deleteProfile.js"
 import profileUpdate from "../service/updateProfile.js"
+import db from "../database/models/index.js"
 
 
 class Profile{
-    GET(req, res){
+
+    async GET(req, res){
+
+        const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+        const {user, bio, route, imageRoute, name, email} = await db.Registro.findOne({
+          where:{
+            id: token.id
+          }
+        })
+
+        console.log(route)
+
+
         return res.render('profile', {
-            title: 'all write'
+            userName: user,
+            description: bio,
+            route: route
        })
     }
 

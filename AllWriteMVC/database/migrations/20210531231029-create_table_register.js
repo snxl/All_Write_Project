@@ -28,7 +28,7 @@ module.exports = {
     },
     imageRoute:{
         type: Sequelize.STRING(200),
-        allowNull:false
+        allowNull:true
     },
     credential:{
         type: Sequelize.INTEGER,

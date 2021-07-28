@@ -20,7 +20,7 @@
                         <input class="error_input" data-user="" type="text" name="user" id="input_user">
                         <%if(erro1){%>
                           <p class="p_error"><%=erro1%></p>
-                        <%}%>
+                        <% } %>
                         <%if(user){%>
                           <p class="p_error"><%=user%></p>
                         <%}%>
@@ -28,7 +28,6 @@
                         <input class="input_field" data-user type="text" name="user" id="input_user">
                     <%}%>
                 </div>
-
 
                  <div class="grupo_identificação">
                     <label for="input_name">Nome Completo</label>
@@ -91,6 +90,8 @@
         </div>
     </form>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../javascripts/registro.js"></script>
+
 </body>
 </html>

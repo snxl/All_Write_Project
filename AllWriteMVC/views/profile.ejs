@@ -12,7 +12,45 @@
   </head>
   <body>
 
-    <%- include('./header.ejs') %>
+    <!-- HEADER - Topo do  site-->
+        <header>
+
+                   <a href="/dashboard" alt="Home page" class="logo__color"> </a>
+                          <nav >
+                              <ul class="menu">
+                                      <li> <a href="#">Explorar</a>
+                                        <ul>
+                                          <li><a href="/aventura"> Aventura </a></li>
+                                          <li><a href="/acao"> Ação </a></li>
+                                          <li><a href="/fantasia"> Fantasia </a></li>
+                                          <li><a href="/ficcao"> Ficção </a></li>
+                                          <li><a href="/poesia"> Poesia </a></li>
+                                          <li><a href="/romance"> Romance </a></li>
+                                          <li><a href="/suspense"> Suspense </a></li>
+                                          <li><a href="/terror"> Terror </a></li>
+                                          <li><a href="/biografia"> Biografia </a></li>
+                                          <li><a href="/literario"> Literário </a></li>
+                                          <li><a href="/espiritual"> Espiritual </a></li>
+                                        </ul>
+                                                                          </li>
+
+                                      <li> <a href="#">Sobre</a></li>
+                                      <li> <a href="/contact_support">Suporte</a></li>
+                              </ul>
+
+                          </nav>
+
+
+                          <div class="field_user">
+
+
+                                            <img class="img_login" src="../img/foto_icon_user.svg">
+                                                <a href="/profile" id="user__">ID_usuário</a>
+                                                <a href="/profile__config"><img class="enginer__icon" src="../img/engrenagem.svg"></a>
+
+                          </div>
+            </header>
+<!-- FIM do topo do site-->
 
 <!-- INICIO DO MAIN - CORPO DO SITE-->
             <main>
@@ -30,22 +68,12 @@
                  <!--Inicio Bloco do perfil do usuário-->
                  <div class="align__profile">
                       <section class="user_profile">
-                              <div class="photo__profile">
 
-                              </div>
+                              <img src="<%=route%>" class="photo__profile">
 
                               <div class="text__profile">
-                                          <h1><a href="#" >Nome do usuário</a></h1>
-                                              <h2>
-                                                  Caixa de texto com uma descrição do perfil do usuário
-
-                                                  Lorem ipsum dolor sit amet,
-                                                  consectetur adipiscing elit ut aliquam,
-                                                  purus sit amet luctus venenatis
-                                                  Lorem ipsum dolor sit amet,
-                                                  consectetur adipiscing elit ut aliquam,
-                                                  purus sit amet luctus venenatis
-                                              </h2>
+                                          <h1><a href="#" ><%=userName%></a></h1>
+                                              <h2> <%=description%> </h2>
                               </div>
                       </section>
 
