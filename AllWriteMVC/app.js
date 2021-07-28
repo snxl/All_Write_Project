@@ -88,7 +88,7 @@ class App{
     this.app.use('/dashboard', dashboardRouter);
     this.app.use('/profile', profileRouter);
     this.app.use('/profile__config', profile__configRouter);
-    this.app.use('/reader_book', reader_bookRouter);    
+    this.app.use('/reader_book', reader_bookRouter);
     this.app.use('/aventura', aventuraRouter);
     this.app.use('/acao', acaoRouter);
     this.app.use('/biografia', biografiaRouter);
@@ -120,6 +120,7 @@ class App{
       resave: false,
       saveUninitialized: true
     }));
+    this.app.use("/files", express.static(path.join(__dirname, "public/uploads")))
   }
 
   validateLogin(){
