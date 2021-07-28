@@ -231,14 +231,7 @@ body {
 
 }
 
-.photo__profile {
-    width: 190px;
-    height: 190px;
-    background-color: #fff;
-    border-radius: 100%;
-    margin: 10px 0 15px 0;
 
-}
 
 .text__profile {
   width: 250px;
@@ -389,6 +382,20 @@ justify-content: center;
   border-radius: 100%;
   margin-top: 20px;
   border: #a0a0a0 solid 1px;
+  outline: none;
+  text-decoration: none;
+}
+
+.photo__profile_ {
+  text-indent: -9999px;
+  width: 190px;
+  height: 190px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-top: 20px;
+  border: #a0a0a0 solid 1px;
+  outline: none;
+  text-decoration: none;
 }
 
 .aling-form-photo input{

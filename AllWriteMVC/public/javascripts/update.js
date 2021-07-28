@@ -5,12 +5,31 @@ window.addEventListener("load", function(e){
   const user = document.querySelector("[data-user]")
   const bio = document.querySelector("[data-bio]")
   const image = document.querySelector("[data-image]")
+  const newImage = document.querySelector("[data-image-update]")
   const ulError = document.querySelector("[data-errorList]")
 
   const errorLine = this.document.createElement("li")
 
   errorLine.classList.add("errorLi")
 
+  function readImage(image) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.onerror = () => reject();
+        reader.readAsDataURL(image);
+    });
+  }
+
+  image.addEventListener("change", function(e){
+
+    readImage(e.target.files[0]).then(res =>{
+
+      newImage.src = res
+
+    })
+
+  })
 
   form.addEventListener("submit", function(e){
 
