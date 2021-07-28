@@ -1,10 +1,24 @@
 import service from "../service/updateProfile.js"
+import db from "../database/models/index.js"
+import jwt from "jsonwebtoken"
 
 class Profile__config{
-    GET(req, res){
+
+    async GET(req, res){
+
+        const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+        const {route, bio, user} = await db.Registro.findOne({
+          where:{
+            id: token.id
+          }
+        })
+
         res.render("profile__config", {
             errorUser: false,
-
+            profile: route,
+            bio,
+            user
         })
     }
 
