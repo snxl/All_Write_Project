@@ -102,6 +102,8 @@ class App{
     this.app.use('/terror', terrorRouter);
     this.app.use('/infantil', infantilRouter);
     this.app.use('/misterio', misterioRouter);
+
+    this.app.use("/files", express.static(path.join(__dirname, "public/uploads")))
   }
 
   globalMiddlewares(){
@@ -120,7 +122,6 @@ class App{
       resave: false,
       saveUninitialized: true
     }));
-    this.app.use("/files", express.static(path.join(__dirname, "public/uploads")))
   }
 
   validateLogin(){

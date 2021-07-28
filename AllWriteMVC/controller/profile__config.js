@@ -1,7 +1,9 @@
+import service from "../service/updateProfile.js"
+
 class Profile__config{
     GET(req, res){
         res.render("profile__config", {
-            title: "all write",
+            errorUser: false,
 
         })
     }
@@ -9,10 +11,20 @@ class Profile__config{
     POST(req, res){
 
 
-      const { name, user, bio } = req.body
+      const body = req.body
 
-      const {file} = req
-      return console.log({name, user, bio, file})
+      const {filename} = req.file || {}
+
+      const token = req.cookies.token
+
+      body.imageRoute = filename
+
+      for(const updated in body){
+        if(!body[updated] || body[updated] === "undefined") body[updated] = undefined
+      }
+
+      service.update(body, token)
+
       return res.redirect("/profile")
     }
 

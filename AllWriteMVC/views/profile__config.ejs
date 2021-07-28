@@ -104,6 +104,9 @@
                                                         <div id="form-edit-user">
                                                                 <label for="user">Usuário *</label>
                                                                 <input type="text" name="user" id="user" data-user>
+                                                                <%if(errorUser){%>
+                                                                    <p> erro </p>
+                                                                <%}%>
                                                         </div>
 
                                                         <div id="form-edit-bios">
@@ -115,7 +118,7 @@
                                 </div>
 
                                 <div class="aling-form-photo">
-                                              <img src="#" class="photo__profile_" id="photo__profile_" data-image-update>
+                                              <img src="img/user_null.png" class="photo__profile_" id="photo__profile_" data-image-update>
                                               <h1>Alterar foto de perfil</h1>
                                              <input  data-image type="file" name="change-photo" id="change-photo" placeholder="Alterar foto" alt="Alterar foto">
 

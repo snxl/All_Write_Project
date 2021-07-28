@@ -33,11 +33,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     imageRoute:{
         type: DataTypes.STRING(500),
-        allowNull:false
+        allowNull:true
     },
     route:{
       type: DataTypes.VIRTUAL,
-      get:()=>{
+      get:function(){
         return `https://localhost:3600/files/${this.imageRoute}`
       }
     },
