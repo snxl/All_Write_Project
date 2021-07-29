@@ -1,8 +1,21 @@
-class Espiritual{
-    GET(req, res){
-        res.render("espiritual", {
-            title: "all write",
+import db from "../../database/models/index.js"
+import jwt from "jsonwebtoken"
 
+class Espiritual{
+    async GET(req, res){
+
+        const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+        const {route, user} = await db.Registro.findOne({
+          where:{
+            id: token.id
+          }
+        })
+
+        res.render("espiritual", {
+            errorUser: false,
+            profile: route,
+            user
         })
     }
 

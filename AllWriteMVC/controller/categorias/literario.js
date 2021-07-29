@@ -1,8 +1,21 @@
-class Literario{
-    GET(req, res){
-        res.render("literario", {
-            title: "all write",
+import db from "../../database/models/index.js"
+import jwt from "jsonwebtoken"
 
+class Literario{
+    async GET(req, res){
+
+        const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+        const {route, user} = await db.Registro.findOne({
+          where:{
+            id: token.id
+          }
+        })
+
+        res.render("literario", {
+            errorUser: false,
+            profile: route,
+            user
         })
     }
 

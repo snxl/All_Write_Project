@@ -1,8 +1,21 @@
-class Aventura{
-    GET(req, res){
-        res.render("aventura", {
-            title: "all write",
+import db from "../../database/models/index.js"
+import jwt from "jsonwebtoken"
 
+class Aventura{
+    async GET(req, res){
+
+        const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+        const {route, user} = await db.Registro.findOne({
+          where:{
+            id: token.id
+          }
+        })
+
+        res.render("aventura", {
+            errorUser: false,
+            profile: route,
+            user
         })
     }
 
