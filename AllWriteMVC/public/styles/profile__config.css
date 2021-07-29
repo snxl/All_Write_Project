@@ -438,15 +438,24 @@ justify-content: center;
   list-style: none;
 }
 
-/*********************************************************************/
-/**********************         MY PUBLICATION           *****************/
-/*********************************************************************/
 
+#delete {
+  
+  width: 235px;
+  height: 40px;
+  background-color: #ba1900;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
+}
 
-
-
-/************************************
-FIM - MAIN
-*************************************/
-
-
+#delete:hover {
+  background-color: #ff0000;
+  transition: all 0.3s;
+  background-image: url(../img/emoticon.png);
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
