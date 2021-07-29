@@ -7,6 +7,7 @@ window.addEventListener("load", function(e){
   const image = document.querySelector("[data-image]")
   const newImage = document.querySelector("[data-image-update]")
   const ulError = document.querySelector("[data-errorList]")
+  const deleted = document.querySelector("[data-delete]")
 
   const errorLine = this.document.createElement("li")
 
@@ -58,5 +59,21 @@ window.addEventListener("load", function(e){
     }
     }).then(e => window.location.href = e.request.responseURL)
     }
+  })
+
+
+  deleted.addEventListener("click", function(e){
+
+    console.log("dfdss")
+
+    axios.delete("https://localhost:3600/profile__config", {}, {
+      headers: {
+        "Accept": 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'multipart/form-data',
+    }
+    }).then(e=>{
+      window.location.href = "https://localhost:3600/profile"
+    })
   })
 })

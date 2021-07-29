@@ -42,9 +42,6 @@ class Validation{
           }
         })
 
-        console.log(checkEmail)
-        console.log(req.body.email)
-
         if(!checkUser){
           user = false
         }else{

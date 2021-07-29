@@ -50,11 +50,23 @@ class Profile__config{
         })
     }
 
-    DELETE(req, res){
-        res.render("profile__config", {
-            title: "all write",
+    async DELETE(req, res){
 
-        })
+      const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+      const deleted = await db.Registro.destroy({
+        where:{
+          id:token.id
+        }
+      })
+
+
+      res.cookie("token", token, {
+        maxAge: 0,
+        httpOnly: true
+      })
+
+      res.json(deleted)
     }
 }
 

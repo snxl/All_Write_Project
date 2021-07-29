@@ -4,3 +4,4 @@ controller/testesSequelize.js
 database/config/config.js
 .vercel
 package-lock.json
+public/uploads/*
