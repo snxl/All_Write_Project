@@ -5,22 +5,39 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
+        id_user:{
+          type: DataTypes.INTEGER,
+          references: {model: "Registro", key: "id"},
+          allowNull:false,
+          field: "id_user"
+        },
         titulo: {
-            type: DataTypes.STRING(50),
+            type: DataTypes.STRING,
             allowNull:false,
-        },  
-        subtitulo: {
-            type: DataTypes.STRING(50),
-            unique:true          
-        },  
+        },
         sinopse: {
             type: DataTypes.STRING(1000),
         },
-        
+        image:{
+            type: DataTypes.STRING,
+            allowNull:false
+        },
         imageRoute:{
-            type: DataTypes.STRING(500),
-            allowNull:false       
-        }
+          type: DataTypes.VIRTUAL,
+          get:function(){
+            return `https://localhost:3600/files/${this.image}`
+          }
+        },
+        pdf:{
+          type: DataTypes.STRING,
+          allowNull:false
+        },
+        pdfRoute:{
+          type: DataTypes.VIRTUAL,
+          get: function(){
+            return `https://localhost:3600/files/${this.pdf}`
+          }
+        },
         },{
             tableName: "livros",
             timestamps: false

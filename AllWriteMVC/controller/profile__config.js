@@ -1,10 +1,24 @@
 import service from "../service/updateProfile.js"
+import db from "../database/models/index.js"
+import jwt from "jsonwebtoken"
 
 class Profile__config{
-    GET(req, res){
+
+    async GET(req, res){
+
+        const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+        const {route, bio, user} = await db.Registro.findOne({
+          where:{
+            id: token.id
+          }
+        })
+
         res.render("profile__config", {
             errorUser: false,
-
+            profile: route,
+            bio,
+            user
         })
     }
 
@@ -36,11 +50,23 @@ class Profile__config{
         })
     }
 
-    DELETE(req, res){
-        res.render("profile__config", {
-            title: "all write",
+    async DELETE(req, res){
 
-        })
+      const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+      const deleted = await db.Registro.destroy({
+        where:{
+          id:token.id
+        }
+      })
+
+
+      res.cookie("token", token, {
+        maxAge: 0,
+        httpOnly: true
+      })
+
+      res.json(deleted)
     }
 }
 

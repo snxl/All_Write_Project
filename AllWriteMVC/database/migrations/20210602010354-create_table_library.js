@@ -1,23 +1,34 @@
 'use strict';
 
-const { sequelize } = require("../models");
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('library', {
       id: {
-       type: Sequelize.INTEGER,
-       autoIncrement: true,
-       primaryKey: true
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
       },
-      register_id:{
-        type:Sequelize.INTEGER,
+      id_user:{
+        type: Sequelize.INTEGER,
+        references: {model: "register", key: "id"},
         allowNull:false,
-        references:{
-          model:"register",
-          key:"id"
-        }
+        field: "id_user"
       },
+      titulo: {
+          type: Sequelize.STRING,
+          allowNull:false,
+      },
+      sinopse: {
+          type: Sequelize.STRING(1000),
+      },
+      image:{
+          type: Sequelize.STRING,
+          allowNull:false
+      },
+      pdf:{
+        type: Sequelize.STRING,
+        allowNull:false
+      }
     });
  },
 

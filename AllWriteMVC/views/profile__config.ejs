@@ -44,7 +44,7 @@
 
 
                                             <img class="img_login" src="../img/foto_icon_user.svg">
-                                                <a href="/profile" id="user__">ID_usuário</a>
+                                                <a href="/profile" id="user__"><%=user%></a>
                                                 <a href="/profile__config"><img class="enginer__icon" src="../img/engrenagem.svg"></a>
                                               </div>
             </header>
@@ -66,21 +66,12 @@
                  <!--Inicio Bloco do perfil do usuário-->
                  <div class="align__profile">
                       <section class="user_profile">
-                              <div class="photo__profile" id="photo__profile">
-
-                              </div>
+                              <img src="<%=profile%>" class="photo__profile" id="photo__profile">
 
                               <div class="text__profile">
-                                          <h1><a href="#" >Nome do usuário</a></h1>
+                                          <h1><a href="#" ><%=user%></a></h1>
                                               <h2>
-                                                  Caixa de texto com uma descrição do perfil do usuário
-
-                                                  Lorem ipsum dolor sit amet,
-                                                  consectetur adipiscing elit ut aliquam,
-                                                  purus sit amet luctus venenatis
-                                                  Lorem ipsum dolor sit amet,
-                                                  consectetur adipiscing elit ut aliquam,
-                                                  purus sit amet luctus venenatis
+                                                <%=bio%>
                                               </h2>
                               </div>
                       </section>
@@ -121,8 +112,8 @@
                                               <img src="img/user_null.png" class="photo__profile_" id="photo__profile_" data-image-update>
                                               <h1>Alterar foto de perfil</h1>
                                              <input  data-image type="file" name="change-photo" id="change-photo" placeholder="Alterar foto" alt="Alterar foto">
-                                
-                                             <button type="submit" id="delete" name="delete">Deletar conta</button>
+
+                                             <button type="button" id="delete" name="delete" data-delete >Deletar conta</button>
 
                                             </div>
 
