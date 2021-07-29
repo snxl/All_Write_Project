@@ -1,11 +1,8 @@
 import express from "express"
+import books from "../controller/library.js"
 
-const route = express.Router()
+const router = express.Router()
 
-route.get("/", (req, res)=>{
-  res.render("teste", {
-    name: "ariel"
-  })
-})
+router.get("/all-books", books.allBooks)
 
-export default route
+export default router
