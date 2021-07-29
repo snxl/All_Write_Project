@@ -12,6 +12,8 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {model: "register", key: "id"},
         allowNull:false,
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
         field: "id_user"
       },
       titulo: {

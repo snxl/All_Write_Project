@@ -38,10 +38,21 @@ module.exports = (sequelize, DataTypes) => {
             return `https://localhost:3600/files/${this.pdf}`
           }
         },
+        category:{
+          type: DataTypes.STRING,
+          allowNull:false
+        }
         },{
-            tableName: "livros",
+            tableName: "library",
             timestamps: false
-        })
+    })
+
+    Livros.associate = (models)=>{
+      Livros.belongsTo(models.Registro, {
+        foreignKey: "id_user",
+        as:"autor"
+      })
+    }
 
 
     return Livros

@@ -72,6 +72,11 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "register_id",
             as:"autors"
         })
+
+        Register.hasMany(model.Livros, {
+          foreignKey: "id_user",
+          as: "my_books"
+        })
     }
 
     // Register.addHook("afterCreate", async Registro =>{

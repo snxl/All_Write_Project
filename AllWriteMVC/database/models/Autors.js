@@ -28,6 +28,8 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "register_id",
             as: "Registros_library"
         })
+
+
     }
 
     return Autores
