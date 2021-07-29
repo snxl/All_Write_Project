@@ -176,6 +176,7 @@ body {
   }
 
   .align__search {
+    display: flex;
     width: 100%;
     margin-bottom: 20px;
 
@@ -186,7 +187,7 @@ body {
     border-radius:15px;
     width:400px;
     height: 40px;
-    margin:0 auto;
+    margin: 0 200px 0 460px;
 
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 17px -5px, rgba(50, 50, 93, 0.2) 0px 2px 6px -5px;
   }
@@ -209,6 +210,29 @@ body {
 
 
 /**** BLOCO USER PROFILE ****/
+
+#publish {
+  
+  width: 235px;
+  height: 40px;
+  background-color: #FF6A30;
+  font-size: 18px;
+  margin-right: 44px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#publish:hover {
+  background-color: #fd4007;
+  transition: all 0.3s;
+  background-image: url(../img/emoticon.png);
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
 
 .align__profile{
   width: 100%;
