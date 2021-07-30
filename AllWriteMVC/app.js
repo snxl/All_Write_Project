@@ -29,7 +29,7 @@ import successRouter from "./routes/success.js"
 import books from "./routes/books.js"
 import profile__configRouter from "./routes/profile__config.js"
 import reader_bookRouter from "./routes/reader_book.js"
-import aventuraRouter from "./routes/categorias/aventura.js"
+import categoryRouter from "./routes/categorias/aventura.js"
 import acaoRouter from "./routes/categorias/acao.js"
 import biografiaRouter from "./routes/categorias/biografia.js"
 import espiritualRouter from "./routes/categorias/espiritual.js"
@@ -89,19 +89,19 @@ class App{
     this.app.use('/profile', profileRouter);
     this.app.use('/profile__config', profile__configRouter);
     this.app.use('/reader_book', reader_bookRouter);
-    this.app.use('/aventura', aventuraRouter);
-    this.app.use('/acao', acaoRouter);
-    this.app.use('/biografia', biografiaRouter);
-    this.app.use('/espiritual', espiritualRouter);
-    this.app.use('/fantasia', fantasiaRouter);
-    this.app.use('/ficcao', ficcaoRouter);
-    this.app.use('/literario', literarioRouter);
-    this.app.use('/poesia', poesiaRouter);
-    this.app.use('/romance', romanceRouter);
-    this.app.use('/suspense', suspenseRouter);
-    this.app.use('/terror', terrorRouter);
-    this.app.use('/infantil', infantilRouter);
-    this.app.use('/misterio', misterioRouter);
+    this.app.use('/categoria', categoryRouter);
+    // this.app.use('/acao', acaoRouter);
+    // this.app.use('/biografia', biografiaRouter);
+    // this.app.use('/espiritual', espiritualRouter);
+    // this.app.use('/fantasia', fantasiaRouter);
+    // this.app.use('/ficcao', ficcaoRouter);
+    // this.app.use('/literario', literarioRouter);
+    // this.app.use('/poesia', poesiaRouter);
+    // this.app.use('/romance', romanceRouter);
+    // this.app.use('/suspense', suspenseRouter);
+    // this.app.use('/terror', terrorRouter);
+    // this.app.use('/infantil', infantilRouter);
+    // this.app.use('/misterio', misterioRouter);
 
     this.app.use("/files", express.static(path.join(__dirname, "public/uploads")))
   }
