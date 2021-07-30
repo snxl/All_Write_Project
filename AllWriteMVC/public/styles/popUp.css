@@ -21,7 +21,7 @@
     justify-content: space-between;
     background-color: rgb(228, 228, 228);
     width: 46vw;
-    height: 55%;
+    height: 60%;
     padding: 10px;
     align-items: center;
     border-radius: 10px;
@@ -70,7 +70,7 @@ h2{
     cursor: pointer;
     margin: 10px 0px 30px 0px;
   }
-  
+
 #send_library:hover {
     background-color: #fd4007;
     transition: all 0.3s;
@@ -87,4 +87,4 @@ h2{
     opacity: 1;
     visibility: visible;
     transform: scale(1.0);    
-}
+} 
