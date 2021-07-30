@@ -9,6 +9,7 @@ export default new class Login{
     return await db.Registro.findOne({
       where:{email: email},
     })
+
   }
 
   async validateDatas(datas, password){

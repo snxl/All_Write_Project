@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         }
         },{
             tableName: "library",
-            timestamps: false
+            timestamps: true
     })
 
     Livros.associate = (models)=>{

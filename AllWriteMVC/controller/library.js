@@ -85,9 +85,9 @@ export default new class bookController{
       const {page} = req.query
       const {category} = req.query || {}
 
-      if(req.query.limit && req.query.page){
-        req.query.limit * req.query.page - req.query.limit
-      }
+      // if(req.query.limit && req.query.page){
+      //   req.query.limit * req.query.page - req.query.limit
+      // }
 
       if(category){
         const selectCategory = await db.Livros.findAll({
@@ -102,7 +102,9 @@ export default new class bookController{
           offset: Number(page),
         })
 
-        return res.json(selectCategory)
+        return res.render("aventura", {
+
+        })
       }
 
       const data = await db.Livros.findAll({

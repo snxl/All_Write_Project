@@ -71,14 +71,13 @@ class Validation{
 
             await schema.validate(req.body, {abortEarly: false})
 
-            if(checkEmail === null && checkUser === null) return next()
+            console.log(req.body.email)
 
-            console.log(checkEmail, checkUser)
+            if(checkEmail === null && checkUser === null) return next()
 
         } catch (results) {
             let allError = results.errors
 
-            console.log()
             let checkPassword
 
             allError.find(element=> {
@@ -127,7 +126,7 @@ class Validation{
         }
       })
 
-      checkEmail != null ? email = "email existente": email = false;
+
 
       if(!checkEmail) return res.render("login", {
         erro1,
@@ -141,6 +140,7 @@ class Validation{
       })
 
       try {
+
         await schema.validate(req.body, {abortEarly: false})
 
         if(checkEmail === null && checkUser === null) return next()

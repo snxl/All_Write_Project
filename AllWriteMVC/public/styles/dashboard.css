@@ -14,7 +14,7 @@ header {
     border-bottom:  1px solid #C2C2C2;
     flex-wrap:nowrap;
   }
-  
+
   .logo__color  {
     width: 95px;
     height: 60px;
@@ -22,63 +22,63 @@ header {
     background-image: url(../img/logo_color.png);
     transition: all 0.3s;
   }
-  
+
   .logo__color:hover  {
     width: 95px;
     height: 60px;
     margin-left: 150px;
     background-image: url(../img/logo_color_hover.png);
   }
-  
+
   /*  FIM HEADER - TOPO DO SITE */
-  
+
   /************************************
   CONFIGURAÇÃO MENU
   *************************************/
-  
+
   nav {
     max-width: 500px;
   }
-  
+
   .menu {
     list-style: none;
     float: left;
     margin-left: -400px;
     margin: 0 auto;
     width: 400px;
-  
+
   }
-  
+
   .menu ul {
     width: 300px;
-  
+
   }
-  
+
   .menu li{
     position:relative;
     float:left;
-  
+
     font-weight:500;
-    color:rgb(75, 75, 75); 
-  
-  
+    color:rgb(75, 75, 75);
+
+
     }
-  
+
   .menu li a{
-  color:rgb(75, 75, 75); 
-  text-decoration:none; 
+  color:rgb(75, 75, 75);
+  text-decoration:none;
   padding:5px 15px;
   display:block;
   font-weight: none;
   }
-  
+
   .menu li a:hover{
-  
+
   color:rgb(0, 0, 0);
-  
-  
+
+
   }
-  
+
   .menu li  ul{
     position:absolute;
     width: 200px;
@@ -95,27 +95,27 @@ header {
     transition: 0.3s;
     color: #c637c9;
     }
-  
+
     .menu li:hover ul, .menu li.over ul{
         display:block;
-    
+
     }
-  
+
     .menu li ul li{
-   
+
         display:block;
         width:100px;
         }
-  
+
   /************************************
   FIM - CONFIGURAÇÃO MENU
   *************************************/
-  
-  
+
+
   /************************************
   INICIO - CAMPO DO USUÁRIO - SENHA
   *************************************/
-  
+
   .field_user {
     width: 155px;
     height: 30px;
@@ -130,35 +130,35 @@ header {
     text-align: center;
     align-items: center;
   }
-  
+
   .field_user  p{
     font-size: 0.8rem;
     text-align: center;
     margin: 0 auto;
-  
-  
+
+
   }
-  
+
   .field_user  a{
     list-style: none;
     text-decoration: none;
     text-align: center;
     font-weight:500;
-    color:rgb(95, 95, 95); 
+    color:rgb(95, 95, 95);
   }
-  
+
   .field_user  a:hover{
   color: rgba(247, 25, 136, 1);
   transition: 0.4s
   }
-  
+
   #user__{
     font-size: 0.88rem;
   }
   /************************************
   FIM - CAMPO DO USUÁRIO - SENHA
   *************************************/
-  
+
 
 .banner {
     margin: 4%;
@@ -219,17 +219,17 @@ text-decoration: none;
     transition: justify-content;
     cursor: pointer;
 }
-  
+
   #botao_genero:hover {
     justify-content: space-between;
 
   }
-  
+
   #botao_genero > img {
     display: none;
     width: 59%;
   }
-  
+
   #botao_genero:hover img {
     display: flex;
   }
@@ -239,7 +239,7 @@ text-decoration: none;
     flex-direction: column;
     margin: 4% 4% 0 4%;
     width: 92vw;
-}  
+}
 
 .highlights > h2 {
     display: flex;
@@ -258,7 +258,7 @@ text-decoration: none;
     align-items: center;
     padding: 20px 50px 20px 50px;
 }
-  
+
 .listaDestaque > button > img{
     max-width: 100%;
 }
@@ -267,7 +267,7 @@ text-decoration: none;
     transition: all 0.5s;
     cursor: pointer;
     }
-    
+
 .listaDestaque_1:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
@@ -281,7 +281,7 @@ text-decoration: none;
     transition: all 0.5s;
     cursor: pointer;
     }
-    
+
 .listaDestaque_2:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
@@ -295,7 +295,7 @@ text-decoration: none;
     transition: all 0.5s;
     cursor: pointer;
     }
-    
+
 .listaDestaque_3:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
@@ -309,7 +309,7 @@ text-decoration: none;
     transition: all 0.5s;
     cursor: pointer;
     }
-    
+
 .listaDestaque_4:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
@@ -323,7 +323,7 @@ text-decoration: none;
     transition: all 0.5s;
     cursor: pointer;
     }
-    
+
 .listaDestaque_5:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
@@ -381,7 +381,7 @@ text-decoration: none;
     cursor: pointer;
 
 }
-    
+
 .LivroMaisLidoNaSemana1 > a img:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
@@ -460,7 +460,7 @@ text-decoration: none;
     cursor: pointer;
     width: 11vw;
     }
-    
+
 .LivroMaisLidoNaSemana2 > a img:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
@@ -500,7 +500,7 @@ text-decoration: none;
     cursor: pointer;
     width: 11vw;
 }
-    
+
 .LivroMaisLidoNaSemana3 > a img:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
@@ -519,7 +519,7 @@ text-decoration: none;
     cursor: pointer;
     width: 11vw;
 }
-    
+
 .LivroMaisLidoNaSemana4 > a img:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
@@ -648,7 +648,7 @@ text-decoration: none;
     flex-direction: row;
     align-items: center;
     border: 0;
-    outline: 0;   
+    outline: 0;
     padding: 0;
     width: 100%;
     font-family:Arial, Helvetica, sans-serif;
@@ -687,17 +687,17 @@ text-decoration: none;
     transition: justify-content;
     cursor: pointer;
 }
-    
+
 #botao_genero:hover {
     justify-content: space-between;
 
 }
-    
+
 #botao_genero > img {
     display: none;
     width: 59%;
 }
-    
+
 #botao_genero:hover img {
     display: flex;
 }
@@ -778,7 +778,7 @@ display: flex;
     display: none;
     max-width: 0%;
 }
-            
+
 #img_banner {
     padding: 1.5vw;
     width: 97vw;
@@ -832,20 +832,20 @@ text-decoration: none;
     transition: justify-content;
     cursor: pointer;
 }
-    
+
 #botao_genero:hover {
     justify-content: space-between;
 }
-    
+
 #botao_genero > img {
     display: none;
     width: 59%;
 }
-    
+
 #botao_genero:hover img {
     display: flex;
 }
-    
+
 .highlights > h2 {
     display: flex;
     flex-direction: row;
@@ -862,7 +862,7 @@ text-decoration: none;
     margin-top: 40px;
     padding: 50px 50px 50px 50px;
 }
-    
+
 .listaDestaque > button > img{
     max-width: 100%;
 }
@@ -1100,7 +1100,7 @@ text-decoration: none;
     flex-direction: row;
     align-items: center;
     border: 0;
-    outline: 0;   
+    outline: 0;
     padding: 0;
     width: 100%;
     font-family:Arial, Helvetica, sans-serif;
@@ -1127,4 +1127,8 @@ text-decoration: none;
 }
 
 
+}
+
+.d-bock{
+  width: 191px;
 }

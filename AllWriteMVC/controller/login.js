@@ -12,7 +12,11 @@ class Login{
 
       const { email, password } = req.body
 
+      console.log(email)
+
       const responseUser = await serviceLogin.searchUser(email)
+
+      console.log(responseUser)
 
       if(!responseUser) return responseInvalidData()
 
