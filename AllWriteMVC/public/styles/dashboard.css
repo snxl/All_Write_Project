@@ -3,7 +3,6 @@
     margin: 0;
 }
 
-
 header {
     width: 100%;
     height:  70px;
@@ -380,13 +379,8 @@ text-decoration: none;
     transition: all 0.5s;
     cursor: pointer;
 }
-<<<<<<< HEAD
-    
-.LivroMaisLidoNaSemana1 > img:hover{
-=======
 
 .LivroMaisLidoNaSemana1 > a img:hover{
->>>>>>> d0947ca62b3ae419111184b07ba9919dd0a1ec12
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
 }
