@@ -1,0 +1,462 @@
+body{
+  background-color: #E5E5E5;
+}
+
+
+header {
+  width: 100%;
+  height:  70px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:  1px solid #C2C2C2;
+  flex-wrap:nowrap;
+}
+
+.logo__color  {
+  width: 95px;
+  height: 60px;
+  margin-left: 150px;
+  background-image: url(../img/logo_color.png);
+  transition: all 0.3s;
+}
+
+.logo__color:hover  {
+  width: 95px;
+  height: 60px;
+  margin-left: 150px;
+  background-image: url(../img/logo_color_hover.png);
+}
+
+/*  FIM HEADER - TOPO DO SITE */
+
+/************************************
+CONFIGURAÇÃO MENU
+*************************************/
+
+nav {
+  max-width: 500px;
+}
+
+.menu {
+  list-style: none;
+  float: left;
+  margin-left: -400px;
+  margin: 0 auto;
+  width: 400px;
+
+}
+
+.menu ul {
+  width: 300px;
+
+}
+
+.menu li{
+  position:relative;
+  float:left;
+
+  font-weight:500;
+  color:rgb(75, 75, 75);
+
+
+  }
+
+.menu li a{
+color:rgb(75, 75, 75);
+text-decoration:none;
+padding:5px 15px;
+display:block;
+font-weight: none;
+}
+
+.menu li a:hover{
+
+color:rgb(0, 0, 0);
+
+
+}
+
+.menu li  ul{
+  position:absolute;
+  width: 200px;
+  height: 180px;
+  top:25px;
+  left:0;
+  background-color: #ffffff;
+  background-position: top;
+  background-repeat: no-repeat;
+  display:none;
+  border:1px solid #fdfdfd;
+  padding: 1rem;
+  border-radius: 0 15px 20px 30px;
+  transition: 0.3s;
+  color: #c637c9;
+  }
+
+  .menu li:hover ul, .menu li.over ul{
+      display:block;
+
+  }
+
+  .menu li ul li{
+
+      display:block;
+      width:100px;
+      }
+
+/************************************
+FIM - CONFIGURAÇÃO MENU
+*************************************/
+
+
+/************************************
+INICIO - CAMPO DO USUÁRIO - SENHA
+*************************************/
+
+.field_user {
+  width: 155px;
+  height: 30px;
+  background-color: #ffffff;
+  border: #C2C2C2 solid 1px;
+  border-radius: 30px;
+  margin-right: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px  5px  5px;
+  text-align: center;
+  align-items: center;
+}
+
+.field_user  p{
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0 auto;
+
+
+}
+
+.field_user  a{
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  font-weight:500;
+  color:rgb(95, 95, 95);
+}
+
+.field_user  a:hover{
+color: rgba(247, 25, 136, 1);
+transition: 0.4s
+}
+
+#user__{
+  font-size: 0.88rem;
+}
+/************************************
+FIM - CAMPO DO USUÁRIO - SENHA
+*************************************/
+
+
+/************************************
+INICIO - MAIN
+*************************************/
+body {
+  background-image: url(../img/background_flowers_profilepage.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+  main {
+    max-width: 1440px;
+    height: 700px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .align__search {
+    width: 100%;
+    margin-bottom: 20px;
+
+  }
+
+  .search__field{
+    background-color:#ffffff;
+    border-radius:15px;
+    width:400px;
+    height: 40px;
+    margin:0 auto;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 17px -5px, rgba(50, 50, 93, 0.2) 0px 2px 6px -5px;
+  }
+
+  #search{
+    float:left;
+    width: 350px;
+    height: 40px;
+    background-color:#ffffff;
+    padding-left:15px;
+    border-radius: 15px;
+    font-size:18px;
+    border:none;
+    outline: none;
+  }
+
+  .search__field img {
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+
+/**** BLOCO USER PROFILE ****/
+
+.align__profile{
+  width: 100%;
+
+  display: flex;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.user_profile {
+    width: 300px;
+    height:600px;
+
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+.text__profile {
+  width: 250px;
+  height: 150px;
+
+  padding: 5px;
+}
+
+.text__profile h1 a{
+  font-size: 22px;
+  color: #3E3E3E;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 100px;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.text__profile h1 a:hover{
+  font-size: 22px;
+  color: #e912f0;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.text__profile h2 {
+  font-size: 12px;
+  color: #3E3E3E;
+  font-weight: 400;
+  text-align: justify;
+  margin-top: 10px;
+  line-height: 15px;
+
+}
+
+.user_books {
+  width: 870px;
+  height: 530px;
+  display: flex;
+  background-color: #fff;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 50px;
+  border-radius: 20px;
+
+}
+
+.user_books h1 {
+  color: #3E3E3E;
+  margin-top: 20px;
+  margin-left: 25px;
+  width: 100%;
+  height: 30px;
+
+
+}
+
+#form-edit-data{
+  display: flex;
+  flex-wrap: wrap;
+}
+.aling-form-edit{
+  width: 400px;
+  height: 400px;
+
+  margin-left: 25px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3E3E3E;
+
+}
+
+#form-edit-name{
+  width: 100%;
+
+}
+
+#form-edit-name input{
+  width: 340px;
+  padding-left: 10px;
+  height: 30px;
+  background-color: #ffffff;
+  outline: none;
+  border: 1px solid #cfcfcf;
+  margin-top: 5px;
+}
+
+
+
+#form-edit-user{
+  width: 100%;
+
+}
+
+#form-edit-user input{
+  width: 340px;
+  padding-left: 10px;
+  height: 30px;
+  background-color: #ffffff;
+  outline: none;
+  border: 1px solid #cfcfcf;
+  margin-top: 5px;
+}
+
+
+#form-edit-bios{
+  width: 100%;
+
+}
+
+
+
+#form-edit-bios input{
+  width: 340px;
+  padding-left: 10px;
+  height: 130px;
+  background-color: #ffffff;
+  outline: none;
+  border: 1px solid #cfcfcf;
+  margin-top: 5px;
+}
+
+
+.aling-form-photo{
+  width: 400px;
+  height: 400px;
+
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+  align-items: center;
+
+}
+
+.photo__profile {
+  text-indent: -9999px;
+  width: 190px;
+  height: 190px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-top: 20px;
+  border: #a0a0a0 solid 1px;
+  outline: none;
+  text-decoration: none;
+}
+
+.photo__profile_ {
+  text-indent: -9999px;
+  width: 190px;
+  height: 190px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-top: 20px;
+  border: #a0a0a0 solid 1px;
+  outline: none;
+  text-decoration: none;
+}
+
+.aling-form-photo input{
+  color: #3E3E3E;
+  font-weight: lighter;
+  margin-bottom: 50px;
+}
+
+.aling-form-photo h1{
+  color: #3E3E3E;
+  font-weight: lighter;
+  font-size: 14px;
+
+  width: 300px;
+  text-align: center;
+}
+
+
+
+#save {
+  width: 235px;
+  height: 40px;
+  background-color: #FF6A30;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+#save:hover {
+  background-color: #fd4007;
+  transition: all 0.3s;
+
+}
+
+.dataError{
+  list-style: none;
+}
+
+
+#delete {
+
+  width: 235px;
+  height: 40px;
+  background-color: #ba1900;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#delete:hover {
+  background-color: #ff0000;
+  transition: all 0.3s;
+  background-image: url(../img/emoticon.png);
+  background-repeat: no-repeat;
+  background-size: 40px;
+}

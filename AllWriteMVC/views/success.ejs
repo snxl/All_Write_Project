@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Write - Contatos - Suporte</title>
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/success.css">
+  </head>
+  
+  <body>
+    <!-- HEADER - Topo do  site-->
+    <%- include('./header.ejs') %>
+    <!-- FIM do topo do site-->
+
+<!-- INICIO DO MAIN - CORPO DO SITE-->
+    <main>
+        <h1>Obrigado por entrar em contato.</h1>
+        <h3>Recebemos sua mensagem e em breve retornaremos.</h3>
+        <button type="submit" id="submit" value="Send Message" onclick="window.location.href = '/dashboard'">Continuar Navegando</button>
+    </main>
+
+
+
+<!-- FIM DO MAIN - CORPO DO SITE-->
+
+    <footer>
+    </footer>
+    <script src="../javascript/validatorContact.js"></script>
+  </body>
+</html>

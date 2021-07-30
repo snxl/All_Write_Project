@@ -16,30 +16,13 @@
     </script>
 </head>
 <body>
-    <header>
-        <a id="logo" href="index.ejs">
-        <img src="../img/logo.png" alt="logo">
-        </a>
-        <div id="pesquisa">
-            <input type="text" placeholder="Busque por" />
-            <a id="lupa" href="#">
-            <img src="../img/lupa.svg">
-            </a>
-        </div>
-        <div id="config">
-            <img src="../img/gear.svg">
-            <select class="select_config" name="config" id="config" required>
-                <option value=""></option>
-            </select>
-        </div>
-
-    </header>
+	<%- include('./header.ejs') %>
     <main>
         <div class="formulario">    
 
             <form action="/register" method="POST" enctype="multipart/form-data">
                 
-            <h2 class="titulo_cadastro">CADASTRO</h2>
+            <h2 class="titulo_cadastro">CADASTROss</h2>
             <%if(erro1){%>
                 <p><%=erro1%></p>
             <%}%>

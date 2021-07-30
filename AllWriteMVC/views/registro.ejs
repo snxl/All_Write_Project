@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/registro.css">
-    <link rel="stylesheet" href="css registro/style.css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link rel="stylesheet" href="../styles/global.css"/>
+    <link rel="stylesheet" href="../styles/registro.css"/>
     <title>Registro</title>
-
 </head>
 <body>
     <form method="POST" data-form="">
@@ -20,7 +20,7 @@
                         <input class="error_input" data-user="" type="text" name="user" id="input_user">
                         <%if(erro1){%>
                           <p class="p_error"><%=erro1%></p>
-                        <%}%>
+                        <% } %>
                         <%if(user){%>
                           <p class="p_error"><%=user%></p>
                         <%}%>
@@ -28,7 +28,6 @@
                         <input class="input_field" data-user type="text" name="user" id="input_user">
                     <%}%>
                 </div>
-
 
                  <div class="grupo_identificação">
                     <label for="input_name">Nome Completo</label>
@@ -52,7 +51,7 @@
                           <p class="p_error"><%=email%></p>
                         <%}%>
                     <%}else{%>
-                        <input class="input_field" data-email="" type="email" name="email" id="input_email">
+                        <input class="input_field" data-email="" type="email" name="email" id="input_email" required>
                     <%}%>
                 </div>
 
@@ -91,6 +90,8 @@
         </div>
     </form>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../javascripts/registro.js"></script>
+
 </body>
 </html>
