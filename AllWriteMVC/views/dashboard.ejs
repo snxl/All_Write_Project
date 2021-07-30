@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../img/favicon.png" />
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/dashboard.css">
-  </head>
+    <link rel="stylesheet" href="../styles/popUp.css">  </head>
   <body>
 
     <%- include('./header.ejs') %>
@@ -45,20 +45,20 @@
         <button class="botaoDestaque">
           <img src="../img/setaEsquerda.svg" alt="seta esquerda" />
         </button>
-        <div class="listaDestaque_1"><a href="/">
-          <img src="../img/FrankPayne.jpg" alt="img" /></a>
+        <div class="listaDestaque_1">
+          <img id="popUp" src="../img/FrankPayne.jpg" alt="img" onclick="showModal()" />
         </div>
-        <div class="listaDestaque_2"><a href="#">
-          <img src="../img/livro2.jpg" alt="img" /></a>
+        <div class="listaDestaque_2">
+          <img id="popUp" src="../img/livro2.jpg" alt="img" onclick="showModal()"/>
         </div>
-        <div class="listaDestaque_3"><a href="#">
-          <img src="../img/livro3.svg" alt="img" /></a>
+        <div class="listaDestaque_3">
+          <img id="popUp" src="../img/livro3.svg" alt="img" onclick="showModal()"/>
         </div>
-        <div class="listaDestaque_4"><a href="#">
-          <img src="../img/livro4.svg" alt="img" /></a>
+        <div class="listaDestaque_4">
+          <img id="popUp" src="../img/livro4.svg" alt="img" onclick="showModal()"/>
         </div>
-        <div class="listaDestaque_5"><a href="#">
-          <img src="../img/livro5.svg" alt="img" /></a>
+        <div class="listaDestaque_5">
+          <img id="popUp" src="../img/livro5.svg" alt="img" onclick="showModal()"/>
         </div>
         <button class="botaoDestaque">
           <img src="../img/setadireita.svg" alt="seta direita" />
@@ -69,7 +69,7 @@
     <div class="maisLidosNaSemana"> 
       <h2>Mais lidos da semana</h2>
       <div class="livroMaisLidoNaSemana1">
-        <a href="/"><img src="../img/FrankPayne.jpg"></a>
+        <img src="../img/FrankPayne.jpg" onclick="showModal()">
         <div class="info_livroMaisLidoNaSemana1">
           <div class="txt_livroMaisLidoNaSemana1">  
             <h1>Frank Payne e a Caverna Misteriosa</h1><br>
@@ -282,6 +282,28 @@
 
       </div>
     </div>
+
+<!-- Início do Modal  -->
+    <div class="modal" id="modal">    
+      <div class="pop_up">
+          <div class="capa">
+              <img id="capa" src="../img/FrankPayne.jpg">
+          </div>
+
+          <div class="info_livro">
+              <div class="btnClose">
+                  <img id="btn_close" src="../img/x.svg" onclick="closeModal()">
+                  <h2>Frank Payne e a Caverna Misteriosa</h2>
+              </div>
+                  <button type="submit" id="send_library" name="send_library">Enviar para biblioteca</button>
+                  <h3>Até onde você iria para encontrar seu pai desaparecido e dado como morto há cinco anos, mas que acabara de se comunicar com você de uma forma totalmente imprevisível?
+                      Frank Payne, um garoto de 17 anos, acabou de receber do mar uma enigmática pedra que faz sua vida virar de cabeça para baixo, após descobrir algumas inscrições em uma língua desconhecida indicando o paradeiro de seu pai Douglas, que desapareceu há cinco anos.
+                      Junto de sua amiga Barbara e seu avô Walter partem para a ilha de Guam, no extremo pacífico. Dentro de um submarino chegam às profundezas do oceano, precisamente na Fossa das Marianas onde atravessam um portal mágico que os levam para dentro de uma caverna um tanto misteriosa.
+          </div>
+      </div>
+  </div>
+<!-- Final do Modal  -->
+
   </main>
   <footer>    
     <div class="naoEncontrou">
@@ -295,5 +317,12 @@
       </div>
     </div>
   </footer>
+<!-- MODAL -->
+
+<script type="text/javascript" src="../javascripts/popUp.js"></script>
+
+
+<!-- MODAL -->
+
 </body>
 </html>

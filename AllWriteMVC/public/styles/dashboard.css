@@ -354,6 +354,7 @@ text-decoration: none;
     display: flex;
     flex-direction: column;
     width: 100%;
+
 }
 .maisLidosNaSemana > h2 {
     display: flex;
@@ -374,14 +375,13 @@ text-decoration: none;
     margin: 4vw 0 0 9vw;
 }
 
-.livroMaisLidoNaSemana1 > a img{
-    margin: 18px 13px 0px 13px;
+.livroMaisLidoNaSemana1 > img{
+    padding: 15px;
     transition: all 0.5s;
     cursor: pointer;
-
 }
     
-.LivroMaisLidoNaSemana1 > a img:hover{
+.LivroMaisLidoNaSemana1 > img:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
 }

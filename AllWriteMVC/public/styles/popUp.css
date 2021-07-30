@@ -1,0 +1,90 @@
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0.25s ease-in-out , opacity 0.25s ease-in-out, transform 0.25s ease-in-out;   
+}
+
+.pop_up {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(228, 228, 228);
+    width: 46vw;
+    height: 55%;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#capa{
+    width: 95%;
+}
+
+.info_livro{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+}
+
+.btnClose{
+    display: flex;
+    flex-direction: column;
+    margin-top: -30px;
+}
+
+#btn_close{
+    width: 25px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+
+h2{
+    font-size: calc(0.4rem + 1.2vw);
+    margin-top: unset;
+}
+
+#send_library {
+    width: 235px;
+    height: 40px;
+    background-color: #FF6A30;
+    font-size: 18px;
+    align-self: center;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 10px 0px 30px 0px;
+  }
+  
+#send_library:hover {
+    background-color: #fd4007;
+    transition: all 0.3s;
+  }
+
+  h3{
+    text-align: justify;
+    text-align-last: left;
+    font-size: calc(0.4rem + 0.5vw);
+    padding-right: 5px
+}
+
+.show-modal{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);    
+}
