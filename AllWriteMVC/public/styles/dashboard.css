@@ -443,6 +443,7 @@ text-decoration: none;
     justify-content: space-between;
     width: 81%;
     margin: 4vw 0 0 9vw;
+    background-color: #c637c9;
 }
 
 .LivroMaisLidoNaSemana2{
@@ -452,14 +453,14 @@ text-decoration: none;
     background-color: #F1F0F0;
 }
 
-.LivroMaisLidoNaSemana2 > a img{
-    margin: 25px 15px 0px 15px;
+.LivroMaisLidoNaSemana2 > img{
+    padding: 10px;
     transition: all 0.5s;
     cursor: pointer;
-    width: 11vw;
+    width: 16vw;
     }
 
-.LivroMaisLidoNaSemana2 > a img:hover{
+.LivroMaisLidoNaSemana2 > img:hover{
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
 }
@@ -949,14 +950,14 @@ text-decoration: none;
     padding: 0px 50px 0px 10px;
 }
 
-.boxLivrosMaisLidosNaSemana{
+.boxLivrosMaisLidosNaSemana {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 10px;
     width: 80%;
     margin: 25px 0px 25px 130px;
+    background-color: #c637c9;
 }
 
 .LivroMaisLidoNaSemana2{
@@ -967,7 +968,7 @@ text-decoration: none;
 }
 
 .LivroMaisLidoNaSemana2 > img{
-    padding: 15px;
+    width: 32px;
 }
 
 .LivroMaisLidoNaSemana3{

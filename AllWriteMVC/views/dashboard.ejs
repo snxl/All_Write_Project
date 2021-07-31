@@ -62,13 +62,15 @@
     
     <div class="maisLidosNaSemana">
       <h2>Mais lidos da semana</h2>
-      <% listaDeLivrosMaisLidos.forEach(function(element){%>
+
+      <!-- Inicio: livro grande -->
+      <% element = listaDeLivrosMaisLidos[0]%>
       <div class="livroMaisLidoNaSemana1">
         <img src="<%=element.imageRoute%>" onclick="showModal('livro-' + <%=element.id%>)">
         <div class="info_livroMaisLidoNaSemana1">
           <div class="txt_livroMaisLidoNaSemana1">
-            <h1><%=element.titulo%></h1><br>
-            <span><%=element.sinopse%></span><br>
+            <h2><%=element.titulo%></h2><br>
+            <h3><%=element.sinopse%></h3><br>
           </div>
           
           <!-- <div class="views_rating">
@@ -79,8 +81,30 @@
           </div>
         </div>
       </div>
-      <% }) %>
+      <!-- Fim: livro grande -->
 
+      <!-- Inicio: livros pequenos -->
+      <% listaDeLivrosMaisLidos.slice(1).forEach(function(element){%>
+        <div class="boxLivrosMaisLidosNaSemana">
+        <div class="LivroMaisLidoNaSemana2">
+          <img src="<%=element.imageRoute%>" onclick="showModal('livro-' + <%=element.id%>)">
+         
+            <div class="txt_boxLivroMaisLidoNaSemana">
+              <h1><%=element.titulo%></h1><br>
+              <span><%=element.sinopse%></span><br>
+            </div>
+            
+            <!-- <div class="views_rating">
+                <img id="views" src="../img/viewsIcon.svg">
+                <h3>10K views</h3>
+                <img id="rating" src="../img/ratingIcon.svg">
+                <h3>9,6738</h3> -->
+          </div>
+        </div>
+    
+      
+      <% }) %>
+      <!-- Fim: livros pequenos -->
 
     <div class="exploreLivrosNaComunidade">
       <h2>Explore livros na comunidade</h2>
