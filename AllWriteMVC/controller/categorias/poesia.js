@@ -1,11 +1,23 @@
-class Poesia{
-    GET(req, res){
-        res.render("poesia", {
-            title: "all write",
+import db from "../../database/models/index.js"
+import jwt from "jsonwebtoken"
 
+class Poesia{
+    async GET(req, res){
+
+        const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+        const {route, user} = await db.Registro.findOne({
+          where:{
+            id: token.id
+          }
+        })
+
+        res.render("poesia", {
+            errorUser: false,
+            profile: route,
+            user
         })
     }
-
     POST(req, res){
         return
     }

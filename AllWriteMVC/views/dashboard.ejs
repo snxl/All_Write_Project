@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../img/favicon.png" />
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="../styles/popUp.css">  
   </head>
   <body>
 
@@ -40,81 +41,70 @@
     </div>
 
     <div class="highlights">
-      <h2>Livros em Destaque</h2>
+      <h2>Livros mais recentes</h2>
       <div class="listaDestaque">
         <button class="botaoDestaque">
           <img src="../img/setaEsquerda.svg" alt="seta esquerda" />
         </button>
-        <div class="listaDestaque_1"><a href="/">
-          <img src="../img/FrankPayne.jpg" alt="img" /></a>
+
+        <% listaDeLivros.forEach(function(element){%>
+        <div class="listaDestaque_1">
+          <img id="popUp" src="<%=element.imageRoute%>" alt="img" onclick="showModal('livro-' + <%=element.id%>)" />
         </div>
-        <div class="listaDestaque_2"><a href="#">
-          <img src="../img/livro2.jpg" alt="img" /></a>
-        </div>
-        <div class="listaDestaque_3"><a href="#">
-          <img src="../img/livro3.svg" alt="img" /></a>
-        </div>
-        <div class="listaDestaque_4"><a href="#">
-          <img src="../img/livro4.svg" alt="img" /></a>
-        </div>
-        <div class="listaDestaque_5"><a href="#">
-          <img src="../img/livro5.svg" alt="img" /></a>
-        </div>
+        <% }) %>
+        
         <button class="botaoDestaque">
           <img src="../img/setadireita.svg" alt="seta direita" />
         </button>
       </div>
     </div>
-
+    
+    
     <div class="maisLidosNaSemana">
       <h2>Mais lidos da semana</h2>
+
+      <!-- Inicio: livro grande -->
+      <% element = listaDeLivrosMaisLidos[0]%>
       <div class="livroMaisLidoNaSemana1">
-        <a href="/"><img src="../img/FrankPayne.jpg"></a>
+        <img src="<%=element.imageRoute%>" onclick="showModal('livro-' + <%=element.id%>)">
         <div class="info_livroMaisLidoNaSemana1">
           <div class="txt_livroMaisLidoNaSemana1">
-            <h1>Frank Payne e a Caverna Misteriosa</h1><br>
-            <h2>Autor: Marcelo Gamón</h2><br>
-            <span>Até onde você iria para encontrar seu pai desaparecido e dado como morto há cinco anos, mas que acabara de se comunicar com você de uma forma totalmente imprevisível?</span><br>
-            <span>Frank Payne, um garoto de 17 anos, acabou de receber do mar uma enigmática pedra que faz sua vida virar de cabeça para baixo, após descobrir algumas inscrições em uma língua desconhecida indicando o paradeiro de seu pai Douglas, que desapareceu há cinco anos.</span><br>
-            <span>Junto de sua amiga Barbara e seu avô Walter partem para a ilha de Guam, no extremo pacífico. Dentro de um submarino chegam às profundezas do oceano, precisamente na Fossa das Marianas onde atravessam um portal mágico que os levam para dentro de uma caverna um tanto misteriosa.</span><br>
-            <span>É assim, entre enigmas e aventuras sinistras que conhecem o verdadeiro poder da lendária pedra da água e as intenções de um temível vilão, que fará de tudo para encontrar o outro pedaço dessa relíquia que está com Frank para junta-la às outras três (fogo, ar e terra) e colocar seu plano maligno em prática, destruir o planeta.</span><br>
-            <span>Pegue sua mochila, seu passaporte e embarque junto nessa eletrizante e fantástica aventura.</span>
+            <h2><%=element.titulo%></h2><br>
+            <h3><%=element.sinopse%></h3><br>
           </div>
-          <div class="views_rating">
+          
+          <!-- <div class="views_rating">
               <img id="views" src="../img/viewsIcon.svg">
               <h3>10K views</h3>
               <img id="rating" src="../img/ratingIcon.svg">
-              <h3>9,6738</h3>
+              <h3>9,6738</h3> -->
           </div>
         </div>
       </div>
-      <div class="boxLivrosMaisLidosNaSemana">
+      <!-- Fim: livro grande -->
+
+      <!-- Inicio: livros pequenos -->
+      <% listaDeLivrosMaisLidos.slice(1).forEach(function(element){%>
+        <div class="boxLivrosMaisLidosNaSemana">
         <div class="LivroMaisLidoNaSemana2">
-          <a href="/"><img src="../img/LivroMaisLidoNaSemana2.svg"></a>
+          <img src="<%=element.imageRoute%>" onclick="showModal('livro-' + <%=element.id%>)">
+         
             <div class="txt_boxLivroMaisLidoNaSemana">
-              <h2>Os noivos do inverno: 1 </h2>
-              <h3>Christelle Dabos</h3><br>
-              <h4>Honesta e cabeça-dura, Ophélie não se importa com as aparências. Mas, por baixo de seus óculos de aros largos e cachecol desgastado, a garota esconde poderes únicos: ela pode ler o passado dos objetos e atravessar espelhos. A vida tranquila que leva em Anima se transforma quando Ophélie é prometida em casamento a Thorn, herdeiro...</h4>
-          </div>
-        </div>
-        <div class="LivroMaisLidoNaSemana3">
-          <a href="/"><img src="../img/LivroMaisLidoNaSemana3.svg"></a>
-          <div class="txt_boxLivroMaisLidoNaSemana">
-            <h2>O Timbre: 3</h2>
-            <h3>Neal Shusterman</h3><br>
-            <h4>A humanidade alcançou um mundo ideal em que não há fome, doenças, guerras, miséria… nem morte. Mas, mesmo com todo o esforço da inteligência artificial da Nimbo-Cúmulo, parece que alguns problemas humanos, como a corrupção e a sede de poder, também são imortais. Desde que o ceifador Goddard começou a ganhar seguidores da nova ordem, entusiastas do prazer de matar...</h4>
-          </div>
-        </div>
-          <div class="LivroMaisLidoNaSemana4">
-            <a href="/"><img src="../img/LivroMaisLidoNaSemana4.svg"></a>
-            <div class="txt_boxLivroMaisLidoNaSemana">
-              <h2>As Crônicas de Olam - Volume 2</h2>
-              <h3>L. L. Wurlitzer</h3><br>
-              <h4>A inesperada queda da cidade branca e o vácuo de poder provocam um estado de guerra generalizada entre as cidades de Olam. O caos avança enquanto dragões e behemots se enfrentam em batalhas mortais. Apesar de vitoriosos, os shedins são forçados a recuar para a cortina de trevas afim de se recuperarem das baixas causadas...</h4>
+              <h1><%=element.titulo%></h1><br>
+              <span><%=element.sinopse%></span><br>
             </div>
+            
+            <!-- <div class="views_rating">
+                <img id="views" src="../img/viewsIcon.svg">
+                <h3>10K views</h3>
+                <img id="rating" src="../img/ratingIcon.svg">
+                <h3>9,6738</h3> -->
           </div>
-      </div>
-    </div>
+        </div>
+    
+      
+      <% }) %>
+      <!-- Fim: livros pequenos -->
 
     <div class="exploreLivrosNaComunidade">
       <h2>Explore livros na comunidade</h2>
@@ -125,7 +115,7 @@
           <div class="info_livro_comunidade">
             <h3>Nome do Livro Loren</h3><br>
             <div class="info2_livro_comunidade">
-              <div id="views_rating_comunidade">
+        <!--  <div id="views_rating_comunidade">
                 <div id="img_views_rating_comunidade" >
                   <img src="../img/viewsIcon.svg">
                   <h5>114 views</h5>
@@ -134,7 +124,7 @@
                   <img src="../img/ratingIcon.svg">
                   <h5>8,5685</h5>
                 </div>
-              </div>
+              </div> -->
               <h3>Romance</h3>
             </div>
           </div>
@@ -145,7 +135,7 @@
           <div class="info_livro_comunidade">
             <h3>Nome do Livro Loren</h3><br>
             <div class="info2_livro_comunidade">
-              <div id="views_rating_comunidade">
+              <!-- <div id="views_rating_comunidade">
                 <div id="img_views_rating_comunidade" >
                   <img src="../img/viewsIcon.svg">
                   <h5>114 views</h5>
@@ -154,7 +144,7 @@
                   <img src="../img/ratingIcon.svg">
                   <h5>8,5685</h4>
                 </div>
-              </div>
+              </div> -->
               <h3>Ação</h3>
             </div>
           </div>
@@ -165,7 +155,7 @@
           <div class="info_livro_comunidade">
             <h3>Nome do Livro Loren</h3><br>
             <div class="info2_livro_comunidade">
-              <div id="views_rating_comunidade">
+             <!-- <div id="views_rating_comunidade">
                 <div id="img_views_rating_comunidade" >
                   <img src="../img/viewsIcon.svg">
                   <h5>114 views</h5>
@@ -174,7 +164,7 @@
                   <img src="../img/ratingIcon.svg">
                   <h5>8,5685</h5>
                 </div>
-              </div>
+              </div> -->
               <h3>Aventura</h3>
             </div>
           </div>
@@ -185,7 +175,7 @@
           <div class="info_livro_comunidade">
             <h3>Nome do Livro Loren</h3><br>
             <div class="info2_livro_comunidade">
-              <div id="views_rating_comunidade">
+              <!--<div id="views_rating_comunidade">
                 <div id="img_views_rating_comunidade" >
                   <img src="../img/viewsIcon.svg">
                   <h5>114 views</h5>
@@ -194,7 +184,7 @@
                   <img src="../img/ratingIcon.svg">
                   <h5>8,5685</h5>
                 </div>
-              </div>
+              </div> -->
               <h3>Terror</h3>
             </div>
           </div>
@@ -205,7 +195,7 @@
           <div class="info_livro_comunidade">
             <h3>Nome do Livro Loren</h3><br>
             <div class="info2_livro_comunidade">
-              <div id="views_rating_comunidade">
+             <!-- <div id="views_rating_comunidade">
                 <div id="img_views_rating_comunidade" >
                   <img src="../img/viewsIcon.svg">
                   <h5>114 views</h5>
@@ -214,7 +204,7 @@
                   <img src="../img/ratingIcon.svg">
                   <h5>8,5685</h5>
                 </div>
-              </div>
+              </div> -->
               <h3>Biografia</h3>
             </div>
           </div>
@@ -225,7 +215,7 @@
           <div class="info_livro_comunidade">
             <h3>Nome do Livro Loren</h3><br>
             <div class="info2_livro_comunidade">
-              <div id="views_rating_comunidade">
+            <!--  <div id="views_rating_comunidade">
                 <div id="img_views_rating_comunidade" >
                   <img src="../img/viewsIcon.svg">
                   <h5>114 views</h5>
@@ -234,7 +224,7 @@
                   <img src="../img/ratingIcon.svg">
                   <h5>8,5685</h5>
                 </div>
-              </div>
+              </div> -->
               <h3>Ficção</h3>
             </div>
           </div>
@@ -245,7 +235,7 @@
           <div class="info_livro_comunidade">
             <h3>Nome do Livro Loren</h3><br>
             <div class="info2_livro_comunidade">
-              <div id="views_rating_comunidade">
+           <!--   <div id="views_rating_comunidade">
                 <div id="img_views_rating_comunidade" >
                   <img src="../img/viewsIcon.svg">
                   <h5>114 views</h5>
@@ -254,7 +244,7 @@
                   <img src="../img/ratingIcon.svg">
                   <h5>8,5685</h5>
                 </div>
-              </div>
+              </div> -->
               <h3>Mistério</h3>
             </div>
           </div>
@@ -265,7 +255,7 @@
           <div class="info_livro_comunidade">
             <h3>Nome do Livro Loren</h3><br>
             <div class="info2_livro_comunidade">
-              <div id="views_rating_comunidade">
+            <!--  <div id="views_rating_comunidade">
                 <div id="img_views_rating_comunidade" >
                   <img src="../img/viewsIcon.svg">
                   <h5>114 views</h5>
@@ -273,8 +263,8 @@
                 <div id="img_views_rating_comunidade" >
                   <img src="../img/ratingIcon.svg">
                   <h5>8,5685</h5>
-                </div>
-              </div>
+                </div> 
+              </div> -->
               <h3>Suspense</h3>
             </div>
           </div>
@@ -282,6 +272,27 @@
 
       </div>
     </div>
+
+<!-- Início do Modal  -->
+<% listaDeLivros.forEach(function(element){%>
+    <div class="modal" id="livro-<%=element.id%>">    
+      <div class="pop_up">
+          <div class="capa">
+              <img id="capa" src="<%=element.imageRoute%>">
+          </div>
+          <div class="info_livro">
+              <div class="btnClose">
+                  <img id="btn_close" src="../img/x.svg" onclick="closeModal('livro-' + <%=element.id%>)">
+                  <h2><%=element.titulo%></h2>
+              </div>
+                  <button type="submit" id="send_library" name="send_library">Enviar para biblioteca</button>
+                  <h3><%=element.sinopse%></h3>
+          </div>
+      </div>
+  </div>
+  <% }) %>
+<!-- Final do Modal  -->
+
   </main>
   <footer>
     <div class="naoEncontrou">
@@ -295,5 +306,12 @@
       </div>
     </div>
   </footer>
+<!-- MODAL -->
+
+<script type="text/javascript" src="../javascripts/popUp.js"></script>
+
+
+<!-- MODAL -->
+
 </body>
 </html>

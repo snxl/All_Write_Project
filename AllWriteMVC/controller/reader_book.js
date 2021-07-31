@@ -1,8 +1,21 @@
+import db from "../database/models/index.js"
+import jwt from "jsonwebtoken"
+
 class Reader_book{
-    GET(req, res){
+    async GET(req, res){
+
+        const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+        const {route, user} = await db.Registro.findOne({
+          where:{
+            id: token.id
+          }
+        })
+
         res.render("reader_book", {
-            title: "all write",
-            imagePerfil: req.cookies.imagePerfil
+            errorUser: false,
+            profile: route,
+            user
         })
     }
 

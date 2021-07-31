@@ -1,11 +1,23 @@
-class Romance{
-    GET(req, res){
-        res.render("romance", {
-            title: "all write",
+import db from "../../database/models/index.js"
+import jwt from "jsonwebtoken"
 
+class Romance{
+    async GET(req, res){
+
+        const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+        const {route, user} = await db.Registro.findOne({
+          where:{
+            id: token.id
+          }
+        })
+
+        res.render("romance", {
+            errorUser: false,
+            profile: route,
+            user
         })
     }
-
     POST(req, res){
         return
     }

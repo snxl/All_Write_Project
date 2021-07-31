@@ -1,11 +1,23 @@
-class Fantasia{
-    GET(req, res){
-        res.render("fantasia", {
-            title: "all write",
+import db from "../../database/models/index.js"
+import jwt from "jsonwebtoken"
 
+class Fantasia{
+    async GET(req, res){
+
+        const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+        const {route, user} = await db.Registro.findOne({
+          where:{
+            id: token.id
+          }
+        })
+
+        res.render("fantasia", {
+            errorUser: false,
+            profile: route,
+            user
         })
     }
-
     POST(req, res){
         return
     }
