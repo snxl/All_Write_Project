@@ -1,9 +1,9 @@
-function showModal() {
-    var element = document.getElementById("modal");
+function showModal(elementID) {
+    var element = document.getElementById(elementID);
     element.classList.add("show-modal");
 }
 
-function closeModal() {
-    var element = document.getElementById("modal");
+function closeModal(elementID) {
+    var element = document.getElementById(elementID);
     element.classList.remove("show-modal");
 }

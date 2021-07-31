@@ -21,11 +21,13 @@ class Aventura{
 
         return res.render("categoria", {
           category: category.toUpperCase(),
-          data: data
+          data: data,
+          user: "teste"
+
         })
 
       } catch (error) {
-
+        console.log(error)
       }
 
     }

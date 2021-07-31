@@ -28,7 +28,7 @@
 }
 
 #capa{
-    width: 95%;
+    width: 100%;
 }
 
 .info_livro{
@@ -41,7 +41,7 @@
 .btnClose{
     display: flex;
     flex-direction: column;
-    margin-top: -30px;
+    margin-top: -180px;
 }
 
 #btn_close{
@@ -54,6 +54,7 @@
 h2{
     font-size: calc(0.4rem + 1.2vw);
     margin-top: unset;
+    padding: 10px
 }
 
 #send_library {
@@ -80,7 +81,7 @@ h2{
     text-align: justify;
     text-align-last: left;
     font-size: calc(0.4rem + 0.5vw);
-    padding-right: 5px
+    padding: 10px
 }
 
 .show-modal{
