@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 /* GET home page. */
-router.get('/', reader_book.GET);
+router.get('/:id', reader_book.GET);
 //router.post("/", reader_book.POST)
 //router.put("/", reader_book.PUT)
 //router.delete("/", reader_book.DELETE)

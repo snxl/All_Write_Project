@@ -7,7 +7,7 @@ class Aventura{
 
         const { category, page } = req.params
 
-        const data = await db.Livros.findAll({
+        let data = await db.Livros.findAll({
           where:{
             category
           },
@@ -19,13 +19,23 @@ class Aventura{
           offset: 0,
         })
 
+        data.forEach(element => {
+          const date = String(element.createdAt)
+
+          element.createdAt = date.split("GMT")[0].substr(4, 11).replace(/\s+/g, "/")
+
+          console.log(element.createdAt)
+        })
+
         return res.render("categoria", {
           category: category.toUpperCase(),
-          data: data
+          data: data,
+          user: "teste"
+
         })
 
       } catch (error) {
-
+        console.log(error)
       }
 
     }

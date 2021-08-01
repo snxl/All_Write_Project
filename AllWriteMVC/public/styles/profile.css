@@ -229,9 +229,6 @@ body {
 #publish:hover {
   background-color: #fd4007;
   transition: all 0.3s;
-  background-image: url(../img/emoticon.png);
-  background-repeat: no-repeat;
-  background-size: 40px;
 }
 
 .align__profile{
