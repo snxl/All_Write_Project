@@ -69,8 +69,8 @@
         <img src="<%=element.imageRoute%>" onclick="showModal('livro-' + <%=element.id%>)">
         <div class="info_livroMaisLidoNaSemana1">
           <div class="txt_livroMaisLidoNaSemana1">
-            <h2><%=element.titulo%></h2><br>
-            <h3><%=element.sinopse%></h3><br>
+            <h1><%=element.titulo%></h1><br>
+            <h2><%=element.sinopse%></h2>
           </div>
           
           <!-- <div class="views_rating">
@@ -84,14 +84,14 @@
       <!-- Fim: livro grande -->
 
       <!-- Inicio: livros pequenos -->
-      <% listaDeLivrosMaisLidos.slice(1).forEach(function(element){%>
+
         <div class="boxLivrosMaisLidosNaSemana">
+          <% listaDeLivrosMaisLidos.slice(1).forEach(function(element){%>
         <div class="LivroMaisLidoNaSemana2">
           <img src="<%=element.imageRoute%>" onclick="showModal('livro-' + <%=element.id%>)">
-         
             <div class="txt_boxLivroMaisLidoNaSemana">
-              <h1><%=element.titulo%></h1><br>
-              <span><%=element.sinopse%></span><br>
+              <h2><%=element.titulo%></h2><br>
+              <h3><%=element.sinopse%></h3>
             </div>
             
             <!-- <div class="views_rating">
@@ -100,10 +100,11 @@
                 <img id="rating" src="../img/ratingIcon.svg">
                 <h3>9,6738</h3> -->
           </div>
+          <% }) %>
         </div>
     
       
-      <% }) %>
+
       <!-- Fim: livros pequenos -->
 
     <div class="exploreLivrosNaComunidade">

@@ -369,7 +369,6 @@ text-decoration: none;
     display: flex;
     flex-direction: row;
     width: 81vw;
-    justify-content: center;
     background-color: #F1F0F0;
     margin: 4vw 0 0 9vw;
 }
@@ -443,7 +442,7 @@ text-decoration: none;
     justify-content: space-between;
     width: 81%;
     margin: 4vw 0 0 9vw;
-    background-color: #c637c9;
+
 }
 
 .LivroMaisLidoNaSemana2{
@@ -457,7 +456,8 @@ text-decoration: none;
     padding: 10px;
     transition: all 0.5s;
     cursor: pointer;
-    width: 16vw;
+    width: 140px;
+    height: 190px;
     }
 
 .LivroMaisLidoNaSemana2 > img:hover{
