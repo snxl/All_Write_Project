@@ -6,7 +6,8 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon ./bin/www",
-    "migrate": "node_modules/.bin/sequelize db:migrate"
+    "migrate": "node_modules/.bin/sequelize db:migrate",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -37,5 +38,11 @@
     "socket.io": "^4.1.3",
     "swagger-ui-express": "^4.1.6",
     "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.14.5",
+    "@types/jest": "^26.0.24",
+    "jest": "^27.0.6",
+    "supertest": "^6.1.4"
   }
 }

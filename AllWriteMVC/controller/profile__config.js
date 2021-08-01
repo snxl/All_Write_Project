@@ -52,21 +52,43 @@ class Profile__config{
 
     async DELETE(req, res){
 
-      const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+      const t = await db.sequelize.transaction()
 
-      const deleted = await db.Registro.destroy({
-        where:{
-          id:token.id
-        }
-      })
+      try {
+
+        const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
 
 
-      res.cookie("token", token, {
-        maxAge: 0,
-        httpOnly: true
-      })
 
-      res.json(deleted)
+        const deleted = await db.Registro.destroy({
+          where:{
+            id:token.id
+          },
+          transaction:t
+        })
+
+        await t.commit()
+
+        res.cookie("token", token, {
+          maxAge: 0,
+          httpOnly: true
+        })
+
+        res.json(deleted)
+
+      } catch (error) {
+
+        console.log(error)
+
+        await t.rollback()
+
+        res.json(error)
+      }
+
+
+
+
+
     }
 }
 

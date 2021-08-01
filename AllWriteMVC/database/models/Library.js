@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
           id_user:{
             type: DataTypes.INTEGER,
             references: {model: "register", key: "id"},
-            allowNull:false,
+            allowNull:true,
             onUpdate: "CASCADE",
             onDelete: "CASCADE",
             field: "id_user"
