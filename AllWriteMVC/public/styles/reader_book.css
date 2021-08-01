@@ -61,14 +61,14 @@ nav {
   float:left;
 
   font-weight:500;
-  color:rgb(75, 75, 75); 
+  color:rgb(75, 75, 75);
 
 
   }
 
 .menu li a{
-color:rgb(75, 75, 75); 
-text-decoration:none; 
+color:rgb(75, 75, 75);
+text-decoration:none;
 padding:5px 15px;
 display:block;
 font-weight: none;
@@ -100,11 +100,11 @@ color:rgb(0, 0, 0);
 
   .menu li:hover ul, .menu li.over ul{
       display:block;
-  
+
   }
 
   .menu li ul li{
- 
+
       display:block;
       width:100px;
       }
@@ -146,7 +146,7 @@ INICIO - CAMPO DO USUÁRIO - SENHA
   text-decoration: none;
   text-align: center;
   font-weight:500;
-  color:rgb(95, 95, 95); 
+  color:rgb(95, 95, 95);
 }
 
 .field_user  a:hover{
@@ -220,7 +220,7 @@ body {
 }
 
 .my__book:hover::-webkit-scrollbar-thumb{
-  
+
   background-color: var(--color-headings);
   border-radius: 20PX;
   scroll-behavior: smooth;
@@ -299,7 +299,7 @@ body {
   display: flex;
   justify-content:space-between;
   flex-wrap: wrap;
-  
+
 }
 
 .top__reader h1 {
@@ -331,7 +331,7 @@ border: 1px solid var(--color-text)
 }
 
 #book__{
-  background-color: #c637c9;
+
   width: 920px;
   height: 620px;
   margin: 0 auto;
@@ -348,9 +348,9 @@ html{
   --bg: #FCFCFC;
   --bg-panel: #fff;
   --color-headings:#424242;
-  --color-text: #dbdbdb;  
+  --color-text: #dbdbdb;
   --body:#ffffff;
-  
+
   }
 
 
@@ -402,7 +402,7 @@ input:checked + label::after {
 label:active:after {
     width: 45px;
 }
-  
+
 
 
 /*  FIMTOOGLE DARK MODE */

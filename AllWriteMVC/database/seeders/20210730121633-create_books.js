@@ -58,7 +58,7 @@ module.exports = {
       id_user: 3,
       titulo: "Romeu e Julieta",
       sinopse:"livro de teste 06",
-      image: "image6.jgp",
+      image: "image6.jpg",
       pdf:"livro6.pdf",
       category:"romance",
       createdAt: moment().format("YYYY-MM-DD HH:mm:ss"),
