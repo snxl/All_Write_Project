@@ -43,7 +43,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     credential:{
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
+        defaultValue:0
     },
     createdAt:{
         type: DataTypes.DATE,
@@ -67,24 +68,18 @@ module.exports = (sequelize, DataTypes) => {
 
     })
 
+
+
     Register.associate = (model)=>{
-        Register.hasOne(model.Autores,{
-            foreignKey: "register_id",
-            as:"autors"
-        })
 
-        Register.hasMany(model.Livros, {
-          foreignKey: "id_user",
-          as: "my_books"
-        })
+      Register.hasMany(model.Livros, {
+        onDelete:"SET NULL",
+        hooks:true,
+        foreignKey: "id_user",
+        as: "my_books",
+      })
+
     }
-
-    // Register.addHook("afterCreate", async Registro =>{
-    //   await database.Autores.create({
-    //     acceptContact: 0,
-    //     register_id: Registro.id
-    //   })
-    // })
 
     return Register
 }
