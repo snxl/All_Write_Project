@@ -7,7 +7,7 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "migrate": "node_modules/.bin/sequelize db:migrate",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "jest --watchAll --silent --noStackTrace"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
