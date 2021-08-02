@@ -8,22 +8,30 @@ class Profile{
 
     async GET(req, res){
 
+      try {
+
         const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
 
-        const {user, bio, route, imageRoute, name, email} = await db.Registro.findOne({
+        const {user, bio, route, imageRoute, name, email, my_books} = await db.Registro.findOne({
           where:{
             id: token.id
+          },
+          include:{
+            model: db.Livros,
+            as:"my_books"
           }
         })
-
-        console.log(route)
-
 
         return res.render('profile', {
             userName: user,
             description: bio,
-            route: route
+            route: route,
+            books: my_books
        })
+
+      } catch (error) {
+
+      }
     }
 
     async PUT(req, res){

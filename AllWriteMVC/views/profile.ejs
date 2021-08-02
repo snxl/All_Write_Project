@@ -91,60 +91,13 @@
                               <!-- Carrossel JS primeiro bloco = Meus livros -->
                               <article class="my__books" id="carrossel__my__books">
 
-                                                    <div class="book__block">
-                                                            <img src="../img/book_libary_test.svg">
-                                                                <div class="title__book__block">
-                                                                      <h1><a href="#">Nome do Livro</a></h1>
-                                                                            <h3>Data publicação</h3>
-                                                                      <h5><a href="#">114 views</a></h5>
-                                                            </div>
-                                                    </div>
+                                                    <% books.forEach(element =>{%>
 
-                                                    <div class="book__block">
-                                                      <img src="../img/book_libary_test.svg">
-                                                          <div class="title__book__block">
-                                                                <h1><a href="#">Nome do Livro</a></h1>
-                                                                      <h3>Data publicação</h3>
-                                                                <h5><a href="#">114 views</a></h5>
+                                                      <div class="book__block" >
+                                                        <a href="/reader_book/<%=element.id%>"><img src="https://localhost:3600/files/<%=element.image%>" style="width: 120px; height: 150px;"></a>
                                                       </div>
-                                                    </div>
 
-                                                    <div class="book__block">
-                                                      <img src="../img/book_libary_test.svg">
-                                                          <div class="title__book__block">
-                                                                <h1><a href="#">Nome do Livro</a></h1>
-                                                                      <h3>Data publicação</h3>
-                                                                <h5><a href="#">114 views</a></h5>
-                                                      </div>
-                                                    </div>
-
-                                                    <div class="book__block">
-                                                      <img src="../img/book_libary_test.svg">
-                                                          <div class="title__book__block">
-                                                                <h1><a href="#">Nome do Livro</a></h1>
-                                                                      <h3>Data publicação</h3>
-                                                                <h5><a href="#">114 views</a></h5>
-                                                      </div>
-                                                     </div>
-
-                                              <div class="book__block">
-                                                <img src="../img/book_libary_test.svg">
-                                                    <div class="title__book__block">
-                                                          <h1><a href="#">Nome do Livro</a></h1>
-                                                                <h3>Data publicação</h3>
-                                                          <h5><a href="#">114 views</a></h5>
-                                                </div>
-                                        </div>
-
-                                        <div class="book__block">
-                                          <img src="../img/book_libary_test.svg">
-                                              <div class="title__book__block">
-                                                    <h1><a href="#">Nome do Livro</a></h1>
-                                                          <h3>Data publicação</h3>
-                                                    <h5><a href="#">114 views</a></h5>
-                                          </div>
-                                  </div>
-
+                                                    <%})%>
 
                               </article>
 
