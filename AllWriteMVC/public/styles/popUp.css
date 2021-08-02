@@ -1,3 +1,20 @@
+.sinopse::-webkit-scrollbar{
+    background-color: transparent;
+    width: 0.6vw;
+    scroll-behavior: smooth;
+}
+
+.sinopse::-webkit-scrollbar-thumb{
+    background-color:#f95773;
+    border-radius: 20px;
+    scroll-behavior: smooth;
+}
+
+.sinopse:hover::-webkit-scrollbar{
+    width: 0.6vw;
+    scroll-behavior: smooth;
+}
+
 .modal{
     position: fixed;
     top:0;
@@ -36,25 +53,29 @@
     flex-direction: column;
     text-align: center;
     width: 70%;
+    margin-top: 174px;
 }
 
 .btnClose{
     display: flex;
     flex-direction: column;
-    margin-top: -180px;
+    margin-top: -220px;
 }
 
 #btn_close{
     width: 25px;
     align-self: flex-end;
     cursor: pointer;
+    margin-top: 40px;
 }
 
 
 h2{
     font-size: calc(0.4rem + 1.2vw);
     margin-top: unset;
-    padding: 10px
+    padding: 10px;
+
+
 }
 
 #send_library {
@@ -69,7 +90,7 @@ h2{
     color: #fff;
     transition: all 0.3s;
     cursor: pointer;
-    margin: 10px 0px 30px 0px;
+    margin: 7px 0px 7px 0px;
   }
 
 #send_library:hover {
@@ -77,11 +98,19 @@ h2{
     transition: all 0.3s;
   }
 
+.sinopse{
+    margin-top: 10px;
+    padding: 10px;
+    height: 215px;
+    width: 96%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
   h3{
     text-align: justify;
     text-align-last: left;
     font-size: calc(0.4rem + 0.5vw);
-    padding: 10px
 }
 
 .show-modal{
