@@ -18,10 +18,13 @@ export default new class bookController{
 
       const newBook = await db.Livros.create({ id_user: id, titulo: tittle, category: category.toLowerCase() ,sinopse, pdf: file[0].filename, image: background[0].filename })
 
-      res.json(newBook)
+      console.log(newBook)
+
+      res.redirect("/profile")
 
     } catch (error) {
 
+      console.log(error)
       res.json(error)
 
     }

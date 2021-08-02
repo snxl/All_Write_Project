@@ -49,7 +49,7 @@
 
         <% listaDeLivros.forEach(function(element){%>
         <div class="listaDestaque_1">
-          <img id="popUp" src="<%=element.imageRoute%>" alt="img" onclick="showModal('livro-' + <%=element.id%>)" />
+          <img id="popUp" src="<%=element.imageRoute%>" alt="img" onclick="showModal('livro-' + <%=element.id%>)" style="height: 244px;"/>
         </div>
         <% }) %>
 
@@ -61,7 +61,7 @@
 
 
     <div class="maisLidosNaSemana">
-      <h2>Mais lidos da semana</h2>
+      <h2>Últimos adicionados</h2>
 
       <!-- Inicio: livro grande -->
       <% element = listaDeLivrosMaisLidos[0]%>

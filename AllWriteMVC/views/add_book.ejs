@@ -14,22 +14,22 @@
     <!-- HEADER - Topo do  site-->
         <header>
 
-                   <a href="#" alt="Home page" class="logo__color"> </a>
+                   <a href="/dashboard" alt="Home page" class="logo__color"> </a>
                           <nav >
                               <ul class="menu">
                                       <li> <a href="#">Explorar</a>
                                              <ul>
-                                                    <li><a href="#"> Aventura </a></li>
-                                                    <li><a href="#"> Ação </a></li>
-                                                    <li><a href="#"> Fantasia </a></li>
-                                                    <li><a href="#"> Ficção </a></li>
-                                                    <li><a href="#"> Poesia </a></li>
-                                                    <li><a href="#"> Romance </a></li>
-                                                    <li><a href="#"> Suspense </a></li>
-                                                    <li><a href="#"> Terror </a></li>
-                                                    <li><a href="#"> Biografia </a></li>
-                                                    <li><a href="#"> Miterário </a></li>
-                                                    <li><a href="#"> Espiritual </a></li>
+                                                    <li><a href="/categoria/aventura/0"> Aventura </a></li>
+                                                    <li><a href="/categoria/ação/0"> Ação </a></li>
+                                                    <li><a href="/categoria/fantasia/0"> Fantasia </a></li>
+                                                    <li><a href="/categoria/ficção/0"> Ficção </a></li>
+                                                    <li><a href="/categoria/poesia/0"> Poesia </a></li>
+                                                    <li><a href="/categoria/romance/0"> Romance </a></li>
+                                                    <li><a href="/categoria/Suspense/0"> Suspense </a></li>
+                                                    <li><a href="/categoria/Terror/0"> Terror </a></li>
+                                                    <li><a href="/categoria/Biografia/0"> Biografia </a></li>
+                                                    <li><a href="/categoria/mistério/0"> Miterário </a></li>
+                                                    <li><a href="/categoria/espiritual/0"> Espiritual </a></li>
                                               </ul>
                                             </li>
 
@@ -44,7 +44,7 @@
 
 
                                             <img class="img_login" src="/img/foto_icon_user.svg">
-                                                <a href="#" id="user__">ID_usuário</a>
+                                                <a href="/profile" id="user__">ID_usuário</a>
                                                 <img class="enginer__icon" src="/img/engrenagem.svg">
 
                           </div>
@@ -76,31 +76,36 @@
                                                   <div class="aling-form-edit">
                                                                           <div id="form-edit-title">
                                                                                 <label for="title">Título do livro</label>
-                                                                                <input data-tittle="" type="text" name="title" id="title">
+                                                                                <input data-tittle="" type="text" name="title" id="title" required>
                                                                           </div>
+
+                                                                          <div id="form-edit-front-img">
+                                                                            <label for="front-img">Capa do livro<h6>*Somente formato JPEG ou PNG</h6></label>
+                                                                            <input data-image="" type="file" name="front-img" id="front-img" placeholder="Selecionar capa do livro" alt="Selecionar capa do livro" accept="image/x-png,image/jpeg" required />
+                                                                      </div>
 
                                                                           <div id="form-edit-category">
 
                                                                             <label for="category">Categoria</label>
-                                                                                    <select data-select name="categoria" id="category">
+                                                                                    <select data-select name="categoria" id="category" required>
                                                                                               <option value="#"> </option>
-                                                                                                <option value="bota">Aventura</option>
-                                                                                                <option value="fla">Ação</option>
-                                                                                                <option value="flu">Fantasia</option>
-                                                                                                <option value="vasco">Ficção</option>
-                                                                                                <option value="vasco">Poesia</option>
-                                                                                                <option value="vasco">Romance</option>
-                                                                                                <option value="vasco">Suspense</option>
-                                                                                                <option value="vasco">Terror</option>
-                                                                                                <option value="vasco">Biografia</option>
-                                                                                                <option value="vasco">Espiritual</option>
-                                                                                                <option value="vasco">Literario</option>
+                                                                                                <option value="aventura">Aventura</option>
+                                                                                                <option value="Ação">Ação</option>
+                                                                                                <option value="Fantasia">Fantasia</option>
+                                                                                                <option value="Ficção">Ficção</option>
+                                                                                                <option value="Poesia">Poesia</option>
+                                                                                                <option value="Romance">Romance</option>
+                                                                                                <option value="Suspense">Suspense</option>
+                                                                                                <option value="Terror">Terror</option>
+                                                                                                <option value="Biografia">Biografia</option>
+                                                                                                <option value="Espiritual">Espiritual</option>
+                                                                                                <option value="Literario">Literario</option>
                                                                                       </select>
                                                                           </div>
 
                                                                           <div id="form-edit-sinopse">
                                                                                   <label for="sinopse">Sinopse</label>
-                                                                                  <input data-sinopse type="text" name="sinopse" id="sinopse">
+                                                                                  <input data-sinopse type="text" name="sinopse" id="sinopse" required>
                                                                           </div>
 
 
@@ -108,7 +113,7 @@
 
                                                   <div class="aling-form-book">
                                                                 <label for="select__book"></label>
-                                                              <input data-pdf="" type="file" name="select__book" id="select__book" placeholder="Selecionar livro" alt="Selecionar livro" accept="application/pdf" />
+                                                              <input data-pdf="" type="file" name="select__book" id="select__book" placeholder="Selecionar livro" alt="Selecionar livro" accept="application/pdf" required />
                                                   </div>
 
                                                   <button type="submit" id="upload" name="upload">Publicar meu livro</button>
@@ -122,7 +127,7 @@
 
             </main>
 
-            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script src="https://unpkg.com/axios/dist/axios.min.js">var axios</script>
             <script src="/javascripts/newBook.js"></script>
 
 

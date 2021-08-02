@@ -10,7 +10,7 @@ const validateRoute = {
       }else{
         res.redirect("/")
       }
-    },
+    }
 }
 
 export default validateRoute

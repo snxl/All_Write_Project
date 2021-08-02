@@ -36,7 +36,7 @@ module.exports = {
     },
     {
       id_user: 2,
-      titulo: "vinte mil léguas submarinas",
+      titulo: "O banquete",
       sinopse:"livro de teste 04",
       image: "o-banquete.jpg",
       pdf:"livro4.pdf",

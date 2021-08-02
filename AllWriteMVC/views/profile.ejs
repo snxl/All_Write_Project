@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="../img/favicon.png" />
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/profile.css">
-    <script type="text/javascript" src="../javascript/carousel.js"></script>
   </head>
   <body>
 
@@ -20,17 +19,17 @@
                               <ul class="menu">
                                       <li> <a href="#">Explorar</a>
                                         <ul>
-                                          <li><a href="/aventura"> Aventura </a></li>
-                                          <li><a href="/acao"> Ação </a></li>
-                                          <li><a href="/fantasia"> Fantasia </a></li>
-                                          <li><a href="/ficcao"> Ficção </a></li>
-                                          <li><a href="/poesia"> Poesia </a></li>
-                                          <li><a href="/romance"> Romance </a></li>
-                                          <li><a href="/suspense"> Suspense </a></li>
-                                          <li><a href="/terror"> Terror </a></li>
-                                          <li><a href="/biografia"> Biografia </a></li>
-                                          <li><a href="/literario"> Literário </a></li>
-                                          <li><a href="/espiritual"> Espiritual </a></li>
+                                          <li><a href="/categoria/aventura/0"> Aventura </a></li>
+                                          <li><a href="/categoria/ação/0"> Ação </a></li>
+                                          <li><a href="/categoria/fantasia/0"> Fantasia </a></li>
+                                          <li><a href="/categoria/ficção/0"> Ficção </a></li>
+                                          <li><a href="/categoria/poesia/0"> Poesia </a></li>
+                                          <li><a href="/categoria/romance/0"> Romance </a></li>
+                                          <li><a href="/categoria/Suspense/0"> Suspense </a></li>
+                                          <li><a href="/categoria/Terror/0"> Terror </a></li>
+                                          <li><a href="/categoria/Biografia/0"> Biografia </a></li>
+                                          <li><a href="/categoria/mistério/0"> Miterário </a></li>
+                                          <li><a href="/categoria/espiritual/0"> Espiritual </a></li>
                                         </ul>
                                                                           </li>
 
@@ -62,7 +61,7 @@
                     <img src="../img/search_icon.svg">
                 </div>
 
-                <button type="submit" id="publish" name="publish">Publicar livro</button>
+                <button type="submit" id="publish" name="publish"><a href="/add_book" style="text-decoration: none; color: white;">Publicar livro</a></button>
 
 
               </div>
@@ -87,12 +86,6 @@
                           <div class="my__publications">
                               <div class="title__publication">
                                   <h1>Minhas publicações</h1>
-
-                                            <div class="btn__my__publication">
-                                                          <img id="previus__books" src="../img/previus__img.svg" onclick="previus__books();">
-                                                          <img id="next__books" src="../img/next__img.svg" onclick="next__books();">
-                                          </div>
-
                               </div>
 
                               <!-- Carrossel JS primeiro bloco = Meus livros -->
@@ -105,6 +98,24 @@
                                                                             <h3>Data publicação</h3>
                                                                       <h5><a href="#">114 views</a></h5>
                                                             </div>
+                                                    </div>
+
+                                                    <div class="book__block">
+                                                      <img src="../img/book_libary_test.svg">
+                                                          <div class="title__book__block">
+                                                                <h1><a href="#">Nome do Livro</a></h1>
+                                                                      <h3>Data publicação</h3>
+                                                                <h5><a href="#">114 views</a></h5>
+                                                      </div>
+                                                    </div>
+
+                                                    <div class="book__block">
+                                                      <img src="../img/book_libary_test.svg">
+                                                          <div class="title__book__block">
+                                                                <h1><a href="#">Nome do Livro</a></h1>
+                                                                      <h3>Data publicação</h3>
+                                                                <h5><a href="#">114 views</a></h5>
+                                                      </div>
                                                     </div>
 
                                                     <div class="book__block">
@@ -184,5 +195,7 @@
 
 
 </footer>
+
+<script src="/javascripts/profile.js"></script>
   </body>
 </html>

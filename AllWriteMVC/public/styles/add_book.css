@@ -285,6 +285,38 @@ label {
 }
 
 
+#form-edit-front-img{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+
+#form-edit-front-img label{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#front-img{
+width: 370px;
+height: 30px;
+background-color: #ffffff;
+outline: none;
+margin-top: 5px;
+}
+
+
+#form-edit-front-img h6{
+  background-color: #c637c9;
+  width: 200px;
+  height: 0px;
+  font-weight: 200;
+  text-align:start;
+ font-style: italic;
+}
+
 
 #form-edit-category{
   width: 100%;
@@ -322,7 +354,7 @@ label {
 #form-edit-sinopse input{
   width: 370px;
   padding-left: 10px;
-  height: 200px;
+  height:150px;
   background-color: #ffffff;
   outline: none;
   border: 1px solid #cfcfcf;
