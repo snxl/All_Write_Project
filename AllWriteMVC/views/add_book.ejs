@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Write - profile</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/add_book.css">
+
+  </head>
+  <body>
+
+    <!-- HEADER - Topo do  site-->
+        <header>
+
+                   <a href="#" alt="Home page" class="logo__color"> </a>
+                          <nav >
+                              <ul class="menu">
+                                      <li> <a href="#">Explorar</a>
+                                             <ul>
+                                                    <li><a href="#"> Aventura </a></li>
+                                                    <li><a href="#"> Ação </a></li>
+                                                    <li><a href="#"> Fantasia </a></li>
+                                                    <li><a href="#"> Ficção </a></li>
+                                                    <li><a href="#"> Poesia </a></li>
+                                                    <li><a href="#"> Romance </a></li>
+                                                    <li><a href="#"> Suspense </a></li>
+                                                    <li><a href="#"> Terror </a></li>
+                                                    <li><a href="#"> Biografia </a></li>
+                                                    <li><a href="#"> Miterário </a></li>
+                                                    <li><a href="#"> Espiritual </a></li>
+                                              </ul>
+                                            </li>
+
+                                      <li> <a href="#">Sobre</a></li>
+                                      <li> <a href="#">Suporte</a></li>
+                              </ul>
+
+                          </nav>
+
+
+                          <div class="field_user">
+
+
+                                            <img class="img_login" src="/img/foto_icon_user.svg">
+                                                <a href="#" id="user__">ID_usuário</a>
+                                                <img class="enginer__icon" src="/img/engrenagem.svg">
+
+                          </div>
+            </header>
+<!-- FIM do topo do site-->
+
+<!-- INICIO DO MAIN - CORPO DO SITE-->
+            <main>
+
+                <!--Incio Campo de busca-->
+                <div class="align__search">
+                <div class="search__field">
+                    <input type="text" id="search" placeholder="Buscar..."/>
+                    <img src="/img/search_icon.svg">
+                </div>
+              </div>
+                 <!--Fim Campo de busca-->
+
+
+                 <!--Inicio Bloco do perfil do usuário-->
+                 <div class="align__profile">
+
+
+
+
+                    <section class="user_books">
+                          <h1>Adicionar livro  + </h1>
+                        <form id="form-edit-data" method="POST" data-form="">
+                                                  <div class="aling-form-edit">
+                                                                          <div id="form-edit-title">
+                                                                                <label for="title">Título do livro</label>
+                                                                                <input data-tittle="" type="text" name="title" id="title">
+                                                                          </div>
+
+                                                                          <div id="form-edit-category">
+
+                                                                            <label for="category">Categoria</label>
+                                                                                    <select data-select name="categoria" id="category">
+                                                                                              <option value="#"> </option>
+                                                                                                <option value="bota">Aventura</option>
+                                                                                                <option value="fla">Ação</option>
+                                                                                                <option value="flu">Fantasia</option>
+                                                                                                <option value="vasco">Ficção</option>
+                                                                                                <option value="vasco">Poesia</option>
+                                                                                                <option value="vasco">Romance</option>
+                                                                                                <option value="vasco">Suspense</option>
+                                                                                                <option value="vasco">Terror</option>
+                                                                                                <option value="vasco">Biografia</option>
+                                                                                                <option value="vasco">Espiritual</option>
+                                                                                                <option value="vasco">Literario</option>
+                                                                                      </select>
+                                                                          </div>
+
+                                                                          <div id="form-edit-sinopse">
+                                                                                  <label for="sinopse">Sinopse</label>
+                                                                                  <input data-sinopse type="text" name="sinopse" id="sinopse">
+                                                                          </div>
+
+
+                                                  </div>
+
+                                                  <div class="aling-form-book">
+                                                                <label for="select__book"></label>
+                                                              <input data-pdf="" type="file" name="select__book" id="select__book" placeholder="Selecionar livro" alt="Selecionar livro" accept="application/pdf" />
+                                                  </div>
+
+                                                  <button type="submit" id="upload" name="upload">Publicar meu livro</button>
+                       </form>
+
+                      </section>
+              </div>
+
+
+
+
+            </main>
+
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script src="/javascripts/newBook.js"></script>
+
+
+
+
+<!-- FIM DO MAIN - CORPO DO SITE-->
+
+<footer>
+a
+
+</footer>
+  </body>
+</html>

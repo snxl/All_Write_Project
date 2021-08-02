@@ -12,17 +12,16 @@ class Dashboard{
           }
         })
 
-const listaDeLivros = await db.Livros.findAll({order: [['id', 'DESC']], limit: 5 })
-const listaDeLivrosMaisLidos = await db.Livros.findAll({order: [['id', 'DESC']], limit: 4 })
+        const listaDeLivros = await db.Livros.findAll({order: [['id', 'DESC']], limit: 5 })
+        const listaDeLivrosMaisLidos = await db.Livros.findAll({order: [['id', 'DESC']], limit: 4 })
 // const listaDeLivrosMaisLidos = await db.Livros.findAll({order: [['visualizations', 'DESC']], limit: 4 })
-
 
 
         res.render("dashboard", {
             errorUser: false,
             profile: route,
             user,
-            listaDeLivros, 
+            listaDeLivros,
             listaDeLivrosMaisLidos,
 
         })

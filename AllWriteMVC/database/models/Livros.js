@@ -8,7 +8,9 @@ module.exports = (sequelize, DataTypes) => {
         id_user:{
           type: DataTypes.INTEGER,
           references: {model: "Registro", key: "id"},
-          allowNull:false,
+          onUpdate: "CASCADE",
+          onDelete: "SET NULL",
+          allowNull:true,
           field: "id_user"
         },
         titulo: {
@@ -50,7 +52,8 @@ module.exports = (sequelize, DataTypes) => {
     Livros.associate = (models)=>{
       Livros.belongsTo(models.Registro, {
         foreignKey: "id_user",
-        as:"autor"
+        as:"autor",
+        onDelete:"SET NULL"
       })
     }
 

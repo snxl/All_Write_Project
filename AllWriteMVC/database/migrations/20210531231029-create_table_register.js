@@ -28,11 +28,13 @@ module.exports = {
     },
     imageRoute:{
         type: Sequelize.STRING(200),
-        allowNull:true
+        allowNull:true,
+        defaultValue:null
     },
     credential:{
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        defaultValue:0
     },
     createdAt:{
         type: Sequelize.DATE,

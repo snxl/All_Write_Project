@@ -32,6 +32,7 @@ import reader_bookRouter from "./routes/reader_book.js"
 import categoryRouter from "./routes/categorias/aventura.js"
 import aboutRouter from "./routes/about.js"
 import about2Router from "./routes/about2.js"
+import add_bookRoute from './routes/add_book.js';
 import acaoRouter from "./routes/categorias/acao.js"
 import biografiaRouter from "./routes/categorias/biografia.js"
 import espiritualRouter from "./routes/categorias/espiritual.js"
@@ -94,6 +95,7 @@ class App{
     this.app.use('/reader_book', reader_bookRouter);
     this.app.use('/categoria', categoryRouter);
     this.app.use('/about2', about2Router);
+    this.app.use("/add_book", add_bookRoute)
     // this.app.use('/acao', acaoRouter);
     // this.app.use('/biografia', biografiaRouter);
     // this.app.use('/espiritual', espiritualRouter);
