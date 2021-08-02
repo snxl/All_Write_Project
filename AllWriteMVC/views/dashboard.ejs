@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Write</title>
     <link rel="shortcut icon" href="../img/favicon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/dashboard.css">
     <link rel="stylesheet" href="../styles/popUp.css">
+    <link rel="stylesheet" href="../sass/style.scss">
+
+
   </head>
   <body>
 
@@ -41,21 +45,13 @@
     </div>
 
     <div class="highlights">
-      <h2>Livros mais recentes</h2>
+      <h2>Top 5 - Livros mais recentes</h2>
       <div class="listaDestaque">
-        <button class="botaoDestaque">
-          <img src="../img/setaEsquerda.svg" alt="seta esquerda" />
-        </button>
-
         <% listaDeLivros.forEach(function(element){%>
         <div class="listaDestaque_1">
           <img id="popUp" src="<%=element.imageRoute%>" alt="img" onclick="showModal('livro-' + <%=element.id%>)" />
         </div>
         <% }) %>
-
-        <button class="botaoDestaque">
-          <img src="../img/setadireita.svg" alt="seta direita" />
-        </button>
       </div>
     </div>
 
@@ -276,19 +272,23 @@
 <% listaDeLivros.forEach(function(element){%>
     <div class="modal" id="livro-<%=element.id%>">
       <div class="pop_up">
-          <div class="capa">
-              <img id="capa" src="<%=element.imageRoute%>">
+        <div class="capa">
+            <img id="capa" src="<%=element.imageRoute%>">
+        </div>
+        <div class="info_livro">
+          <div class="btnClose">
+              <img id="btn_close" src="../img/x.svg" onclick="closeModal('livro-' + <%=element.id%>)">
+              <h2><%=element.titulo%></h2>
           </div>
-          <div class="info_livro">
-              <div class="btnClose">
-                  <img id="btn_close" src="../img/x.svg" onclick="closeModal('livro-' + <%=element.id%>)">
-                  <h2><%=element.titulo%></h2>
-              </div>
-                  <button type="submit" id="send_library" name="send_library"><a href="/read/<%=element.id%>" style="text-decoration: none; color: white;">Enviar para biblioteca</a></button>
-                  <h3><%=element.sinopse%></h3>
+          <div class="send_library">
+            <button type="submit" id="send_library" name="send_library"><a href="/read/<%=element.id%>" style="text-decoration: none; color: white;">Enviar para biblioteca</a></button>
           </div>
+          <div class="sinopse">
+            <h3><%=element.sinopse%></h3>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
   <% }) %>
 <!-- Final do Modal  -->
 
@@ -306,10 +306,7 @@
     </div>
   </footer>
 <!-- MODAL -->
-
 <script type="text/javascript" src="../javascripts/popUp.js"></script>
-
-
 <!-- MODAL -->
 
 </body>
