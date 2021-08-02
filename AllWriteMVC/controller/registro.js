@@ -55,7 +55,7 @@ class Registro{
           httpOnly: true
         })
 
-        return res.redirect("/profile")
+        return res.redirect("/dashboard")
 
         }
     }

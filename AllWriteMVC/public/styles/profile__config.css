@@ -58,14 +58,14 @@ nav {
   float:left;
 
   font-weight:500;
-  color:rgb(75, 75, 75); 
+  color:rgb(75, 75, 75);
 
 
   }
 
 .menu li a{
-color:rgb(75, 75, 75); 
-text-decoration:none; 
+color:rgb(75, 75, 75);
+text-decoration:none;
 padding:5px 15px;
 display:block;
 font-weight: none;
@@ -97,11 +97,11 @@ color:rgb(0, 0, 0);
 
   .menu li:hover ul, .menu li.over ul{
       display:block;
-  
+
   }
 
   .menu li ul li{
- 
+
       display:block;
       width:100px;
       }
@@ -143,7 +143,7 @@ INICIO - CAMPO DO USUÁRIO - SENHA
   text-decoration: none;
   text-align: center;
   font-weight:500;
-  color:rgb(95, 95, 95); 
+  color:rgb(95, 95, 95);
 }
 
 .field_user  a:hover{
@@ -190,7 +190,7 @@ body {
 
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 17px -5px, rgba(50, 50, 93, 0.2) 0px 2px 6px -5px;
   }
-  
+
   #search{
     float:left;
     width: 350px;
@@ -213,7 +213,7 @@ body {
 
 .align__profile{
   width: 100%;
- 
+
   display: flex;
   justify-content:center;
   align-items:center;
@@ -223,7 +223,7 @@ body {
 .user_profile {
     width: 300px;
     height:600px;
-  
+
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -231,14 +231,7 @@ body {
 
 }
 
-.photo__profile {
-    width: 190px;
-    height: 190px;
-    background-color: #fff;
-    border-radius: 100%;
-    margin: 10px 0 15px 0;
 
-}
 
 .text__profile {
   width: 250px;
@@ -379,16 +372,31 @@ label {
   flex-direction: column;
 justify-content: center;
   align-items: center;
-  
+
 }
 
 .photo__profile {
+  text-indent: -9999px;
   width: 190px;
   height: 190px;
   background-color: #fff;
   border-radius: 100%;
   margin-top: 20px;
   border: #a0a0a0 solid 1px;
+  outline: none;
+  text-decoration: none;
+}
+
+.photo__profile_ {
+  text-indent: -9999px;
+  width: 190px;
+  height: 190px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-top: 20px;
+  border: #a0a0a0 solid 1px;
+  outline: none;
+  text-decoration: none;
 }
 
 .aling-form-photo input{
@@ -427,15 +435,74 @@ justify-content: center;
 
 }
 
-/*********************************************************************/
-/**********************         MY PUBLICATION           *****************/
-/*********************************************************************/
+.dataError{
+  list-style: none;
+}
 
 
+#delete {
+  width: 235px;
+  height: 40px;
+  background-color: #ba1900;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
+}
 
+#delete:hover {
+  background-color: #ff0000;
+  transition: all 0.3s;
+  background-image: url(../img/emoticon.png);
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
 
-/************************************
-FIM - MAIN
-*************************************/
-
-
+#delete:hover + .drop div {
+  display: block;
+}
+ 
+ .drop{
+   position: absolute;
+   top: 698px;
+   left: 978px;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ .drop div{
+   position: absolute;
+   display: none;
+ }
+ 
+ .drop div:nth-child(1){
+   left: 0%;
+   animation: animate 10s linear infinite;
+   animation-delay: -5s;
+ }
+ .drop div:nth-child(2){
+   left: 1.5%;
+   animation: animate 10s linear infinite;
+   animation-delay: -10s;
+ }
+ .drop div:nth-child(3){
+  left: 0%;
+  animation: animate 10s linear infinite;
+  animation-delay: -15s;
+}
+.drop div:nth-child(4){
+  left: 1.5%;
+  animation: animate 10s linear infinite;
+  animation-delay: -20s;
+}
+ 
+   @keyframes animate{
+   0%{
+     top: -10%;
+   }
+   100%{
+     top: -4%
+   }
+ }

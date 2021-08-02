@@ -12,13 +12,24 @@ class Login{
 
       const { email, password } = req.body
 
+      console.log(email)
+
       const responseUser = await serviceLogin.searchUser(email)
 
-      if(responseUser == null){
-        return responseInvalidData()
-      }
+      console.log(responseUser)
 
-      res.json(responseUser)
+      if(!responseUser) return responseInvalidData()
+
+      const validateDatas = await serviceLogin.validateDatas(responseUser, password)
+
+      if(validateDatas.status !== "OK") return responseInvalidData()
+
+      res.cookie("token", validateDatas.webtoken,{
+        maxAge: 604900000,
+        httpOnly: true
+      })
+
+      res.status(200).redirect("dashboard")
 
       function responseInvalidData(){
         res.render("login", {

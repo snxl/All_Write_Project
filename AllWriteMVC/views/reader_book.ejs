@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Write - profile</title>
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/reader_book.css">
+
+  </head>
+  <body>
+
+    <!-- HEADER - Topo do  site-->
+    <%- include('./header.ejs') %>
+    <!-- FIM do topo do site-->
+
+<!-- INICIO DO MAIN - CORPO DO SITE-->
+            <main>
+
+                            <section class="my__book">
+                              <h1>Sua biblioteca</h1>
+                                  <nav>
+                                          <ul>
+                                                  <li>
+                                                       <img src="../img/book__reader_book1.svg">
+                                                       <div class="data__book_reader">
+                                                              <a href="#" id="name__book_reader" class="link__style_nameBook">Nome do Livro</a>
+                                                              <a href="#" id="date__book_reader" class="link__style_dateBook">Data de publicaçao</a>
+                                                              <a href="#" id="views__book_reader" class="link__style_viewsBook">
+                                                                  <img src="../img/eye__book_views.svg">
+                                                                Visualizações
+                                                                     </a>
+                                                       </div>
+                                                  </li>
+
+                                                  <li>
+                                                    <img src="../img/book__reader_book2.svg">
+                                                    <div class="data__book_reader">
+                                                           <a href="#" id="name__book_reader" class="link__style_nameBook">Nome do Livro</a>
+                                                           <a href="#" id="date__book_reader" class="link__style_dateBook">Data de publicaçao</a>
+                                                           <a href="#" id="views__book_reader" class="link__style_viewsBook">
+                                                               <img src="../img/eye__book_views.svg">
+                                                             Visualizações
+                                                                  </a>
+                                                    </div>
+                                               </li>
+
+                                               <li>
+                                                <img src="../img/book__reader_book1.svg">
+                                                <div class="data__book_reader">
+                                                       <a href="#" id="name__book_reader" class="link__style_nameBook">Nome do Livro</a>
+                                                       <a href="#" id="date__book_reader" class="link__style_dateBook">Data de publicaçao</a>
+                                                       <a href="#" id="views__book_reader" class="link__style_viewsBook">
+                                                           <img src="../img/eye__book_views.svg">
+                                                         Visualizações
+                                                              </a>
+                                                </div>
+                                           </li>
+
+                                           <li>
+                                            <img src="../img/book__reader_book2.svg">
+                                            <div class="data__book_reader">
+                                                   <a href="#" id="name__book_reader" class="link__style_nameBook">Nome do Livro</a>
+                                                   <a href="#" id="date__book_reader" class="link__style_dateBook">Data de publicaçao</a>
+                                                   <a href="#" id="views__book_reader" class="link__style_viewsBook">
+                                                       <img src="../img/eye__book_views.svg">
+                                                     Visualizações
+                                                          </a>
+                                            </div>
+                                       </li>
+
+                                       <li>
+                                        <img src="../img/book__reader_book1.svg">
+                                        <div class="data__book_reader">
+                                               <a href="#" id="name__book_reader" class="link__style_nameBook">Nome do Livro</a>
+                                               <a href="#" id="date__book_reader" class="link__style_dateBook">Data de publicaçao</a>
+                                               <a href="#" id="views__book_reader" class="link__style_viewsBook">
+                                                   <img src="../img/eye__book_views.svg">
+                                                 Visualizações
+                                                      </a>
+                                        </div>
+                                   </li>
+
+                                   <li>
+                                    <img src="../img/book__reader_book2.svg">
+                                    <div class="data__book_reader">
+                                           <a href="#" id="name__book_reader" class="link__style_nameBook">Nome do Livro</a>
+                                           <a href="#" id="date__book_reader" class="link__style_dateBook">Data de publicaçao</a>
+                                           <a href="#" id="views__book_reader" class="link__style_viewsBook">
+                                               <img src="../img/eye__book_views.svg">
+                                             Visualizações
+                                                  </a>
+                                    </div>
+                               </li>
+
+                               <li>
+                                <img src="../img/book__reader_book1.svg">
+                                <div class="data__book_reader">
+                                       <a href="#" id="name__book_reader" class="link__style_nameBook">Nome do Livro</a>
+                                       <a href="#" id="date__book_reader" class="link__style_dateBook">Data de publicaçao</a>
+                                       <a href="#" id="views__book_reader" class="link__style_viewsBook">
+                                           <img src="../img/eye__book_views.svg">
+                                         Visualizações
+                                              </a>
+                                </div>
+                           </li>
+
+                           <li>
+                            <img src="../img/book__reader_book2.svg">
+                            <div class="data__book_reader">
+                                   <a href="#" id="name__book_reader" class="link__style_nameBook">Nome do Livro</a>
+                                   <a href="#" id="date__book_reader" class="link__style_dateBook">Data de publicaçao</a>
+                                   <a href="#" id="views__book_reader" class="link__style_viewsBook">
+                                       <img src="../img/eye__book_views.svg">
+                                     Visualizações
+                                          </a>
+                            </div>
+                       </li>
+
+
+
+
+                                          </ul>
+                                  </nav>
+                             </section>
+
+
+
+                             <section class="top__reader">
+
+                                                  <h1><%=data.titulo%></h1>
+
+                                                  <div class="toggle__button">
+                                                    <input id="switch" type="checkbox" name="theme">
+                                                    <label for="switch">Toggle</label>
+                                                  </div>
+
+                                                  <article class="reader__book">
+
+                                                    <iframe src="/pdfjs/web/viewer.html?file=/uploads/<%=data.pdf%>" frameborder="0" width="100%" height="100%"></iframe>
+
+
+                                                  </article>
+
+                             </section>
+
+
+
+            </main>
+
+
+<!-- FIM DO MAIN - CORPO DO SITE-->
+
+<footer>
+
+    <img src="../img/logo.svg" class="logo__footer">
+
+</footer>
+<script src="/pdfjs/build/pdf.js"></script>
+<script src="/javascripts/pdfRender.js"></script>
+<script src="../javascript/darkMode.js"></script>
+  </body>
+</html>

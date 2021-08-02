@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Write - profile</title>
+    <link rel="shortcut icon" href="../img/favicon.png" />
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/profile.css">
     <script type="text/javascript" src="../javascript/carousel.js"></script>
@@ -14,27 +15,27 @@
     <!-- HEADER - Topo do  site-->
         <header>
 
-                   <a href="#" alt="Home page" class="logo__color"> </a>
+                   <a href="/dashboard" alt="Home page" class="logo__color"> </a>
                           <nav >
                               <ul class="menu">
                                       <li> <a href="#">Explorar</a>
-                                             <ul>
-                                                    <li><a href="#"> Aventura </a></li>
-                                                    <li><a href="#"> Ação </a></li>
-                                                    <li><a href="#"> Fantasia </a></li>
-                                                    <li><a href="#"> Ficção </a></li>
-                                                    <li><a href="#"> Poesia </a></li>
-                                                    <li><a href="#"> Romance </a></li>
-                                                    <li><a href="#"> Suspense </a></li>
-                                                    <li><a href="#"> Terror </a></li>
-                                                    <li><a href="#"> Biografia </a></li>
-                                                    <li><a href="#"> Miterário </a></li>
-                                                    <li><a href="#"> Espiritual </a></li>
-                                              </ul>
-                                            </li>
+                                        <ul>
+                                          <li><a href="/aventura"> Aventura </a></li>
+                                          <li><a href="/acao"> Ação </a></li>
+                                          <li><a href="/fantasia"> Fantasia </a></li>
+                                          <li><a href="/ficcao"> Ficção </a></li>
+                                          <li><a href="/poesia"> Poesia </a></li>
+                                          <li><a href="/romance"> Romance </a></li>
+                                          <li><a href="/suspense"> Suspense </a></li>
+                                          <li><a href="/terror"> Terror </a></li>
+                                          <li><a href="/biografia"> Biografia </a></li>
+                                          <li><a href="/literario"> Literário </a></li>
+                                          <li><a href="/espiritual"> Espiritual </a></li>
+                                        </ul>
+                                                                          </li>
 
                                       <li> <a href="#">Sobre</a></li>
-                                      <li> <a href="#">Suporte</a></li>
+                                      <li> <a href="/contact_support">Suporte</a></li>
                               </ul>
 
                           </nav>
@@ -44,8 +45,8 @@
 
 
                                             <img class="img_login" src="../img/foto_icon_user.svg">
-                                                <a href="#" id="user__">ID_usuário</a>
-                                                <img class="enginer__icon" src="../img/engrenagem.svg">
+                                                <a href="/profile" id="user__"><%=userName%></a>
+                                                <a href="/profile__config"><img class="enginer__icon" src="../img/engrenagem.svg"></a>
 
                           </div>
             </header>
@@ -60,6 +61,10 @@
                     <input type="text" id="search" placeholder="Buscar..."/>
                     <img src="../img/search_icon.svg">
                 </div>
+
+                <button type="submit" id="publish" name="publish">Publicar livro</button>
+
+
               </div>
                  <!--Fim Campo de busca-->
 
@@ -67,22 +72,12 @@
                  <!--Inicio Bloco do perfil do usuário-->
                  <div class="align__profile">
                       <section class="user_profile">
-                              <div class="photo__profile">
 
-                              </div>
+                              <img src="<%=route%>" class="photo__profile">
 
                               <div class="text__profile">
-                                          <h1><a href="#" >Nome do usuário</a></h1>
-                                              <h2>
-                                                  Caixa de texto com uma descrição do perfil do usuário
-
-                                                  Lorem ipsum dolor sit amet,
-                                                  consectetur adipiscing elit ut aliquam,
-                                                  purus sit amet luctus venenatis
-                                                  Lorem ipsum dolor sit amet,
-                                                  consectetur adipiscing elit ut aliquam,
-                                                  purus sit amet luctus venenatis
-                                              </h2>
+                                          <h1><a href="#" ><%=userName%></a></h1>
+                                              <h2> <%=description%> </h2>
                               </div>
                       </section>
 

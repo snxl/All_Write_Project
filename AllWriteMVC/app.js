@@ -14,6 +14,7 @@ import fs from "fs"
 import cors from "cors"
 import dotenv from "dotenv"
 
+
 dotenv.config()
 
 //ROUTER
@@ -22,9 +23,26 @@ import dashboardRouter from "./routes/dashboard.js"
 import profileRouter from './routes/profile.js';
 import loginRouter from "./routes/login.js"
 import resgistroRouter from "./routes/registros.js"
+import contact_supportRouter from "./routes/contact_support.js"
 import teste from "./routes/testesSequelize.js"
-
-
+import successRouter from "./routes/success.js"
+import books from "./routes/books.js"
+import profile__configRouter from "./routes/profile__config.js"
+import reader_bookRouter from "./routes/reader_book.js"
+import categoryRouter from "./routes/categorias/aventura.js"
+import add_bookRoute from './routes/add_book.js';
+import acaoRouter from "./routes/categorias/acao.js"
+import biografiaRouter from "./routes/categorias/biografia.js"
+import espiritualRouter from "./routes/categorias/espiritual.js"
+import fantasiaRouter from "./routes/categorias/fantasia.js"
+import ficcaoRouter from "./routes/categorias/ficcao.js"
+import literarioRouter from "./routes/categorias/literario.js"
+import poesiaRouter from "./routes/categorias/poesia.js"
+import romanceRouter from "./routes/categorias/romance.js"
+import suspenseRouter from "./routes/categorias/suspense.js"
+import terrorRouter from "./routes/categorias/terror.js"
+import infantilRouter from "./routes/categorias/infantil.js"
+import misterioRouter from "./routes/categorias/misterio.js"
 
 //MIDDLEWARE
 import validateRoute from './middlewares/privateRoutes.js';
@@ -47,6 +65,7 @@ class App{
     this.socketIo();
     this.globalMiddlewares();
     this.routes()
+
   }
 
 
@@ -56,16 +75,37 @@ class App{
   }
 
 
-  routes(){~
+  routes(){
+    this.app.use("/books", books)
     this.app.use('/',indexRouter);
     this.app.use("/login", loginRouter);
     this.app.use("/register", resgistroRouter);
     this.app.use("/teste", teste);
+    this.app.use("/contact_support", contact_supportRouter);
+    this.app.use('/success', successRouter);
     this.app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(JSON.parse(fs.readFileSync("./swaggerNew.json", "utf-8"))))
 
     this.validateLogin()
     this.app.use('/dashboard', dashboardRouter);
     this.app.use('/profile', profileRouter);
+    this.app.use('/profile__config', profile__configRouter);
+    this.app.use('/reader_book', reader_bookRouter);
+    this.app.use('/categoria', categoryRouter);
+    this.app.use("/add_book", add_bookRoute)
+    // this.app.use('/acao', acaoRouter);
+    // this.app.use('/biografia', biografiaRouter);
+    // this.app.use('/espiritual', espiritualRouter);
+    // this.app.use('/fantasia', fantasiaRouter);
+    // this.app.use('/ficcao', ficcaoRouter);
+    // this.app.use('/literario', literarioRouter);
+    // this.app.use('/poesia', poesiaRouter);
+    // this.app.use('/romance', romanceRouter);
+    // this.app.use('/suspense', suspenseRouter);
+    // this.app.use('/terror', terrorRouter);
+    // this.app.use('/infantil', infantilRouter);
+    // this.app.use('/misterio', misterioRouter);
+
+    this.app.use("/files", express.static(path.join(__dirname, "public/uploads")))
   }
 
   globalMiddlewares(){
@@ -128,6 +168,6 @@ class App{
       next()
     })
   }
-}
 
+}
 export default new App()

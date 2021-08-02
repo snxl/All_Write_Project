@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 
-const storage = multer.diskStorage({
+ const storage = multer.diskStorage({
     destination: resolve(__dirname, '..', 'public', 'uploads'),
     filename: (req, file, cb) => {
         crypto.randomBytes(32, (err, value) => {
@@ -16,8 +16,8 @@ const storage = multer.diskStorage({
                 cb(err);
             }
             return cb(null, value.toString('hex') + extname(file.originalname));
-        })      
+        })
     }
 });
- 
+
 export default storage

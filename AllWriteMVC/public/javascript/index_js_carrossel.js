@@ -6,3 +6,4 @@ const listaLivros = '[data-lista-livros]'
 
 
 new Carrossel(anterior, proximo, listaLivros)
+

@@ -1,10 +1,33 @@
+import db from "../database/models/index.js"
+import jwt from "jsonwebtoken"
+
 class Dashboard{
-    GET(req, res){
-        res.render("dashboard", {
-            title: "all write",
-            imagePerfil: req.cookies.imagePerfil
+    async GET(req, res){
+
+        const token = jwt.verify(req.cookies.token, process.env.TOKEN_SECRET)
+
+        const {route, user} = await db.Registro.findOne({
+          where:{
+            id: token.id
+          }
         })
+
+        const listaDeLivros = await db.Livros.findAll({order: [['id', 'DESC']], limit: 5 })
+        const listaDeLivrosMaisLidos = await db.Livros.findAll({order: [['id', 'DESC']], limit: 4 })
+// const listaDeLivrosMaisLidos = await db.Livros.findAll({order: [['visualizations', 'DESC']], limit: 4 })
+
+
+        res.render("dashboard", {
+            errorUser: false,
+            profile: route,
+            user,
+            listaDeLivros,
+            listaDeLivrosMaisLidos,
+
+        })
+
     }
+
 
     POST(req, res){
         return

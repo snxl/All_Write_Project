@@ -3,7 +3,7 @@ const database = require("./index.js")
 
 module.exports = (sequelize, DataTypes) => {
     const Register = sequelize.define("Registro",{
-      id : {
+    id : {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
@@ -33,11 +33,18 @@ module.exports = (sequelize, DataTypes) => {
     },
     imageRoute:{
         type: DataTypes.STRING(500),
-        allowNull:false
+        allowNull:true
+    },
+    route:{
+      type: DataTypes.VIRTUAL,
+      get:function(){
+        return `https://localhost:3600/files/${this.imageRoute}`
+      }
     },
     credential:{
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
+        defaultValue:0
     },
     createdAt:{
         type: DataTypes.DATE,
@@ -46,6 +53,10 @@ module.exports = (sequelize, DataTypes) => {
     updatedAt:{
         type: DataTypes.DATE,
         allowNull:false
+    },
+    bio:{
+      type: DataTypes.STRING(1000),
+      allowNull:true
     }
     },{
       tableName: "register"
@@ -57,19 +68,18 @@ module.exports = (sequelize, DataTypes) => {
 
     })
 
-    Register.associate = (model)=>{
-        Register.hasOne(model.Autores,{
-            foreignKey: "register_id",
-            as:"autors"
-        })
-    }
 
-    // Register.addHook("afterCreate", async Registro =>{
-    //   await database.Autores.create({
-    //     acceptContact: 0,
-    //     register_id: Registro.id
-    //   })
-    // })
+
+    Register.associate = (model)=>{
+
+      Register.hasMany(model.Livros, {
+        onDelete:"SET NULL",
+        hooks:true,
+        foreignKey: "id_user",
+        as: "my_books",
+      })
+
+    }
 
     return Register
 }

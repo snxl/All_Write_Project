@@ -4,11 +4,38 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
-           },
-           register_id:{
-             type:DataTypes.INTEGER,
-             allowNull:false,
-           }
+          },
+          id_user:{
+            type: DataTypes.INTEGER,
+            references: {model: "register", key: "id"},
+            allowNull:true,
+            onUpdate: "CASCADE",
+            onDelete: "CASCADE",
+            field: "id_user"
+          },
+          titulo: {
+              type: DataTypes.STRING,
+              allowNull:false,
+          },
+          sinopse: {
+              type: DataTypes.STRING(1000),
+          },
+          image:{
+              type: DataTypes.STRING,
+              allowNull:false
+          },
+          pdf:{
+            type: DataTypes.STRING,
+            allowNull:false
+          },
+          createdAt:{
+            type: DataTypes.DATE,
+            allowNull:false
+          },
+          updatedAt:{
+            type: DataTypes.DATE,
+            allowNull:false
+          }
         }, {
             tableName: "library",
             timestamps: false
