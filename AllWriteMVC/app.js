@@ -30,6 +30,7 @@ import books from "./routes/books.js"
 import profile__configRouter from "./routes/profile__config.js"
 import reader_bookRouter from "./routes/reader_book.js"
 import categoryRouter from "./routes/categorias/aventura.js"
+import add_bookRoute from './routes/add_book.js';
 import acaoRouter from "./routes/categorias/acao.js"
 import biografiaRouter from "./routes/categorias/biografia.js"
 import espiritualRouter from "./routes/categorias/espiritual.js"
@@ -90,6 +91,7 @@ class App{
     this.app.use('/profile__config', profile__configRouter);
     this.app.use('/reader_book', reader_bookRouter);
     this.app.use('/categoria', categoryRouter);
+    this.app.use("/add_book", add_bookRoute)
     // this.app.use('/acao', acaoRouter);
     // this.app.use('/biografia', biografiaRouter);
     // this.app.use('/espiritual', espiritualRouter);
