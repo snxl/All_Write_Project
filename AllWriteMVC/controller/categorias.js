@@ -15,8 +15,6 @@ class Aventura{
             model:db.Registro,
             as:"autor"
           },
-          limit: 16 ,
-          offset: 0,
         })
 
         data.forEach(element => {
