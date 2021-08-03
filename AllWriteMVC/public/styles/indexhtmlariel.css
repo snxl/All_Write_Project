@@ -276,6 +276,7 @@ main {
 
 
 .figure__2  {
+    z-index: 50;
     width: 330px;
     height: 300px;
     padding: 10px;
@@ -296,6 +297,9 @@ margin-left: 15px;
 
 
 .figure__2 h4 {
+    position: relative;
+    bottom: -20px;
+    z-index: 50;
     color: white;
     text-align: center;
     font-weight: 400;

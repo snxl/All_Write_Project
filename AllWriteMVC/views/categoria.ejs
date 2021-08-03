@@ -46,7 +46,7 @@
         <% data.forEach(function(element){%>
 
           <div class="flexCenter item1">
-            <a href="/reader_book/<%=element.id%>" class="d-block"><img src="<%=element.imageRoute%>" style="height: 232px;" /></a>
+            <a href="/reader_book/<%=element.id%>" class="d-block"><img src="<%=element.imageRoute%>" style="height: 232px; width: 190px;" /></a>
             <div class="descricao">
               <h2><%=element.titulo%></h2>
               <p><%=element.autor.user%></p>
@@ -60,16 +60,7 @@
 
 
 			</div>
-			<div class="flexCenter">
-				<nav aria-label=".">
-					<ul class="pagination">
-					<li class="page-item disabled"><span class="page-link"><</span></li>
-					<li class="page-item"><a class="page-link" href="#">1</a></li>
-					<li class="page-item active" aria-current="page"><span class="page-link">2</span></li>
-					<li class="page-item"><a class="page-link" href="#">></a></li>
-					</ul>
-				</nav>
-			</div>
+
 		</div>
 	</section>
 	<!-- SCRIPTS -->

@@ -78,6 +78,7 @@ color:rgb(0, 0, 0);
 
 }
 
+
 .menu li  ul{
   position:absolute;
   width: 200px;
@@ -212,7 +213,7 @@ body {
 /**** BLOCO USER PROFILE ****/
 
 #publish {
-  
+
   width: 235px;
   height: 40px;
   background-color: #FF6A30;
@@ -319,7 +320,8 @@ body {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-
+  justify-content: space-around;
+  align-items: center;
 }
 
       .title__publication {
@@ -338,8 +340,26 @@ body {
 
           }
 
+          .my__books{
+            padding: 3px;
+            width: 95%;
+            display: flex;
+            flex-direction: row;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+          }
+
+
+          .book__block{
+            padding: 0 4px 0 4px;
+            scroll-snap-align: start;
+            pointer-events: all;
+          }
+
           .my__books__carrossel {
-            position: relative;
+
             background-color: #00ff73;
             width: 460px;
             height: 140px;

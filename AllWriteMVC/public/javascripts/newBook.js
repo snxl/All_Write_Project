@@ -6,6 +6,7 @@ window.addEventListener("load", function(event){
   const options = this.document.querySelector("[data-select]")
   const sinopse = this.document.querySelector("[data-sinopse]")
   const pdf = this.document.querySelector("[data-pdf]")
+  const image = this.document.querySelector("[data-image]")
 
   form.addEventListener("submit", function(e){
 
@@ -13,10 +14,21 @@ window.addEventListener("load", function(event){
 
     const fd = new FormData()
 
-    fd.append("titulo", titulo.value)
+    fd.append("tittle", titulo.value)
     fd.append("category", options.value)
     fd.append("sinopse", sinopse.value)
+    fd.append("file", pdf.files[0])
+    fd.append("background", image.files[0])
 
-    console.log({titulo, options, sinopse, pdf})
+    console.log(options)
+
+    axios.post("https://localhost:3600/profile/new-book", fd, {
+      headers: {
+        "method":"POST",
+        "Accept": 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'multipart/form-data',
+    }
+    }).then(e => window.location.href = e.request.responseURL)
   })
 })

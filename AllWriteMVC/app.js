@@ -79,10 +79,10 @@ class App{
 
   routes(){
     this.app.use("/books", books)
-    this.app.use('/',indexRouter);
-    this.app.use("/login", loginRouter);
-    this.app.use("/register", resgistroRouter);
-    this.app.use("/teste", teste);
+    this.app.use('/',  indexRouter);
+    this.app.use("/login",  loginRouter);
+    this.app.use("/register",  resgistroRouter);
+    this.app.use("/teste",  teste);
     this.app.use("/contact_support", contact_supportRouter);
     this.app.use('/success', successRouter);
     this.app.use('/about', aboutRouter);

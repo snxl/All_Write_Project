@@ -21,7 +21,7 @@ module.exports = {
           allowNull:false,
       },
       sinopse: {
-          type: Sequelize.STRING(1000),
+          type: Sequelize.STRING(5000),
       },
       image:{
           type: Sequelize.STRING,
