@@ -30,6 +30,8 @@ import books from "./routes/books.js"
 import profile__configRouter from "./routes/profile__config.js"
 import reader_bookRouter from "./routes/reader_book.js"
 import categoryRouter from "./routes/categorias/aventura.js"
+import aboutRouter from "./routes/about.js"
+import about2Router from "./routes/about2.js"
 import add_bookRoute from './routes/add_book.js';
 import acaoRouter from "./routes/categorias/acao.js"
 import biografiaRouter from "./routes/categorias/biografia.js"
@@ -82,7 +84,8 @@ class App{
     this.app.use("/register",  resgistroRouter);
     this.app.use("/teste",  teste);
     this.app.use("/contact_support", contact_supportRouter);
-    this.app.use('/success',  successRouter);
+    this.app.use('/success', successRouter);
+    this.app.use('/about', aboutRouter);
     this.app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(JSON.parse(fs.readFileSync("./swaggerNew.json", "utf-8"))))
 
     this.validateLogin()
@@ -91,6 +94,7 @@ class App{
     this.app.use('/profile__config', profile__configRouter);
     this.app.use('/reader_book', reader_bookRouter);
     this.app.use('/categoria', categoryRouter);
+    this.app.use('/about2', about2Router);
     this.app.use("/add_book", add_bookRoute)
     // this.app.use('/acao', acaoRouter);
     // this.app.use('/biografia', biografiaRouter);
